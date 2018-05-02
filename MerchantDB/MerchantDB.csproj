@@ -791,6 +791,8 @@
     <Content Include="Models\MerchantDBEntities.edmx.diagram">
       <DependentUpon>MerchantDBEntities.edmx</DependentUpon>
     </Content>
+    <None Include="Properties\PublishProfiles\LineBotforTest - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\LineBotforTest - Web Deploy %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\LineBotforTest - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />

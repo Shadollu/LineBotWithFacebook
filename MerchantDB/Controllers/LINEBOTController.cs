@@ -13,9 +13,9 @@ namespace MerchantDB.Controllers
     public class LINEBOTController : ApiController
     {
         //doge
-        //public const string ChannelAccessToken = "jdoqLxieahEpwy7jE4511lu76psRpJUQGqRcjOQLapMI2gpdsD/ea7CNtXU/h9szE6PynyFmYwh11sNtHALwrUukFCgEMdH0E3WctzP/+Hpe5+jD0eqJxleaFlTIK+hi/ojGqvvW/TGy9RcIS2A+CQdB04t89/1O/w1cDnyilFU=";
+        public const string ChannelAccessToken = "jdoqLxieahEpwy7jE4511lu76psRpJUQGqRcjOQLapMI2gpdsD/ea7CNtXU/h9szE6PynyFmYwh11sNtHALwrUukFCgEMdH0E3WctzP/+Hpe5+jD0eqJxleaFlTIK+hi/ojGqvvW/TGy9RcIS2A+CQdB04t89/1O/w1cDnyilFU=";
         //nigga
-        public const string ChannelAccessToken = "VcC9lWBYYACb0/nxzr8rUf+CaElUkRw5dNwoz6rQCHlCySrGQs3HtZtj5RJB/qq+dIIf8vbQtH7fx23riR3SDEz1BRvpGrXz4vHwf9Tv5Y9akc2L7S+0buPuX0tvf3w3tsqY3vug7UyVWIOWlrK3YgdB04t89/1O/w1cDnyilFU=";
+        //public const string ChannelAccessToken = "VcC9lWBYYACb0/nxzr8rUf+CaElUkRw5dNwoz6rQCHlCySrGQs3HtZtj5RJB/qq+dIIf8vbQtH7fx23riR3SDEz1BRvpGrXz4vHwf9Tv5Y9akc2L7S+0buPuX0tvf3w3tsqY3vug7UyVWIOWlrK3YgdB04t89/1O/w1cDnyilFU=";
         LineBotEntities LinebotDB = new LineBotEntities();
         [HttpGet]
         public IHttpActionResult GET()
