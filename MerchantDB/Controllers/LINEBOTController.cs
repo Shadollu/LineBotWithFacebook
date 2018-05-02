@@ -222,7 +222,7 @@ namespace MerchantDB.Controllers
                     //ByteConverter Bc = new ByteConverter();
                     //var getImg = Bc.BufferToImage(imageBytes);
 
-                    VisionRecognize.MakeAnalysisRequest(imageBytes);
+                    VisionRecognize.MakeAnalysisRequest(imageBytes,senderToken);
 
                 }
 
