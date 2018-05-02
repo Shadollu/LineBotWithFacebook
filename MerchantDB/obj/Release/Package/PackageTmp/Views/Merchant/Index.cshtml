@@ -1,0 +1,61 @@
+﻿@model IEnumerable<MerchantDB.Models.正式商店設定資料>
+
+@{
+    ViewBag.Title = "查詢正式商店資料";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+
+@using (Html.BeginForm("Index", "Merchant"))
+{
+
+    @Html.RadioButton("OptionValue", "CustName", true)
+    @Html.Label("依客戶名稱")<br />
+
+    @Html.RadioButton("OptionValue", "Merno_F", true)
+    @Html.Label("依商店編號")<br />
+
+    @Html.RadioButton("OptionValue", "Custname_Extn", true)
+    @Html.Label("依商店對外名稱")<br />
+
+    <p>
+        Title:@Html.TextBox("searchString")
+        <input type="submit" value="Filter" />
+    </p>
+
+}
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CustName)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.ActionLink(@Html.DisplayFor(modelItem => item.CustName).ToString(), "Details", new { id = item.No })
+            </td>
+
+            <td>
+                @item.MerNo_F
+            </td>
+            <td>
+                @item.MER_TYPE.Description
+            </td>
+            <td>
+                @item.MER_STATE.Description
+            </td>
+
+        </tr>
+    }
+</table>

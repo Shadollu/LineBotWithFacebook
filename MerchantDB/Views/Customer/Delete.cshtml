@@ -1,0 +1,296 @@
+﻿@model MerchantDB.Models.客戶基本資料
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>客戶基本資料</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.No)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.No)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustName_En)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustName_En)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BusinessNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BusinessNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustName_Extn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustName_Extn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustName_Rept)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustName_Rept)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustName_Bill)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustName_Bill)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AcctTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AcctTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AcctNum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AcctNum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AcctBank)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AcctBank)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BankBranch)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BankBranch)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InvAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InvAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustTel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustTel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustFax)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustFax)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustURL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustURL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MerURL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MerURL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FileNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FileNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Capital)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Capital)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Director)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Director)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DirectorID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DirectorID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AuthPerson)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AuthPerson)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AuthMail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AuthMail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AuthTel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AuthTel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustAdrs)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustAdrs)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustName_EnCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustName_EnCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AddresseeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AddresseeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InvZipcode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InvZipcode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustZipcode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustZipcode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Remarks)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Remarks)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IS_Distributor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IS_Distributor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InspectStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InspectStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProjectRecord)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProjectRecord)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CompanySetupDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CompanySetupDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ChangeApprovalDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ChangeApprovalDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EMPLOYEE.Department)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EMPLOYEE.Department)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LINEBOTModelStoreContainer" CdmEntityContainer="LINEBOTEnt">
+    <EntitySetMapping Name="LAT_LON">
+      <EntityTypeMapping TypeName="LINEBOTModel.LAT_LON">
+        <MappingFragment StoreEntitySet="LAT_LON">
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="LAT" ColumnName="LAT" />
+          <ScalarProperty Name="LON" ColumnName="LON" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PARKING">
+      <EntityTypeMapping TypeName="LINEBOTModel.PARKING">
+        <MappingFragment StoreEntitySet="PARKING">
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="LAT" ColumnName="LAT" />
+          <ScalarProperty Name="LON" ColumnName="LON" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

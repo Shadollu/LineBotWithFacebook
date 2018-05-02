@@ -1,0 +1,316 @@
+using isRock.LineBot.Conversation;
+using MerchantDB.Models;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Net;
+using System.Net.Http;
+using System.Text;
+using System.Web.Http;
+
+namespace MerchantDB.Controllers
+{
+    public class LINEBOTController : ApiController
+    {
+        //doge
+       public static string ChannelAccessToken = "jdoqLxieahEpwy7jE4511lu76psRpJUQGqRcjOQLapMI2gpdsD/ea7CNtXU/h9szE6PynyFmYwh11sNtHALwrUukFCgEMdH0E3WctzP/+Hpe5+jD0eqJxleaFlTIK+hi/ojGqvvW/TGy9RcIS2A+CQdB04t89/1O/w1cDnyilFU=";
+        //nigga
+     //  public static string ChannelAccessToken = "VcC9lWBYYACb0/nxzr8rUf+CaElUkRw5dNwoz6rQCHlCySrGQs3HtZtj5RJB/qq+dIIf8vbQtH7fx23riR3SDEz1BRvpGrXz4vHwf9Tv5Y9akc2L7S+0buPuX0tvf3w3tsqY3vug7UyVWIOWlrK3YgdB04t89/1O/w1cDnyilFU=";
+
+        [HttpGet]
+        public IHttpActionResult GET()
+        {
+            return Ok();
+        }
+
+        [HttpPost]
+        public IHttpActionResult POST()
+        {
+            LineBotEntities LinebotDB = new LineBotEntities();
+
+            try
+            {
+
+                //取得 http Post RawData(should be JSON)
+                string postData = Request.Content.ReadAsStringAsync().Result;
+                //剖析JSON
+                var ReceivedMessage = isRock.LineBot.Utility.Parsing(postData);
+                //取得UID
+                string uid = ReceivedMessage.events[0].source.userId.ToString();
+                //取得座標（如果有的話）
+                var location = LinebotDB.LAT_LON.Where(x => x.UID.ToString().Equals(uid)).ToList();
+
+                //回覆訊息
+                string Message = "";
+
+                #region buttomTemplatePostBack
+
+                //使用buttomTemplate的Postback時所執行的部分
+
+                if (ReceivedMessage.events[0].type == "postback")
+                {
+                    switch (ReceivedMessage.events[0].postback.data)
+                    {
+                        case "CALLBUSDATA":
+                            if (location.Count() > 0)
+                            {
+                                var lat = location.First().LAT.ToString();
+                                var lon = location.First().LON.ToString();
+                                PTXApi getAPIData = new MerchantDB.PTXApi();
+                                string BusData = Environment.NewLine + getAPIData.returnBusData(lat, lon);
+
+                                Message = BusData;
+
+                                var adv = LinebotDB.LAT_LON.FirstOrDefault(x => x.UID.ToString().Equals(uid));
+                                LinebotDB.LAT_LON.Remove(adv);
+                                LinebotDB.SaveChanges();
+
+                            }
+                            break;
+                        case "CALLBIKEDATA":
+                            if (location.Count() > 0)
+                            {
+                                var lat = location.First().LAT.ToString();
+                                var lon = location.First().LON.ToString();
+                                string country = "";
+                                PTXApi getAPIData = new MerchantDB.PTXApi();
+
+                                string data = location.First().COUNTRY.ToString();
+
+                                switch (data)
+                                {
+                                    case "台北市":
+                                        country = "Taipei";
+                                        break;
+                                    case "新北市":
+                                        country = "NewTaipei";
+                                        break;
+                                    case "桃園市":
+                                        country = "Taoyuan";
+                                        break;
+                                    case "台中市":
+                                        country = "Taichung";
+                                        break;
+                                    case "台南市":
+                                        country = "Tainan";
+                                        break;
+                                    case "高雄市":
+                                        country = "Kaohsiung";
+                                        break;
+                                    case "屏東縣":
+                                        country = "PingtungCounty";
+                                        break;
+                                    default:
+                                        
+                                        break;
+                                }
+
+
+                                string BikeData = getAPIData.returnBikeData(lat, lon,ReceivedMessage.events[0].source.groupId,country);
+                                
+
+                                Message = BikeData;
+
+                                var adv = LinebotDB.LAT_LON.FirstOrDefault(x => x.UID.ToString().Equals(uid));
+                                LinebotDB.LAT_LON.Remove(adv);
+                                LinebotDB.SaveChanges();
+
+                            }
+                            break;
+
+                        case "GETNAVIGATE":
+
+                            if (location.Count() > 0)
+                            {
+                                var lat = location.First().LAT.ToString();
+                                var lon = location.First().LON.ToString();
+
+                                Message = "你的座標為" + lat + "," + lon + Environment.NewLine + "想去嗎哪？格式：我想去OOXXOOXX";
+                            }
+                            break;
+                        case "GETLOCATION":
+
+                            var parkingloc = LinebotDB.PARKING.Where(x => x.UID.ToString().Equals(uid)).ToList();
+
+                            if (parkingloc.Count() == 0)
+                            {
+                                var parking = new PARKING
+                                {
+                                    UID = location.First().UID,
+                                    LAT = location.First().LAT,
+                                    LON = location.First().LON
+                                };
+
+                                LinebotDB.PARKING.Add(parking);
+                                LinebotDB.SaveChanges();
+
+                                Message = "座標已經記錄完畢！查詢請打『車子停哪』";
+
+                                //確認使用者只需儲存停車座標,故把原本存在LAT_LON的資料刪除
+                                var adv = LinebotDB.LAT_LON.FirstOrDefault(x => x.UID.ToString().Equals(uid));
+                                LinebotDB.LAT_LON.Remove(adv);
+                                LinebotDB.SaveChanges();
+
+                            }
+                            else
+                                Message = "座標已經記錄完畢！查詢請打『車子停哪』";
+
+                            break;
+                    }
+
+                    isRock.LineBot.Utility.ReplyMessage(ReceivedMessage.events[0].replyToken, Message, ChannelAccessToken);
+
+                }
+                #endregion
+
+                #region 當使用者發送位置訊息時
+                
+                if (ReceivedMessage.events[0].message.latitude != 0 && ReceivedMessage.events[0].message.longitude != 0)
+                {
+                    if (location.Count() == 0)
+                    {
+
+                        string address = "";
+                        if (ReceivedMessage.events[0].message.address.ToString().Length > ReceivedMessage.events[0].message.title.ToString().Length)
+                        {
+                            address = ReceivedMessage.events[0].message.address.ToString();
+                        }
+                        else
+                        {
+                            address = ReceivedMessage.events[0].message.title.ToString();
+                        }
+
+
+                        var adv = new LAT_LON
+                        {
+                            UID = ReceivedMessage.events[0].source.userId.ToString(),
+                            LAT = ReceivedMessage.events[0].message.latitude.ToString(),
+                            LON = ReceivedMessage.events[0].message.longitude.ToString(),
+                            COUNTRY = address.Substring(5, 3)
+                        };
+
+                        LinebotDB.LAT_LON.Add(adv);
+                        LinebotDB.SaveChanges();
+
+                        var actions = new List<isRock.LineBot.TemplateActionBase>();
+                        actions.Add(new isRock.LineBot.PostbackAction()
+                        { label = "幫我導航", data = "GETNAVIGATE" });
+                        actions.Add(new isRock.LineBot.PostbackAction()
+                        { label = "幫我記錄停車位置", data = "GETLOCATION" });
+                        actions.Add(new isRock.LineBot.PostbackAction()
+                        { label = "最近的3個公車站資訊", data = "CALLBUSDATA" });
+                        actions.Add(new isRock.LineBot.PostbackAction()
+                        { label = "最近的3個Youbike站資訊", data = "CALLBIKEDATA" });
+                        SendRequest.sendButtonTemplate(ReceivedMessage.events[0].source.groupId, actions, "座標定位系統", "想做些什麼？", ChannelAccessToken);
+
+                        //Message = "你的座標為" + ReceivedMessage.events[0].message.latitude + "," + ReceivedMessage.events[0].message.longitude + Environment.NewLine + "想去嗎哪？格式：我想去OOXXOOXX";
+                    }
+                    else
+                    {
+                        var actions = new List<isRock.LineBot.TemplateActionBase>();
+                        actions.Add(new isRock.LineBot.PostbackAction()
+                        { label = "幫我導航", data = "GETNAVIGATE" });
+                        actions.Add(new isRock.LineBot.PostbackAction()
+                        { label = "幫我記錄停車位置", data = "GETLOCATION" });
+                        actions.Add(new isRock.LineBot.PostbackAction()
+                        { label = "最近的3個公車站資訊", data = "CALLBUSDATA" });
+                        actions.Add(new isRock.LineBot.PostbackAction()
+                        { label = "最近的3個Youbike站資訊", data = "CALLBIKEDATA" });
+                        SendRequest.sendButtonTemplate(ReceivedMessage.events[0].source.groupId, actions, "座標定位系統", "想做些什麼？", ChannelAccessToken);
+
+                        //Message = "請直接告訴我你想去哪,格式：我想去OOXXOOXX";
+                    }
+
+                }
+                #endregion
+
+                #region 判斷使用者發送的文字訊息
+                if (ReceivedMessage.events[0].message.text != null)
+                {
+                    if (ReceivedMessage.events[0].message.text.Length > 8 && (ReceivedMessage.events[0].message.text.Substring(0, 8) == "幫我google" || ReceivedMessage.events[0].message.text.Substring(0, 8) == "幫我GOOGLE" || ReceivedMessage.events[0].message.text.Substring(0, 8) == "幫我Google"))
+                    {
+                        Message = "我來幫你google: https://www.google.com.tw/search?hl=zh-TW&q=" + ReceivedMessage.events[0].message.text.Substring(9).Replace(" ", "%20");
+                    }
+                    if (ReceivedMessage.events[0].message.text == "給我匿名網址UID")
+                    {
+                        Message = "講話不用負責任,網址給你 : https://linebotfortest.azurewebsites.net/home/index/" + ReceivedMessage.events[0].source.userId;
+                    }
+                    if (ReceivedMessage.events[0].message.text == "給我匿名網址")
+                    {
+                        Message = "講話不用負責任,網址給你 : https://linebotfortest.azurewebsites.net/home/index/" + ReceivedMessage.events[0].source.groupId;
+                    }
+                    if (ReceivedMessage.events[0].message.text == "車子停哪")
+                    {
+                        var parkingloc = LinebotDB.PARKING.Where(x => x.UID.ToString().Equals(uid)).ToList();
+
+                        if (parkingloc.Count() > 0)
+                        {
+                            var lat = parkingloc.First().LAT.ToString();
+                            var lon = parkingloc.First().LON.ToString();
+                            SendRequest.SendLocation(ReceivedMessage.events[0].source.groupId, lat, lon,"你車停在這啦！", "可能因天氣地形因素影響而有出入");
+
+                            var adv = LinebotDB.PARKING.FirstOrDefault(x => x.UID.ToString().Equals(uid));
+                            LinebotDB.PARKING.Remove(adv);
+                            LinebotDB.SaveChanges();
+                        }
+                    }
+
+
+                    if (ReceivedMessage.events[0].message.text.Substring(0, 3) == "我想去")
+                    {
+
+                        if (location.Count() > 0)
+                        {
+                            var lat = location.First().LAT.ToString();
+                            var lon = location.First().LON.ToString();
+
+                            string googleUrl = "https://www.google.com.tw/maps/dir/" + Uri.EscapeDataString(lat + "," + lon) + "/" + Uri.EscapeDataString(ReceivedMessage.events[0].message.text.Substring(3));
+
+                            var actions = new List<isRock.LineBot.TemplateActionBase>();
+                            actions.Add(new isRock.LineBot.UriAction()
+                            { label = "點這邊開啟GoogleMap導航", uri = new Uri(googleUrl) });
+
+
+                            SendRequest.sendButtonTemplate(ReceivedMessage.events[0].source.groupId, actions, "幫您導航", "以下選項協助您抵達目的地", ChannelAccessToken);
+
+                            var adv = LinebotDB.LAT_LON.FirstOrDefault(x => x.UID.ToString().Equals(uid));
+                            LinebotDB.LAT_LON.Remove(adv);
+                            LinebotDB.SaveChanges();
+                        }
+                    }
+
+                    #region Facebook
+
+                    if (ReceivedMessage.events[0].message.text.Length > 7 && ReceivedMessage.events[0].message.text.Substring(0,7) == "send fb")
+                    {
+                        var FBresult = ReceivedMessage.events[0].message.text.Substring(7);
+
+                        SendRequest.sendFacebookMsg("2073223756038991", FBresult);
+                    }
+
+                    #endregion
+                }
+
+                #endregion
+
+                if (!string.IsNullOrEmpty(Message))
+                {
+                    isRock.LineBot.Utility.ReplyMessage(ReceivedMessage.events[0].replyToken, Message, ChannelAccessToken);
+                }
+
+                //回覆API OK
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return Ok();
+            }
+        }
+
+
+
+    }
+}

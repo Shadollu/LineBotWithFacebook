@@ -1,0 +1,112 @@
+﻿@model MerchantDB.Models.正式商店設定資料
+
+<style>
+    fieldset {
+        border: 0;
+        padding: 10px;
+        margin-bottom: 10px;
+        background: #EEE;
+    }
+
+    legend {
+        padding: 5px 10px;
+        background-color: #4F709F;
+        color: #FFF;
+    }
+
+    body {
+        font-family: Arial;
+    }
+
+    /* Style the tab */
+    .tab {
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+    }
+
+        /* Style the buttons inside the tab */
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+        }
+
+            /* Change background color of buttons on hover */
+            .tab button:hover {
+                background-color: #ddd;
+            }
+
+            /* Create an active/current tablink class */
+            .tab button.active {
+                background-color: #ccc;
+            }
+
+    /* Style the tab content */
+    .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        border-top: none;
+        animation: fadeEffect 1s; /* Fading effect takes 1 second */
+    }
+</style>
+
+<h2>正式商店資訊</h2>
+
+<fieldset>
+    <legend>正式商店設定資料</legend>
+    <p style="float:right">
+        @Html.ActionLink("Edit", "Edit",new { id = Model.No}) | @Html.ActionLink("回到上一頁", "Index")
+    </p>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName("客戶名稱")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustName)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("商店編號")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MerNo_F)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("商店狀態")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MER_STATE.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("收單銀行")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ACQUIRE_BANK.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("收單模式")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ACQUIRE_MODE.Description)
+        </dd>
+
+    </dl>
+</fieldset>
+
+
+

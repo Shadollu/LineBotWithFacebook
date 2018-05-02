@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f1f7928f3a3945bdb98d9d346057b2ce" Name="Diagram1">
+        <EntityTypeShape EntityType="TestDB2Model.C_AUTO_SETTLE_TIME" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C_MER_TYPE" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C_合約狀態" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C_合約資料" Width="1.5" PointX="3" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C_服務型態" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.ACQUIRE_BANK" Width="1.5" PointX="3" PointY="23.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.ACQUIRE_MODE" Width="1.5" PointX="3" PointY="41" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.ADV_FUNC" Width="1.5" PointX="8" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.Alipay_Product" Width="1.5" PointX="3" PointY="35.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.AUTHORITY_FUNCTION" Width="1.5" PointX="10.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.AUTHORITY_SETTLEMENT" Width="1.5" PointX="2.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.AUTO_SERIAL_NUM" Width="1.5" PointX="12.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.AUTO_SETTLE_TIME" Width="1.5" PointX="3" PointY="43.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.BANK_BRANCH_CODE" Width="1.5" PointX="12.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.BANK_HQ" Width="1.5" PointX="12.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.BANK_MODE" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.BATCH_TYPE" Width="1.5" PointX="14.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.CONT_ENAB_FUNC" Width="1.5" PointX="10.25" PointY="25.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.CONT_ENAB_FUNC_TEMP" Width="1.5" PointX="14.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.CONTRA_CAUSE" Width="1.5" PointX="11" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.CONTRA_KIND" Width="1.5" PointX="5.75" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.CONTRA_RENEW" Width="1.5" PointX="10.25" PointY="30" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.CONTRA_STATE" Width="1.5" PointX="5.75" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.CONTRA_UPDATE" Width="1.5" PointX="13.25" PointY="26.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.COOP_MODE" Width="1.5" PointX="14.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.COOP_UNIT" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.COOP_UNIT_CONNECT" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.DISTRIBUTOR_LIST" Width="1.5" PointX="12.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.dtproperties" Width="1.5" PointX="14.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.EMPLOYEE" Width="1.5" PointX="3.5" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.FAQ_CLASS_CS" Width="1.5" PointX="0.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.FAQ_CS" Width="1.5" PointX="2.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.FAQ_QUE_RECORD" Width="1.5" PointX="16.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.FAQ_RELATIVE_LINK" Width="1.5" PointX="16.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.FAQ_UPDATE_COUNT" Width="1.5" PointX="16.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.HOSTS" Width="1.5" PointX="3" PointY="45.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.MALL_TYPE" Width="1.5" PointX="5.75" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.MER_STATE" Width="1.5" PointX="3" PointY="48.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.MER_TX_BATCH" Width="1.5" PointX="16.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.MER_TX_BATCH_TEMP" Width="1.5" PointX="16.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.MER_TX_BATCH_TEMP_BLOCK" Width="1.5" PointX="10.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.MER_TYPE" Width="1.5" PointX="3" PointY="37.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.MPOS_TID" Width="1.5" PointX="7.5" PointY="44.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.OBJ_VER" Width="1.5" PointX="3" PointY="51.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.OnCmpData" Width="1.5" PointX="7.5" PointY="48" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.RM_LOGIN_QUESTION_TRADE" Width="1.5" PointX="10" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.RM_NOTICE_UNIT" Width="1.5" PointX="7.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.RM_REGISTER_QUERY_TEMP" Width="1.5" PointX="13.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.RM_REGISTER_REASON" Width="1.5" PointX="12.25" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.RM_REGISTER_REASON_CODE" Width="1.5" PointX="10" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.RM_REGISTER_REASON_TEMP" Width="1.5" PointX="15.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.SERVER_NAME" Width="1.5" PointX="17.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.SERVICE_TYPE" Width="1.5" PointX="0.75" PointY="29.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.SETTLE_CYCLE" Width="1.5" PointX="3" PointY="53.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.SETTLE_IP" Width="1.5" PointX="8" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.sysdiagrams" Width="1.5" PointX="18.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.TEMP_ADVANCE_QUERY" Width="1.5" PointX="18.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.TEMP_ADVANCE_QUERY_STORE" Width="1.5" PointX="18.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.TEMP_SELECT_EMAIL" Width="1.5" PointX="19.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.TRADE_STATISTICAL" Width="1.5" PointX="8" PointY="54.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.正式商店設定資料" Width="1.5" PointX="5.25" PointY="26.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.合約資料" Width="1.5" PointX="8" PointY="22" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.客戶技術窗口資料" Width="1.5" PointX="8" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.客戶客服窗口資料" Width="1.5" PointX="8" PointY="60.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.客戶基本資料" Width="1.5" PointX="5.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.客戶帳務窗口資料" Width="1.5" PointX="8" PointY="63.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.客戶報表窗口資料" Width="1.5" PointX="8" PointY="66.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.客戶業務窗口資料" Width="1.5" PointX="8" PointY="69.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.停用連線服務原因" Width="1.5" PointX="20.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.國內發卡銀行" Width="1.5" PointX="20.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.測式商店設定資料" Width="1.5" PointX="8.25" PointY="34.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.測試商店備註欄" Width="1.5" PointX="10.5" PointY="37.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.測試商店備註欄暫存" Width="1.5" PointX="0.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.測試商店進階查詢暫存" Width="1.5" PointX="20.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C_CASHSYS" Width="1.5" PointX="2.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.ezPay代收代付" Width="1.5" PointX="15.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo__AUTO_SETTLE_TIME" Width="1.5" PointX="20.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo__MER_TYPE" Width="1.5" PointX="17.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo__合約狀態" Width="1.5" PointX="19.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo__合約資料" Width="1.5" PointX="21.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo__服務型態" Width="1.5" PointX="22.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_ACQUIRE_BANK" Width="1.5" PointX="22.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_ACQUIRE_MODE" Width="1.5" PointX="22.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_ADV_FUNC" Width="1.5" PointX="22.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_AUTHORITY_FUNCTION" Width="1.5" PointX="23.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_AUTHORITY_SETTLEMENT" Width="1.5" PointX="17.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_AUTO_SERIAL_NUM" Width="1.5" PointX="23.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_AUTO_SETTLE_TIME" Width="1.5" PointX="19.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_BANK_BRANCH_CODE" Width="1.5" PointX="23.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_BANK_HQ" Width="1.5" PointX="24.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_BANK_MODE" Width="1.5" PointX="24.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_BATCH_TYPE" Width="1.5" PointX="24.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_CONT_ENAB_FUNC" Width="1.5" PointX="21.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_CONT_ENAB_FUNC_TEMP" Width="1.5" PointX="23.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_CONTRA_CAUSE" Width="1.5" PointX="24.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_CONTRA_KIND" Width="1.5" PointX="25.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_CONTRA_RENEW" Width="1.5" PointX="25.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_CONTRA_STATE" Width="1.5" PointX="25.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_CONTRA_UPDATE" Width="1.5" PointX="25.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_COOP_MODE" Width="1.5" PointX="25.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_COOP_UNIT" Width="1.5" PointX="26.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_COOP_UNIT_CONNECT" Width="1.5" PointX="26.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_DISTRIBUTOR_LIST" Width="1.5" PointX="26.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_EMAIL_AUTH" Width="1.5" PointX="17.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_EMPLOYEE" Width="1.5" PointX="27.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_ezPay代收代付" Width="1.5" PointX="27.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_FAQ_CLASS_CS" Width="1.5" PointX="27.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_FAQ_CS" Width="1.5" PointX="27.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_FAQ_QUE_RECORD" Width="1.5" PointX="28.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_FAQ_RELATIVE_LINK" Width="1.5" PointX="28.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_FAQ_UPDATE_COUNT" Width="1.5" PointX="28.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_HOSTS" Width="1.5" PointX="19.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_MALL_TYPE" Width="1.5" PointX="21.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_MER_STATE" Width="1.5" PointX="23.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_MER_TX_BATCH" Width="1.5" PointX="25.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_MER_TX_BATCH_TEMP" Width="1.5" PointX="27.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_MER_TX_BATCH_TEMP_BLOCK" Width="1.5" PointX="29.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_MER_TYPE" Width="1.5" PointX="12.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_OBJ_VER" Width="1.5" PointX="29.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_RM_LOGIN_QUESTION_TRADE" Width="1.5" PointX="14.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_RM_NOTICE_UNIT" Width="1.5" PointX="29.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_RM_REGISTER_QUERY_TEMP" Width="1.5" PointX="16.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_RM_REGISTER_REASON" Width="1.5" PointX="29.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_RM_REGISTER_REASON_CODE" Width="1.5" PointX="29.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_RM_REGISTER_REASON_TEMP" Width="1.5" PointX="29.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_SERVER_NAME" Width="1.5" PointX="29.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_SERVICE_TYPE" Width="1.5" PointX="30.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_SETTLE_CYCLE" Width="1.5" PointX="30.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_SETTLE_IP" Width="1.5" PointX="29.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_TEMP_ADVANCE_QUERY" Width="1.5" PointX="31.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_TEMP_ADVANCE_QUERY_STORE" Width="1.5" PointX="31.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_TEMP_SELECT_EMAIL" Width="1.5" PointX="18.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_TRADE_STATISTICAL" Width="1.5" PointX="31.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_正式商店設定資料" Width="1.5" PointX="20.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_正式商店標籤視圖" Width="1.5" PointX="22.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_合約資料" Width="1.5" PointX="31.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_合約資料標籤視圖" Width="1.5" PointX="32.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_客戶技術窗口資料" Width="1.5" PointX="32.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_客戶客服窗口資料" Width="1.5" PointX="24.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_客戶基本資料" Width="1.5" PointX="33.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_客戶帳務窗口資料" Width="1.5" PointX="33.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_客戶報表窗口資料" Width="1.5" PointX="33.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_客戶業務窗口資料" Width="1.5" PointX="33.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_停用連線服務原因" Width="1.5" PointX="33.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_國內發卡銀行" Width="1.5" PointX="26.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_測式商店設定資料" Width="1.5" PointX="33.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_測試商店備註欄" Width="1.5" PointX="28.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_測試商店備註欄暫存" Width="1.5" PointX="33.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_測試商店視圖" Width="1.5" PointX="34.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_測試商店進階查詢暫存" Width="1.5" PointX="12.75" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_登錄問題交易主選單視圖" Width="1.5" PointX="35.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_登錄問題交易視圖" Width="1.5" PointX="35.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_登錄問題交易匯出視圖" Width="1.5" PointX="14.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_登錄問題原因視圖" Width="1.5" PointX="16.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.EMAIL_AUTH" Width="1.5" PointX="35.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.MPOS視圖" Width="1.5" PointX="35.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.正式商店標籤視圖" Width="1.5" PointX="36.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.合約資料標籤視圖" Width="1.5" PointX="36.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.測試商店視圖" Width="1.5" PointX="22.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.登錄問題交易主選單視圖" Width="1.5" PointX="24.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.登錄問題交易視圖" Width="1.5" PointX="26.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.登錄問題交易匯出視圖" Width="1.5" PointX="28.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDB2Model.登錄問題原因視圖" Width="1.5" PointX="30.75" PointY="36.75" IsExpanded="true" />
+        <AssociationConnector Association="TestDB2Model.FK_合約資料_CONTRA_STATE" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDB2Model.FK_合約資料_EMPLOYEE" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDB2Model.FK_合約資料_SERVICE_TYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDB2Model.FK_正式商店設定資料_ACQUIRE_BANK" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDB2Model.FK_正式商店設定資料_ACQUIRE_MODE" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDB2Model.FK_CONT_ENAB_FUNC_ADV_FUNC" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDB2Model.FK_正式商店設定資料_Alipay_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDB2Model.FK_正式商店設定資料_AUTO_SETTLE_TIME1" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDB2Model.FK_CONT_ENAB_FUNC_合約資料" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDB2Model.FK_CONTRA_UPDATE_CONTRA_CAUSE" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDB2Model.FK_合約資料_CONTRA_KIND" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDB2Model.FK_CONTRA_RENEW_合約資料" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDB2Model.FK_合約資料_CONTRA_STATE1" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDB2Model.FK_CONTRA_UPDATE_合約資料" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDB2Model.FK_COOP_UNIT_CONNECT_COOP_UNIT" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDB2Model.FK_客戶基本資料_EMPLOYEE" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDB2Model.FK_正式商店設定資料_HOSTS" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDB2Model.FK_正式商店設定資料_HOSTS1" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDB2Model.FK_測式商店設定資料_HOSTS" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDB2Model.FK_正式商店設定資料_MALL_TYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDB2Model.FK_合約資料_MALL_TYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDB2Model.FK_正式商店設定資料_MER_STATE" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDB2Model.FK_測式商店設定資料_MER_STATE" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDB2Model.FK_MER_TYPE_SERVICE_TYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDB2Model.FK_正式商店設定資料_MER_TYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDB2Model.FK_測式商店設定資料_MER_TYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDB2Model.FK_MPOS_TID_正式商店設定資料" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDB2Model.FK_正式商店設定資料_OBJ_VER" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDB2Model.FK_OnCmpData_正式商店設定資料" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDB2Model.FK_RM_LOGIN_QUESTION_TRADE_RM_NOTICE_UNIT" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDB2Model.FK_RM_REGISTER_REASON_RM_LOGIN_QUESTION_TRADE" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDB2Model.FK_RM_REGISTER_REASON_RM_REGISTER_REASON_CODE" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDB2Model.FK_合約資料_SERVICE_TYPE1" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDB2Model.FK_正式商店設定資料_SETTLE_CYCLE" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDB2Model.FK_SETTLE_IP_客戶基本資料" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDB2Model.FK_TRADE_STATISTICAL_客戶基本資料" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDB2Model.FK_正式商店設定資料_客戶基本資料1" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDB2Model.FK_合約資料_客戶基本資料" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDB2Model.FK_客戶技術窗口資料_客戶基本資料" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDB2Model.FK_客戶客服窗口資料_客戶基本資料" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDB2Model.FK_客戶帳務窗口資料_客戶基本資料" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDB2Model.FK_客戶報表窗口資料_客戶基本資料" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDB2Model.FK_客戶業務窗口資料_客戶基本資料" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDB2Model.FK_測式商店設定資料_客戶基本資料" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDB2Model.FK_測試商店備註欄_測式商店設定資料" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,415 @@
+﻿@model MerchantDB.Models.客戶基本資料
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h1>客戶基本資料</h1>
+<hr />
+
+<style>
+    fieldset {
+        border: 0;
+        padding: 10px;
+        margin-bottom: 10px;
+        background: #EEE;
+    }
+
+    legend {
+        padding: 5px 10px;
+        background-color: #4F709F;
+        color: #FFF;
+    }
+
+    body {
+        font-family: Arial;
+    }
+
+    /* Style the tab */
+    .tab {
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+    }
+
+        /* Style the buttons inside the tab */
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+        }
+
+            /* Change background color of buttons on hover */
+            .tab button:hover {
+                background-color: #ddd;
+            }
+
+            /* Create an active/current tablink class */
+            .tab button.active {
+                background-color: #ccc;
+            }
+
+    /* Style the tab content */
+    .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        border-top: none;
+        animation: fadeEffect 1s; /* Fading effect takes 1 second */
+    }
+</style>
+
+
+
+
+
+
+
+<fieldset>
+    <legend>公司基本資料</legend>
+    <p style="float:right">
+        @Html.ActionLink("Edit", "Edit", new { id = Model.CustName }) |
+        @Html.ActionLink("回到上一頁", "Index")
+    </p>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName("客戶名稱")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustName)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("統一編號")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BusinessNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("資本額")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Capital)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("英文名稱")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustName_En)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("核准設立日期")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CompanySetupDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("負責人")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Director)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("電話代表號")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustTel)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("傳真代表號")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustFax)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("最後核准變更日期")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ChangeApprovalDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("負責人ID")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DirectorID)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("郵遞區號")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustZipcode)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("營業登記地址")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustAdrs)
+        </dd>
+    </dl>
+</fieldset>
+
+
+<div class="tab">
+    <button class="tablinks" onclick="openCity(event, 'about')">相關資料</button>
+    <button class="tablinks" onclick="openCity(event, 'account')">撥款資料</button>
+    <button class="tablinks" onclick="openCity(event, 'sales_and_tech')">業務及技術窗口</button>
+    <button class="tablinks" onclick="openCity(event, 'cs_and_rept')">客服及報表窗口</button>
+    <button class="tablinks" onclick="openCity(event, 'contra')">合約資料</button>
+    <button class="tablinks" onclick="openCity(event, 'merchant')">正式商家資料</button>
+    <button class="tablinks" onclick="openCity(event, 'projectrec')">專案連絡紀錄</button>
+    <button class="tablinks" onclick="openCity(event, 'invoice')">客戶發票資訊</button>
+
+</div>
+
+<div id="about" class="tabcontent">
+    <dl>
+        <dt>
+            @Html.DisplayNameFor(model => model.CustName_EnCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustName_EnCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustURL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustURL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MerURL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MerURL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NewebSales)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NewebSales)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Remarks)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Remarks)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IS_Distributor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IS_Distributor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InspectStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InspectStatus)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FileNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FileNo)
+        </dd>
+
+    </dl>
+</div>
+
+<div id="account" class="tabcontent">
+    <dl>
+        <dt>
+            @Html.DisplayNameFor(model => model.AcctTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AcctTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AcctNum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AcctNum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AcctBank)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AcctBank)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BankBranch)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BankBranch)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InvZipcode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InvZipcode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InvAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InvAddress)
+        </dd>
+    </dl>
+</div>
+
+<div id="sales_and_tech" class="tabcontent">
+    <dl>
+        <dt>
+            @Html.DisplayNameFor(model => model.AuthPerson)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AuthPerson)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AuthTel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AuthTel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AuthMail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AuthMail)
+        </dd>
+    </dl>
+
+</div>
+
+<div id="projectrec" class="tabcontent">
+    <dl>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProjectRecord)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProjectRecord)
+        </dd>
+
+
+    </dl>
+</div>
+
+<div id="merchant" class="tabcontent">
+    @foreach (var item in Model.正式商店設定資料)
+    {
+        @*<dl>
+                <dd>
+
+                        @Html.ActionLink(item.CustName + " || " + item.MerNo_F + " || " + item.MER_STATE.Description, "Details", "merchant", new { id = item.No }, null)
+
+                </dd>
+            </dl>*@
+        <table>
+            <tr>
+                <th>
+                     
+                </th>
+                <th></th>
+            </tr>
+
+            <tr style="border-style:double">
+                <td style="border-style:solid">
+                    @Html.ActionLink(item.CustName, "Details", "merchant", new { id = item.No }, null)
+                </td>
+                <td style="border-style:solid">
+                    @item.MerNo_F
+                </td>
+                <td style="border-style:solid">
+                    @item.MER_TYPE.Description
+                </td>
+                <td style="border-style:dotted">
+                    @item.MER_STATE.Description
+                </td>
+
+            </tr>
+        </table>
+
+    }
+</div>
+
+
+
+<script>
+    function openCity(evt, cityName) {
+
+        var i, tabcontent, tablinks;
+
+        tabcontent = document.getElementsByClassName("tabcontent");
+
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+
+        tablinks = document.getElementsByClassName("tablinks");
+
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+</script>

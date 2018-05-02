@@ -1,0 +1,2164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="新商家資料庫代收Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="~AUTO_SETTLE_TIME">
+    <Key>
+      <PropertyRef Name="AutoSettleTime" />
+    </Key>
+    <Property Name="AutoSettleTime" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'TestDB2.dbo.~CASHSYS' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+  <EntityType Name="~CASHSYS">
+    <Key>
+      <PropertyRef Name="No" />
+      <PropertyRef Name="PaymentFun" />
+      <PropertyRef Name="PaymentCode" />
+    </Key>
+    <Property Name="No" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PaymentFun" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PaymentCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="~MER_TYPE">
+    <Key>
+      <PropertyRef Name="MerType" />
+    </Key>
+    <Property Name="MerType" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="~合約狀態">
+    <Key>
+      <PropertyRef Name="No" />
+    </Key>
+    <Property Name="No" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="~合約資料">
+    <Key>
+      <PropertyRef Name="No" />
+    </Key>
+    <Property Name="No" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustName" Type="nvarchar" MaxLength="100" />
+    <Property Name="ContraNo" Type="nvarchar" MaxLength="20" />
+    <Property Name="ContraYear" Type="nvarchar" MaxLength="10" />
+    <Property Name="MallType" Type="nvarchar" MaxLength="30" />
+    <Property Name="ContraState" Type="nvarchar" MaxLength="20" />
+    <Property Name="ServiceType" Type="nvarchar" MaxLength="20" />
+    <Property Name="ContraEntDate" Type="datetime" />
+    <Property Name="ContraSendDate" Type="datetime" />
+    <Property Name="InvDate" Type="datetime" />
+    <Property Name="Rent" Type="int" />
+    <Property Name="EarMoney" Type="int" />
+    <Property Name="ContraSignDate" Type="datetime" />
+    <Property Name="Contra_IniDate" Type="datetime" />
+    <Property Name="Contra_ValDate" Type="smallint" />
+    <Property Name="Contra_ExpDate" Type="datetime" />
+    <Property Name="ContraStopDate" Type="datetime" />
+    <Property Name="Total_Rate" Type="float" />
+    <Property Name="Bank_Rate" Type="float" />
+    <Property Name="Neweb_Rate" Type="float" />
+    <Property Name="Mall_Rate" Type="float" />
+    <Property Name="RentExp" Type="nvarchar" MaxLength="200" />
+    <Property Name="RateExp" Type="nvarchar" MaxLength="200" />
+    <Property Name="NewebSales" Type="nvarchar" MaxLength="30" />
+    <Property Name="Distributor" Type="nvarchar" MaxLength="50" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="255" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="SinSerChar" Type="nvarchar" MaxLength="30" />
+    <Property Name="IM" Type="bit" />
+    <Property Name="RP" Type="bit" />
+    <Property Name="FAX" Type="bit" />
+  </EntityType>
+  <EntityType Name="~服務型態">
+    <Key>
+      <PropertyRef Name="No" />
+    </Key>
+    <Property Name="No" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ServiceType" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="ACQUIRE_BANK">
+    <Key>
+      <PropertyRef Name="AcquireBank" />
+    </Key>
+    <Property Name="AcquireBank" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="20" />
+    <Property Name="ENV" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="ACQUIRE_MODE">
+    <Key>
+      <PropertyRef Name="AcquireMode" />
+    </Key>
+    <Property Name="AcquireMode" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="ADV_FUNC">
+    <Key>
+      <PropertyRef Name="FuncCode" />
+    </Key>
+    <Property Name="No" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FuncCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Type" Type="nvarchar" MaxLength="255" />
+    <Property Name="Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="UID" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Alipay_Product">
+    <Key>
+      <PropertyRef Name="Product" />
+    </Key>
+    <Property Name="Product" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AUTHORITY_FUNCTION">
+    <Key>
+      <PropertyRef Name="Num" />
+    </Key>
+    <Property Name="Num" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="業務部門系統主表單" Type="nvarchar" MaxLength="50" />
+    <Property Name="篩選客戶資料" Type="nvarchar" MaxLength="50" />
+    <Property Name="篩選合約資料" Type="nvarchar" MaxLength="50" />
+    <Property Name="篩選正式商店資料" Type="nvarchar" MaxLength="50" />
+    <Property Name="維護客戶資料" Type="nvarchar" MaxLength="50" />
+    <Property Name="維護合約資料" Type="nvarchar" MaxLength="50" />
+    <Property Name="維護正式商店資料" Type="nvarchar" MaxLength="50" />
+    <Property Name="測試商店資料維護" Type="nvarchar" MaxLength="50" />
+    <Property Name="帳務發票寄送標籤選項" Type="nvarchar" MaxLength="50" />
+    <Property Name="風管登錄問題交易維護" Type="nvarchar" MaxLength="50" />
+    <Property Name="風管詳細登錄問題交易" Type="nvarchar" MaxLength="50" />
+    <Property Name="客服FAQ" Type="nvarchar" MaxLength="50" />
+    <Property Name="業務進階查詢_正式商店" Type="nvarchar" MaxLength="50" />
+    <Property Name="業務進階查詢_合約資料" Type="nvarchar" MaxLength="50" />
+    <Property Name="測試商店進階查詢" Type="nvarchar" MaxLength="50" />
+    <Property Name="合作單位資料篩選" Type="nvarchar" MaxLength="50" />
+    <Property Name="維護合約詳細資料New" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="AUTHORITY_SETTLEMENT">
+    <Key>
+      <PropertyRef Name="Num" />
+    </Key>
+    <Property Name="Num" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserRole" Type="nvarchar" MaxLength="30" />
+    <Property Name="FormName" Type="nvarchar" MaxLength="50" />
+    <Property Name="FunctionName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="AUTO_SERIAL_NUM">
+    <Key>
+      <PropertyRef Name="No" />
+    </Key>
+    <Property Name="No" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ContraKind" Type="nvarchar" MaxLength="10" />
+    <Property Name="DateT" Type="nvarchar" MaxLength="10" />
+    <Property Name="SerialNumber" Type="int" />
+  </EntityType>
+  <EntityType Name="AUTO_SETTLE_TIME">
+    <Key>
+      <PropertyRef Name="AutoSettleTime" />
+    </Key>
+    <Property Name="AutoSettleTime" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="BANK_BRANCH_CODE">
+    <Key>
+      <PropertyRef Name="BranchCode" />
+    </Key>
+    <Property Name="BranchCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="BranchName" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="BANK_HQ">
+    <Key>
+      <PropertyRef Name="BankCode_HQ" />
+    </Key>
+    <Property Name="BankCode_HQ" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="BankName_HQ" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="BANK_MODE">
+    <Key>
+      <PropertyRef Name="BankMode" />
+    </Key>
+    <Property Name="BankMode" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="BATCH_TYPE">
+    <Key>
+      <PropertyRef Name="BatchType" />
+    </Key>
+    <Property Name="BatchType" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CONT_ENAB_FUNC">
+    <Key>
+      <PropertyRef Name="No" />
+    </Key>
+    <Property Name="No" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ContraCorreCode" Type="int" />
+    <Property Name="FuncCode" Type="nvarchar" MaxLength="10" />
+    <Property Name="BR_Var" Type="float" />
+    <Property Name="BR_Fix" Type="float" />
+    <Property Name="NR_Var" Type="float" />
+    <Property Name="NR_Fix" Type="float" />
+    <Property Name="Excharge" Type="int" />
+    <Property Name="AddDate" Type="datetime" />
+    <Property Name="SettleCycle" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="CONT_ENAB_FUNC_TEMP">
+    <Key>
+      <PropertyRef Name="No" />
+    </Key>
+    <Property Name="No" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ContraCorreCode" Type="int" />
+    <Property Name="FuncCode" Type="nvarchar" MaxLength="10" />
+    <Property Name="BR_Var" Type="float" />
+    <Property Name="BR_Fix" Type="float" />
+    <Property Name="NR_Var" Type="float" />
+    <Property Name="NR_Fix" Type="float" />
+    <Property Name="Excharge" Type="int" />
+    <Property Name="AddDate" Type="datetime" />
+    <Property Name="SettleCycle" Type="nvarchar" MaxLength="20" />
+    <Property Name="RegisterPerson" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="CONTRA_CAUSE">
+    <Key>
+      <PropertyRef Name="Cause" />
+    </Key>
+    <Property Name="No" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Cause" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CONTRA_KIND">
+    <Key>
+      <PropertyRef Name="ContraKind" />
+    </Key>
+    <Property Name="No" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ContraKind" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="CONTRA_RENEW">
+    <Key>
+      <PropertyRef Name="No" />
+    </Key>
+    <Property Name="No" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ContraCorreCode" Type="int" />
+    <Property Name="Contra_IniDate" Type="datetime" />
+    <Property Name="Contra_ValDate" Type="smallint" />
+    <Property Name="Contra_ExpDate" Type="datetime" />
+    <Property Name="SignSales" Type="nvarchar" MaxLength="30" />
+    <Property Name="Rent" Type="nvarchar" MaxLength="20" />
+    <Property Name="InvoiceNo" Type="nvarchar" MaxLength="15" />
+    <Property Name="InvDate" Type="datetime" />
+    <Property Name="DepositDate" Type="datetime" />
+    <Property Name="RentExp" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="CONTRA_STATE">
+    <Key>
+      <PropertyRef Name="ContraStates" />
+    </Key>
+    <Property Name="ContraStates" Type="nvarchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CONTRA_UPDATE">
+    <Key>
+      <PropertyRef Name="No" />
+    </Key>
+    <Property Name="No" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ContraCorreCode" Type="int" />
+    <Property Name="Updated" Type="datetime" />
+    <Property Name="Cause" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="ntext" />
+  </EntityType>
+  <EntityType Name="COOP_MODE">
+    <Key>
+      <PropertyRef Name="CooperMode" />
+    </Key>
+    <Property Name="CooperMode" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="COOP_UNIT">
+    <Key>
+      <PropertyRef Name="PartnerName" />
+    </Key>
+    <Property Name="No" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PartnerName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="PartnerType" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="COOP_UNIT_CONNECT">
+    <Key>
+      <PropertyRef Name="No" />
+    </Key>
+    <Property Name="No" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PartnerName" Type="nvarchar" MaxLength="100" />
+    <Property Name="ContactName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ContactTel" Type="nvarchar" MaxLength="50" />
+    <Property Name="ContactMobile" Type="nvarchar" MaxLength="50" />
+    <Property Name="ContactEmail" Type="nvarchar" MaxLength="50" />
+    <Property Name="ContactType" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="DISTRIBUTOR_LIST">
+    <Key>
+      <PropertyRef Name="No" />
+    </Key>
+    <Property Name="No" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ContraYear" Type="nvarchar" MaxLength="10" />
+    <Property Name="Customer" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="dtproperties">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="property" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="objectid" Type="int" />
+    <Property Name="property" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="value" Type="varchar" MaxLength="255" />
+    <Property Name="uvalue" Type="nvarchar" MaxLength="255" />
+    <Property Name="lvalue" Type="image" />
+    <Property Name="version" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EMPLOYEE">
+    <Key>
+      <PropertyRef Name="Em_Name" />
+    </Key>
+    <Property Name="No" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Em_Name" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Department" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'TestDB2.dbo.ezPay代收代付' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+  <EntityType Name="ezPay代收代付">
+    <Key>
+      <PropertyRef Name="通知否" />
+    </Key>
+    <Property Name="商家編號" Type="nvarchar" MaxLength="10" />
+    <Property Name="商家名稱" Type="nvarchar" MaxLength="40" />
+    <Property Name="英文名稱" Type="nvarchar" MaxLength="30" />
+    <Property Name="帳號" Type="nvarchar" MaxLength="50" />
+    <Property Name="密碼" Type="nvarchar" MaxLength="50" />
+    <Property Name="商家型態" Type="nvarchar" MaxLength="20" />
+    <Property Name="通知否" Type="bit" Nullable="false" />
+    <Property Name="上線日期" Type="datetime" />
+    <Property Name="傳真號碼" Type="nvarchar" MaxLength="50" />
+    <Property Name="客服聯絡人1" Type="nvarchar" MaxLength="20" />
+    <Property Name="客服電話1" Type="nvarchar" MaxLength="50" />
+    <Property Name="客服依媚兒1" Type="nvarchar" MaxLength="50" />
+    <Property Name="客服聯絡人2" Type="nvarchar" MaxLength="20" />
+    <Property Name="客服電話2" Type="nvarchar" MaxLength="50" />
+    <Property Name="客服依媚兒2" Type="nvarchar" MaxLength="50" />
+    <Property Name="客服聯絡人3" Type="nvarchar" MaxLength="20" />
+    <Property Name="客服電話3" Type="nvarchar" MaxLength="50" />
+    <Property Name="客服依媚兒3" Type="nvarchar" MaxLength="50" />
+    <Property Name="會計聯絡人" Type="nvarchar" MaxLength="20" />
+    <Property Name="會計電話" Type="nvarchar" MaxLength="50" />
+    <Property Name="會計依媚兒" Type="nvarchar" MaxLength="50" />
+    <Property Name="撥款週期" Type="nvarchar" MaxLength="5" />
+    <Property Name="商家區隔" Type="nvarchar" MaxLength="10" />
+    <Property Name="代收費率" Type="nvarchar" MaxLength="50" />
+    <Property Name="業務" Type="nvarchar" MaxLength="50" />
+    <Property Name="下線日期" Type="datetime" />
+    <Property Name="商品" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="FAQ_CLASS_CS">
+    <Key>
+      <PropertyRef Name="FaqGroupCode" />
+    </Key>
+    <Property Name="FaqGroupCode" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FaqGroupName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="FAQ_CS">
+    <Key>
+      <PropertyRef Name="FAQ_No" />
+    </Key>
+    <Property Name="FAQ_No" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="QueType" Type="nvarchar" MaxLength="50" />
+    <Property Name="QueSubject" Type="nvarchar" MaxLength="100" />
+    <Property Name="Phenomenon" Type="text" />
+    <Property Name="Confirmation" Type="text" />
+    <Property Name="Suggestion" Type="text" />
+    <Property Name="Cause" Type="text" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Udated" Type="datetime" />
+    <Property Name="Creator" Type="nvarchar" MaxLength="20" />
+    <Property Name="Reviser" Type="nvarchar" MaxLength="20" />
+    <Property Name="QueCount" Type="int" />
+    <Property Name="UpdateCount" Type="int" />
+  </EntityType>
+  <EntityType Name="FAQ_QUE_RECORD">
+    <Key>
+      <PropertyRef Name="No" />
+    </Key>
+    <Property Name="No" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="QueRecord" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="FAQ_RELATIVE_LINK">
+    <Key>
+      <PropertyRef Name="FAQ_No" />
+    </Key>
+    <Property Name="FAQ_No" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FAQ_UPDATE_COUNT">
+    <Key>
+      <PropertyRef Name="Reviser" />
+    </Key>
+    <Property Name="Reviser" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="UpdateCount" Type="int" />
+    <Property Name="CreateCount" Type="int" />
+  </EntityType>
+  <EntityType Name="HOSTS">
+    <Key>
+      <PropertyRef Name="HostID" />
+    </Key>
+    <Property Name="HostID" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="ENV" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="MALL_TYPE">
+    <Key>
+      <PropertyRef Name="MallType" />
+    </Key>
+    <Property Name="MallType" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="20" />
+    <Property Name="ENV" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="MER_STATE">
+    <Key>
+      <PropertyRef Name="MerState" />
+    </Key>
+    <Property Name="MerState" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="ENV" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="MER_TX_BATCH">
+    <Key>
+      <PropertyRef Name="MERCHANTNUMBER" />
+      <PropertyRef Name="BATCHNUMBER" />
+      <PropertyRef Name="CAPTUREDATE" />
+    </Key>
+    <Property Name="NUM" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MERCHANTNUMBER" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="BATCHNUMBER" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="CAPTUREDATE" Type="datetime" Nullable="false" />
+    <Property Name="TOTALCOUNT" Type="int" />
+    <Property Name="TOTALAMOUNT" Type="int" />
+    <Property Name="TOTALCREDCOUNT" Type="int" />
+    <Property Name="TOTALCREDAMOUNT" Type="int" />
+    <Property Name="SERVICE_TYPE" Type="nvarchar" MaxLength="20" />
+    <Property Name="ACQUIRE_BANK" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="MER_TX_BATCH_TEMP">
+    <Key>
+      <PropertyRef Name="No" />
+    </Key>
+    <Property Name="No" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustName" Type="nvarchar" MaxLength="100" />
+    <Property Name="BusinessNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="AcctTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="AcctNum" Type="nvarchar" MaxLength="50" />
+    <Property Name="AcctBank" Type="nvarchar" MaxLength="50" />
+    <Property Name="BankBranch" Type="nvarchar" MaxLength="30" />
+    <Property Name="InvAddress" Type="nvarchar" MaxLength="100" />
+    <Property Name="AddresseeName" Type="nvarchar" MaxLength="100" />
+    <Property Name="InvZipcode" Type="nvarchar" MaxLength="10" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="100" />
+    <Property Name="MerchantNum" Type="nvarchar" MaxLength="10" />
+    <Property Name="SettleType" Type="nvarchar" MaxLength="20" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="30" />
+    <Property Name="Whether_Choose" Type="bit" />
+  </EntityType>
+  <EntityType Name="MER_TX_BATCH_TEMP_BLOCK">
+    <Key>
+      <PropertyRef Name="No" />
+    </Key>
+    <Property Name="No" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustName" Type="nvarchar" MaxLength="100" />
+    <Property Name="BusinessNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="AcctTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="AcctNum" Type="nvarchar" MaxLength="50" />
+    <Property Name="AcctBank" Type="nvarchar" MaxLength="50" />
+    <Property Name="BankBranch" Type="nvarchar" MaxLength="30" />
+    <Property Name="InvAddress" Type="nvarchar" MaxLength="100" />
+    <Property Name="AddresseeName" Type="nvarchar" MaxLength="100" />
+    <Property Name="InvZipcode" Type="nvarchar" MaxLength="10" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="100" />
+    <Property Name="MerchantNum" Type="nvarchar" MaxLength="10" />
+    <Property Name="SettleType" Type="nvarchar" MaxLength="20" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="30" />
+    <Property Name="Whether_Choose" Type="bit" />
+  </EntityType>
+  <EntityType Name="MER_TYPE">
+    <Key>
+      <PropertyRef Name="MerType" />
+    </Key>
+    <Property Name="MerType" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="20" />
+    <Property Name="ServiceType" Type="nvarchar" MaxLength="20" />
+    <Property Name="ENV" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="MPOS_TID">
+    <Key>
+      <PropertyRef Name="No" />
+    </Key>
+    <Property Name="CustName" Type="nvarchar" MaxLength="100" />
+    <Property Name="MerNo_F" Type="nvarchar" MaxLength="10" />
+    <Property Name="Machine_No" Type="nvarchar" MaxLength="50" />
+    <Property Name="MID" Type="nvarchar" MaxLength="50" />
+    <Property Name="TID" Type="nvarchar" MaxLength="50" />
+    <Property Name="OnCmpTime" Type="datetime" />
+    <Property Name="Description" Type="nvarchar" MaxLength="128" />
+    <Property Name="MPOSCorreCode" Type="int" />
+    <Property Name="No" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OBJ_VER">
+    <Key>
+      <PropertyRef Name="ObjVer" />
+    </Key>
+    <Property Name="ObjVer" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="OnCmpData">
+    <Key>
+      <PropertyRef Name="OnCmpCorreCode" />
+    </Key>
+    <Property Name="No" Type="int" />
+    <Property Name="OnCmpCorreCode" Type="int" Nullable="false" />
+    <Property Name="Merno_F" Type="nvarchar" MaxLength="20" />
+    <Property Name="Custname" Type="nvarchar" MaxLength="256" />
+    <Property Name="Mertype" Type="nvarchar" MaxLength="20" />
+    <Property Name="SystemAccount" Type="nvarchar" MaxLength="25" />
+    <Property Name="SystemPassword" Type="nvarchar" MaxLength="25" />
+    <Property Name="TransAccount" Type="nvarchar" MaxLength="25" />
+    <Property Name="TransPassword" Type="nvarchar" MaxLength="25" />
+    <Property Name="ReportAccount" Type="nvarchar" MaxLength="25" />
+    <Property Name="ReportPassword" Type="nvarchar" MaxLength="25" />
+    <Property Name="R_code" Type="nvarchar" MaxLength="20" />
+    <Property Name="Code" Type="nvarchar" MaxLength="20" />
+    <Property Name="MappingCode" Type="nvarchar" MaxLength="20" />
+    <Property Name="SFTPAccount" Type="nvarchar" MaxLength="25" />
+    <Property Name="SFTPPassword" Type="nvarchar" MaxLength="25" />
+    <Property Name="VPOS_Account" Type="nvarchar" MaxLength="25" />
+    <Property Name="VPOS_Password" Type="nvarchar" MaxLength="25" />
+    <Property Name="quick_Ticket" Type="bit" />
+    <Property Name="Trans_Code" Type="nvarchar" MaxLength="20" />
+    <Property Name="sendMail_Time" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RM_LOGIN_QUESTION_TRADE">
+    <Key>
+      <PropertyRef Name="NumCorrespondingly" />
+    </Key>
+    <Property Name="NumCorrespondingly" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MerNo" Type="nvarchar" MaxLength="20" />
+    <Property Name="OrderNum" Type="nvarchar" MaxLength="20" />
+    <Property Name="Amount" Type="int" />
+    <Property Name="AuthCode" Type="nvarchar" MaxLength="20" />
+    <Property Name="CreditCard" Type="nvarchar" MaxLength="30" />
+    <Property Name="NoticeDate" Type="datetime" />
+    <Property Name="AuthDate" Type="datetime" />
+    <Property Name="IS_Receipt" Type="bit" />
+    <Property Name="RefundDate" Type="datetime" />
+    <Property Name="DisputeCollectDate" Type="datetime" />
+    <Property Name="DeFundDate" Type="datetime" />
+    <Property Name="ReasonRemarks" Type="nvarchar" MaxLength="300" />
+    <Property Name="NoticeUnit" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="RM_NOTICE_UNIT">
+    <Key>
+      <PropertyRef Name="NoticeUnit" />
+    </Key>
+    <Property Name="No" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NoticeUnit" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RM_REGISTER_QUERY_TEMP">
+    <Key>
+      <PropertyRef Name="Num" />
+    </Key>
+    <Property Name="Num" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="QueryPerson" Type="nvarchar" MaxLength="30" />
+    <Property Name="CustName" Type="nvarchar" MaxLength="100" />
+    <Property Name="MerNo" Type="nvarchar" MaxLength="100" />
+    <Property Name="OrderNum" Type="nvarchar" MaxLength="100" />
+    <Property Name="Amount" Type="nvarchar" MaxLength="100" />
+    <Property Name="AuthCode" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreditCard" Type="nvarchar" MaxLength="100" />
+    <Property Name="NoticeDate" Type="nvarchar" MaxLength="100" />
+    <Property Name="AuthDate" Type="nvarchar" MaxLength="100" />
+    <Property Name="IS_Receipt" Type="bit" />
+    <Property Name="RefundDate" Type="nvarchar" MaxLength="100" />
+    <Property Name="DisputeCollectDate" Type="nvarchar" MaxLength="100" />
+    <Property Name="DeFundDate" Type="nvarchar" MaxLength="100" />
+    <Property Name="BankName" Type="nvarchar" MaxLength="100" />
+    <Property Name="RegReasonCode" Type="nvarchar" MaxLength="100" />
+    <Property Name="RegisterDate" Type="nvarchar" MaxLength="100" />
+    <Property Name="NoticeUnit" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="RM_REGISTER_REASON">
+    <Key>
+      <PropertyRef Name="Num" />
+    </Key>
+    <Property Name="Num" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NumCorrespondingly" Type="int" />
+    <Property Name="RegReasonCode" Type="nvarchar" MaxLength="10" />
+    <Property Name="RegisterDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RM_REGISTER_REASON_CODE">
+    <Key>
+      <PropertyRef Name="RegReasonCode" />
+    </Key>
+    <Property Name="RegReasonCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterReason" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="RM_REGISTER_REASON_TEMP">
+    <Key>
+      <PropertyRef Name="Num" />
+    </Key>
+    <Property Name="Num" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NumCorrespondingly" Type="int" />
+    <Property Name="RegReasonCode" Type="nvarchar" MaxLength="10" />
+    <Property Name="RegisterDate" Type="datetime" />
+    <Property Name="RegisterPerson" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="SERVER_NAME">
+    <Key>
+      <PropertyRef Name="ServerName" />
+    </Key>
+    <Property Name="ServerName" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SERVICE_TYPE">
+    <Key>
+      <PropertyRef Name="ServiceType" />
+    </Key>
+    <Property Name="ServiceType" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="SETTLE_CYCLE">
+    <Key>
+      <PropertyRef Name="SettleCycle" />
+    </Key>
+    <Property Name="SettleCycle" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="SETTLE_IP">
+    <Key>
+      <PropertyRef Name="No" />
+    </Key>
+    <Property Name="No" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustName" Type="nvarchar" MaxLength="100" />
+    <Property Name="HostIPs" Type="text" />
+    <Property Name="AdminIPs" Type="text" />
+    <Property Name="RPUploadIPs" Type="text" />
+    <Property Name="MerNo" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TEMP_ADVANCE_QUERY">
+    <Key>
+      <PropertyRef Name="No" />
+    </Key>
+    <Property Name="No" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="QueryPerson" Type="nvarchar" MaxLength="30" />
+    <Property Name="ContraKind" Type="nvarchar" MaxLength="100" />
+    <Property Name="ContraNo" Type="nvarchar" MaxLength="100" />
+    <Property Name="ContraYear" Type="nvarchar" MaxLength="100" />
+    <Property Name="ContraMonth" Type="nvarchar" MaxLength="100" />
+    <Property Name="MallType" Type="nvarchar" MaxLength="100" />
+    <Property Name="ServiceType" Type="nvarchar" MaxLength="100" />
+    <Property Name="ContraState" Type="nvarchar" MaxLength="100" />
+    <Property Name="Distributor" Type="nvarchar" MaxLength="100" />
+    <Property Name="ContraEntDate" Type="nvarchar" MaxLength="100" />
+    <Property Name="ContraSendDate" Type="nvarchar" MaxLength="100" />
+    <Property Name="Contra_IniDate" Type="nvarchar" MaxLength="100" />
+    <Property Name="Contra_ExpDate" Type="nvarchar" MaxLength="100" />
+    <Property Name="ContraStopDate" Type="nvarchar" MaxLength="100" />
+    <Property Name="Capital" Type="nvarchar" MaxLength="100" />
+    <Property Name="BusinessNo" Type="nvarchar" MaxLength="100" />
+    <Property Name="NewebSales" Type="nvarchar" MaxLength="100" />
+    <Property Name="NewebSales_C" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TEMP_ADVANCE_QUERY_STORE">
+    <Key>
+      <PropertyRef Name="No" />
+    </Key>
+    <Property Name="No" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="QueryPerson" Type="nvarchar" MaxLength="30" />
+    <Property Name="MerNo_F" Type="nvarchar" MaxLength="100" />
+    <Property Name="AcquireMode" Type="nvarchar" MaxLength="100" />
+    <Property Name="AcquireBank" Type="nvarchar" MaxLength="100" />
+    <Property Name="MerType" Type="nvarchar" MaxLength="100" />
+    <Property Name="MallType" Type="nvarchar" MaxLength="100" />
+    <Property Name="SettleCycle" Type="nvarchar" MaxLength="100" />
+    <Property Name="MID" Type="nvarchar" MaxLength="100" />
+    <Property Name="TID" Type="nvarchar" MaxLength="100" />
+    <Property Name="CMID" Type="nvarchar" MaxLength="100" />
+    <Property Name="CTID" Type="nvarchar" MaxLength="100" />
+    <Property Name="BusinessItem" Type="nvarchar" MaxLength="100" />
+    <Property Name="VBV" Type="bit" />
+    <Property Name="Capital" Type="nvarchar" MaxLength="100" />
+    <Property Name="BusinessNo" Type="nvarchar" MaxLength="100" />
+    <Property Name="NewebSales" Type="nvarchar" MaxLength="100" />
+    <Property Name="MerState" Type="nvarchar" MaxLength="100" />
+    <Property Name="IS_CTID" Type="bit" />
+    <Property Name="IS_IM" Type="bit" />
+    <Property Name="OnNtcTime" Type="nvarchar" MaxLength="100" />
+    <Property Name="OffNtcTime" Type="nvarchar" MaxLength="100" />
+    <Property Name="OnLineCs" Type="nvarchar" MaxLength="100" />
+    <Property Name="OffLineCs" Type="nvarchar" MaxLength="100" />
+    <Property Name="HostID" Type="nvarchar" MaxLength="100" />
+    <Property Name="FrontHostID" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TEMP_SELECT_EMAIL">
+    <Key>
+      <PropertyRef Name="No" />
+    </Key>
+    <Property Name="No" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MerState" Type="nvarchar" MaxLength="100" />
+    <Property Name="HostID" Type="nvarchar" MaxLength="100" />
+    <Property Name="MerType" Type="nvarchar" MaxLength="100" />
+    <Property Name="MallType" Type="nvarchar" MaxLength="100" />
+    <Property Name="AcquireBank" Type="nvarchar" MaxLength="100" />
+    <Property Name="AcquireMode" Type="nvarchar" MaxLength="100" />
+    <Property Name="VBV" Type="bit" />
+    <Property Name="QueryPerson" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="TRADE_STATISTICAL">
+    <Key>
+      <PropertyRef Name="CustName" />
+      <PropertyRef Name="ServiceType" />
+    </Key>
+    <Property Name="CustName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="ServiceType" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="LastWeekAmount" Type="int" />
+    <Property Name="LastWeekCount" Type="int" />
+    <Property Name="LastWeekCredAmount" Type="int" />
+    <Property Name="LastWeekCredCount" Type="int" />
+    <Property Name="LastMonthAmount" Type="int" />
+    <Property Name="LastMonthCount" Type="int" />
+    <Property Name="LastMonthCredAmount" Type="int" />
+    <Property Name="LastMonthCredCount" Type="int" />
+    <Property Name="ThreeMonthsAmount" Type="int" />
+    <Property Name="ThreeMonthsCount" Type="int" />
+    <Property Name="ThreeMonthsCredAmount" Type="int" />
+    <Property Name="ThreeMonthsCredCount" Type="int" />
+    <Property Name="LastWeekUpdateDate" Type="datetime" />
+    <Property Name="LastMonthUpdateDate" Type="datetime" />
+    <Property Name="ThreeMonthsUpdateDate" Type="datetime" />
+    <Property Name="TradeDateFinally" Type="datetime" />
+  </EntityType>
+  <EntityType Name="正式商店設定資料">
+    <Key>
+      <PropertyRef Name="No" />
+    </Key>
+    <Property Name="No" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MerNo_F" Type="nvarchar" MaxLength="10" />
+    <Property Name="MerNo_T" Type="nvarchar" MaxLength="10" />
+    <Property Name="CustName" Type="nvarchar" MaxLength="100" />
+    <Property Name="MerName_En" Type="nvarchar" MaxLength="50" />
+    <Property Name="MerName_Ch" Type="nvarchar" MaxLength="100" />
+    <Property Name="Account" Type="nvarchar" MaxLength="40" />
+    <Property Name="PassWord" Type="nvarchar" MaxLength="20" />
+    <Property Name="New_PassWord" Type="nvarchar" MaxLength="20" />
+    <Property Name="CooperMode" Type="nvarchar" MaxLength="20" />
+    <Property Name="MID" Type="nvarchar" MaxLength="50" />
+    <Property Name="TID" Type="nvarchar" MaxLength="50" />
+    <Property Name="CMID" Type="nvarchar" MaxLength="50" />
+    <Property Name="CTID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Mall_ID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Org_ID" Type="nvarchar" MaxLength="50" />
+    <Property Name="HostID" Type="nvarchar" MaxLength="10" />
+    <Property Name="BankMode" Type="nvarchar" MaxLength="15" />
+    <Property Name="MerState" Type="nvarchar" MaxLength="10" />
+    <Property Name="MerType2" Type="nvarchar" MaxLength="15" />
+    <Property Name="OnRemarks" Type="nvarchar" MaxLength="150" />
+    <Property Name="BatchType_N" Type="nvarchar" MaxLength="20" />
+    <Property Name="OnNtcTime" Type="datetime" />
+    <Property Name="OnCmpTime" Type="datetime" />
+    <Property Name="OffNtcTime" Type="datetime" />
+    <Property Name="OffCmpTime" Type="datetime" />
+    <Property Name="OffRemarks" Type="nvarchar" MaxLength="150" />
+    <Property Name="ObjVer_N" Type="nvarchar" MaxLength="20" />
+    <Property Name="ReportMail" Type="nvarchar" MaxLength="150" />
+    <Property Name="VBV" Type="bit" />
+    <Property Name="MerNo_New" Type="nvarchar" MaxLength="10" />
+    <Property Name="RSP_CardNo" Type="bit" />
+    <Property Name="SysOn_TimeSt" Type="datetime" />
+    <Property Name="SysOff_TimeSt" Type="datetime" />
+    <Property Name="Total_Rate" Type="float" />
+    <Property Name="Bank_Rate" Type="float" />
+    <Property Name="Neweb_Rate" Type="float" />
+    <Property Name="Mall_Rate" Type="float" />
+    <Property Name="Credit" Type="nvarchar" MaxLength="100" />
+    <Property Name="Credit_Plus" Type="nvarchar" MaxLength="100" />
+    <Property Name="RateExp" Type="nvarchar" MaxLength="256" />
+    <Property Name="BusinessItem" Type="nvarchar" MaxLength="50" />
+    <Property Name="OnLineCs" Type="nvarchar" MaxLength="20" />
+    <Property Name="OffLineCs" Type="nvarchar" MaxLength="20" />
+    <Property Name="IS_IM" Type="bit" />
+    <Property Name="IS_CTID" Type="bit" />
+    <Property Name="RPCCMerNo" Type="nvarchar" MaxLength="20" />
+    <Property Name="MallType" Type="nvarchar" MaxLength="30" />
+    <Property Name="MallTypeNote" Type="nvarchar" MaxLength="50" />
+    <Property Name="IMRate_3" Type="float" />
+    <Property Name="IMRate_6" Type="float" />
+    <Property Name="IMRate_9" Type="float" />
+    <Property Name="IMRate_12" Type="float" />
+    <Property Name="IMRate_18" Type="float" />
+    <Property Name="IMRate_24" Type="float" />
+    <Property Name="IMRate_36" Type="float" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="MerType" Type="nvarchar" MaxLength="20" />
+    <Property Name="AcquireBank" Type="nvarchar" MaxLength="20" />
+    <Property Name="AcquireMode" Type="nvarchar" MaxLength="20" />
+    <Property Name="Is_UnionPay" Type="bit" />
+    <Property Name="SettleCycle" Type="nvarchar" MaxLength="20" />
+    <Property Name="IS_RPRecCCNo" Type="bit" />
+    <Property Name="IS_RPFirstCap" Type="bit" />
+    <Property Name="IS_RPAutoDelFail" Type="bit" />
+    <Property Name="HostIPs" Type="nvarchar" MaxLength="100" />
+    <Property Name="AdminIPs" Type="nvarchar" MaxLength="100" />
+    <Property Name="RPUploadIPs" Type="nvarchar" MaxLength="100" />
+    <Property Name="AutoSettleTime" Type="nvarchar" MaxLength="20" />
+    <Property Name="ReportGiven" Type="int" />
+    <Property Name="AsyncTxtNoteURL" Type="nvarchar" MaxLength="100" />
+    <Property Name="MerLogo" Type="nvarchar" MaxLength="100" />
+    <Property Name="MerTxtNote" Type="nvarchar" MaxLength="100" />
+    <Property Name="Mer_Graph" Type="int" />
+    <Property Name="ContraNo" Type="nvarchar" MaxLength="20" />
+    <Property Name="SinSerChar" Type="int" />
+    <Property Name="FrontHostID" Type="nvarchar" MaxLength="10" />
+    <Property Name="MerNo_Old" Type="nvarchar" MaxLength="10" />
+    <Property Name="SMS" Type="bit" />
+    <Property Name="BlackList" Type="bit" />
+    <Property Name="CS_VAP" Type="nvarchar" MaxLength="50" />
+    <Property Name="CS_IBON" Type="nvarchar" MaxLength="50" />
+    <Property Name="CS_CS" Type="nvarchar" MaxLength="50" />
+    <Property Name="CS_VAPCHK" Type="bit" />
+    <Property Name="CS_WEBATMCHK" Type="bit" />
+    <Property Name="CS_IBONCHK" Type="bit" />
+    <Property Name="CS_FAMIPORTCHK" Type="bit" />
+    <Property Name="CS_LIFEETCHK" Type="bit" />
+    <Property Name="CS_OKGOCHK" Type="bit" />
+    <Property Name="CS_ALIPAYCHK" Type="bit" />
+    <Property Name="CS_ALIPAYWAPCHK" Type="bit" />
+    <Property Name="CS_CSCHK" Type="bit" />
+    <Property Name="AliFee" Type="nvarchar" MaxLength="10" />
+    <Property Name="AliRatio" Type="nvarchar" MaxLength="10" />
+    <Property Name="AliMallFee" Type="nvarchar" MaxLength="10" />
+    <Property Name="AliMallRatio" Type="nvarchar" MaxLength="10" />
+    <Property Name="Ali_Overtime" Type="nvarchar" MaxLength="10" />
+    <Property Name="AliWap_Fee" Type="nvarchar" MaxLength="10" />
+    <Property Name="AliWap_Ratio" Type="nvarchar" MaxLength="10" />
+    <Property Name="AliWapMall_Fee" Type="nvarchar" MaxLength="10" />
+    <Property Name="AliWapMall_Ratio" Type="nvarchar" MaxLength="10" />
+    <Property Name="AliWap_Overtime" Type="nvarchar" MaxLength="10" />
+    <Property Name="Is_Autobilling" Type="bit" />
+    <Property Name="MPOSCorreCode" Type="int" />
+    <Property Name="Alipay_Product" Type="nvarchar" MaxLength="50" />
+    <Property Name="P33" Type="bit" />
+    <Property Name="TransferFee" Type="int" />
+    <Property Name="Custname_Extn" Type="nvarchar" MaxLength="50" />
+    <Property Name="Custname_Rept" Type="nvarchar" MaxLength="50" />
+    <Property Name="Custname_Bill" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="合約資料">
+    <Key>
+      <PropertyRef Name="No" />
+    </Key>
+    <Property Name="No" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustName" Type="nvarchar" MaxLength="100" />
+    <Property Name="ContraNo" Type="nvarchar" MaxLength="20" />
+    <Property Name="ContraYear" Type="nvarchar" MaxLength="10" />
+    <Property Name="ContraMonth" Type="nvarchar" MaxLength="10" />
+    <Property Name="MallType" Type="nvarchar" MaxLength="30" />
+    <Property Name="ContraState" Type="nvarchar" MaxLength="20" />
+    <Property Name="ServiceType" Type="nvarchar" MaxLength="20" />
+    <Property Name="ContraEntDate" Type="datetime" />
+    <Property Name="ContraSendDate" Type="datetime" />
+    <Property Name="InvDate" Type="datetime" />
+    <Property Name="Rent" Type="nvarchar" MaxLength="20" />
+    <Property Name="EarMoney" Type="nvarchar" MaxLength="20" />
+    <Property Name="ContraSignDate" Type="datetime" />
+    <Property Name="Contra_IniDate" Type="datetime" />
+    <Property Name="Contra_ValDate" Type="smallint" />
+    <Property Name="Contra_ExpDate" Type="datetime" />
+    <Property Name="ContraStopDate" Type="datetime" />
+    <Property Name="Total_Rate" Type="float" />
+    <Property Name="Bank_Rate" Type="float" />
+    <Property Name="Neweb_Rate" Type="float" />
+    <Property Name="Mall_Rate" Type="float" />
+    <Property Name="RentExp" Type="nvarchar" MaxLength="200" />
+    <Property Name="RateExp" Type="nvarchar" MaxLength="200" />
+    <Property Name="NewebSales" Type="nvarchar" MaxLength="30" />
+    <Property Name="Distributor" Type="nvarchar" MaxLength="50" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="255" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="SinSerChar" Type="nvarchar" MaxLength="30" />
+    <Property Name="IM" Type="bit" />
+    <Property Name="RP" Type="bit" />
+    <Property Name="FAX" Type="bit" />
+    <Property Name="ContraKind" Type="nvarchar" MaxLength="10" />
+    <Property Name="ContraNo_Last" Type="nvarchar" MaxLength="20" />
+    <Property Name="InvoiceNo" Type="nvarchar" MaxLength="15" />
+    <Property Name="DepositDate" Type="datetime" />
+    <Property Name="AcctTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="AcctNum" Type="nvarchar" MaxLength="50" />
+    <Property Name="AcctBank" Type="nvarchar" MaxLength="50" />
+    <Property Name="BankBranch" Type="nvarchar" MaxLength="30" />
+    <Property Name="AcquireBank" Type="nvarchar" MaxLength="20" />
+    <Property Name="Is_MAST" Type="bit" />
+    <Property Name="ContraType" Type="nvarchar" MaxLength="10" />
+    <Property Name="isNewebPay" Type="bit" />
+  </EntityType>
+  <EntityType Name="客戶技術窗口資料">
+    <Key>
+      <PropertyRef Name="No" />
+    </Key>
+    <Property Name="No" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustName" Type="nvarchar" MaxLength="100" />
+    <Property Name="TechName" Type="nvarchar" MaxLength="50" />
+    <Property Name="TechTel" Type="nvarchar" MaxLength="100" />
+    <Property Name="TechMail" Type="nvarchar" MaxLength="100" />
+    <Property Name="TechICQ" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="客戶客服窗口資料">
+    <Key>
+      <PropertyRef Name="No" />
+    </Key>
+    <Property Name="No" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustName" Type="nvarchar" MaxLength="100" />
+    <Property Name="CsName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CsTel" Type="nvarchar" MaxLength="50" />
+    <Property Name="CsMail" Type="nvarchar" MaxLength="100" />
+    <Property Name="CsIM" Type="nvarchar" MaxLength="50" />
+    <Property Name="Note" Type="nvarchar" MaxLength="255" />
+    <Property Name="Date" Type="datetime" />
+  </EntityType>
+  <EntityType Name="客戶基本資料">
+    <Key>
+      <PropertyRef Name="CustName" />
+    </Key>
+    <Property Name="No" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="CustName_En" Type="nvarchar" MaxLength="50" />
+    <Property Name="BusinessNo" Type="nvarchar" MaxLength="10" />
+    <Property Name="CustName_Extn" Type="nvarchar" MaxLength="50" />
+    <Property Name="CustName_Rept" Type="nvarchar" MaxLength="50" />
+    <Property Name="CustName_Bill" Type="nvarchar" MaxLength="50" />
+    <Property Name="AcctTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="AcctNum" Type="nvarchar" MaxLength="50" />
+    <Property Name="AcctBank" Type="nvarchar" MaxLength="50" />
+    <Property Name="BankBranch" Type="nvarchar" MaxLength="30" />
+    <Property Name="InvAddress" Type="nvarchar" MaxLength="100" />
+    <Property Name="CustTel" Type="nvarchar" MaxLength="100" />
+    <Property Name="CustFax" Type="nvarchar" MaxLength="100" />
+    <Property Name="CustURL" Type="nvarchar" MaxLength="150" />
+    <Property Name="MerURL" Type="nvarchar" MaxLength="150" />
+    <Property Name="FileNo" Type="nvarchar" MaxLength="100" />
+    <Property Name="Capital" Type="bigint" />
+    <Property Name="Director" Type="nvarchar" MaxLength="50" />
+    <Property Name="DirectorID" Type="nvarchar" MaxLength="50" />
+    <Property Name="AuthPerson" Type="nvarchar" MaxLength="100" />
+    <Property Name="AuthMail" Type="nvarchar" MaxLength="255" />
+    <Property Name="AuthTel" Type="nvarchar" MaxLength="100" />
+    <Property Name="NewebSales" Type="nvarchar" MaxLength="30" />
+    <Property Name="CustAdrs" Type="nvarchar" MaxLength="100" />
+    <Property Name="CustName_EnCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="AddresseeName" Type="nvarchar" MaxLength="100" />
+    <Property Name="InvZipcode" Type="nvarchar" MaxLength="10" />
+    <Property Name="CustZipcode" Type="nvarchar" MaxLength="10" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="100" />
+    <Property Name="IS_Distributor" Type="bit" />
+    <Property Name="InspectStatus" Type="bit" />
+    <Property Name="ProjectRecord" Type="ntext" />
+  </EntityType>
+  <EntityType Name="客戶帳務窗口資料">
+    <Key>
+      <PropertyRef Name="No" />
+    </Key>
+    <Property Name="No" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustName" Type="nvarchar" MaxLength="100" />
+    <Property Name="AcctName" Type="nvarchar" MaxLength="50" />
+    <Property Name="AcctTel" Type="nvarchar" MaxLength="100" />
+    <Property Name="AcctMail" Type="nvarchar" MaxLength="100" />
+    <Property Name="AcctICQ" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="客戶報表窗口資料">
+    <Key>
+      <PropertyRef Name="No" />
+    </Key>
+    <Property Name="No" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustName" Type="nvarchar" MaxLength="100" />
+    <Property Name="ReptName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ReptTel" Type="nvarchar" MaxLength="100" />
+    <Property Name="ReptMail" Type="nvarchar" MaxLength="150" />
+    <Property Name="MerNo" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="客戶業務窗口資料">
+    <Key>
+      <PropertyRef Name="No" />
+    </Key>
+    <Property Name="No" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustName" Type="nvarchar" MaxLength="100" />
+    <Property Name="SalesName" Type="nvarchar" MaxLength="50" />
+    <Property Name="SalesTel" Type="nvarchar" MaxLength="100" />
+    <Property Name="SalesMail" Type="nvarchar" MaxLength="100" />
+    <Property Name="SalesICQ" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="停用連線服務原因">
+    <Key>
+      <PropertyRef Name="No" />
+    </Key>
+    <Property Name="No" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Reason" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="國內發卡銀行">
+    <Key>
+      <PropertyRef Name="BankCode" />
+    </Key>
+    <Property Name="BankCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="CardBrand" Type="nvarchar" MaxLength="20" />
+    <Property Name="BankName" Type="nvarchar" MaxLength="80" />
+    <Property Name="CardType" Type="nvarchar" MaxLength="20" />
+    <Property Name="CardSubtype" Type="nvarchar" MaxLength="40" />
+    <Property Name="CountryOrigin" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="測式商店設定資料">
+    <Key>
+      <PropertyRef Name="No" />
+    </Key>
+    <Property Name="No" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MerNo_T" Type="nvarchar" MaxLength="10" />
+    <Property Name="CustName" Type="nvarchar" MaxLength="100" />
+    <Property Name="CooperMode" Type="nvarchar" MaxLength="20" />
+    <Property Name="MerState" Type="nvarchar" MaxLength="10" />
+    <Property Name="MerType2" Type="nvarchar" MaxLength="15" />
+    <Property Name="MerType" Type="nvarchar" MaxLength="20" />
+    <Property Name="HostID" Type="nvarchar" MaxLength="10" />
+    <Property Name="Test_Ntc_Date" Type="datetime" />
+    <Property Name="Test_Cmp_Date" Type="datetime" />
+    <Property Name="Auth" Type="bit" />
+    <Property Name="NewebSales" Type="nvarchar" MaxLength="30" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="500" />
+    <Property Name="InspectStatus" Type="bit" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="IS_IM" Type="bit" />
+    <Property Name="IS_CTID" Type="bit" />
+    <Property Name="OnlyTest" Type="bit" />
+    <Property Name="TestDelDate" Type="datetime" />
+    <Property Name="TestPassword" Type="nvarchar" MaxLength="30" />
+    <Property Name="CS_VAPCHK" Type="bit" />
+    <Property Name="CS_WEBATMCHK" Type="bit" />
+    <Property Name="CS_IBONCHK" Type="bit" />
+    <Property Name="CS_FAMIPORTCHK" Type="bit" />
+    <Property Name="CS_LIFEETCHK" Type="bit" />
+    <Property Name="CS_OKGOCHK" Type="bit" />
+    <Property Name="CS_AlipayCHK" Type="bit" />
+    <Property Name="CS_AlipayWAPCHK" Type="bit" />
+    <Property Name="CS_CSCHK" Type="bit" />
+    <Property Name="VAP_MerState" Type="nvarchar" MaxLength="10" />
+    <Property Name="MMK_MerState" Type="nvarchar" MaxLength="10" />
+    <Property Name="CS_MerState" Type="nvarchar" MaxLength="10" />
+    <Property Name="ALIPAY_MerState" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="測試商店備註欄">
+    <Key>
+      <PropertyRef Name="No" />
+    </Key>
+    <Property Name="No" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RelNum" Type="int" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="500" />
+    <Property Name="RemarksDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="測試商店備註欄暫存">
+    <Key>
+      <PropertyRef Name="No" />
+    </Key>
+    <Property Name="No" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="500" />
+    <Property Name="RemarksDate" Type="datetime" />
+    <Property Name="LoginName" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="測試商店進階查詢暫存">
+    <Key>
+      <PropertyRef Name="No" />
+    </Key>
+    <Property Name="No" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="QueryPerson" Type="nvarchar" MaxLength="30" />
+    <Property Name="MerNo_T" Type="nvarchar" MaxLength="100" />
+    <Property Name="MerState" Type="nvarchar" MaxLength="100" />
+    <Property Name="MerType" Type="nvarchar" MaxLength="100" />
+    <Property Name="HostID" Type="nvarchar" MaxLength="100" />
+    <Property Name="NewebSales" Type="nvarchar" MaxLength="100" />
+    <Property Name="CustName_EnCode" Type="nvarchar" MaxLength="100" />
+    <Property Name="TestPassword" Type="nvarchar" MaxLength="100" />
+    <Property Name="Test_Ntc_Date" Type="nvarchar" MaxLength="100" />
+    <Property Name="Test_Cmp_Date" Type="nvarchar" MaxLength="100" />
+    <Property Name="TestDelDate" Type="nvarchar" MaxLength="100" />
+    <Property Name="Auth" Type="bit" />
+    <Property Name="IS_IM" Type="bit" />
+    <Property Name="IS_CTID" Type="bit" />
+    <Property Name="OnlyTest" Type="bit" />
+    <Property Name="OnNtcTime" Type="nvarchar" MaxLength="100" />
+    <Property Name="OffNtcTime" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <Association Name="FK_CONT_ENAB_FUNC_ADV_FUNC">
+    <End Role="ADV_FUNC" Type="Self.ADV_FUNC" Multiplicity="0..1" />
+    <End Role="CONT_ENAB_FUNC" Type="Self.CONT_ENAB_FUNC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ADV_FUNC">
+        <PropertyRef Name="FuncCode" />
+      </Principal>
+      <Dependent Role="CONT_ENAB_FUNC">
+        <PropertyRef Name="FuncCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CONT_ENAB_FUNC_合約資料">
+    <End Role="合約資料" Type="Self.合約資料" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="CONT_ENAB_FUNC" Type="Self.CONT_ENAB_FUNC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="合約資料">
+        <PropertyRef Name="No" />
+      </Principal>
+      <Dependent Role="CONT_ENAB_FUNC">
+        <PropertyRef Name="ContraCorreCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CONTRA_RENEW_合約資料">
+    <End Role="合約資料" Type="Self.合約資料" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="CONTRA_RENEW" Type="Self.CONTRA_RENEW" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="合約資料">
+        <PropertyRef Name="No" />
+      </Principal>
+      <Dependent Role="CONTRA_RENEW">
+        <PropertyRef Name="ContraCorreCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CONTRA_UPDATE_CONTRA_CAUSE">
+    <End Role="CONTRA_CAUSE" Type="Self.CONTRA_CAUSE" Multiplicity="0..1" />
+    <End Role="CONTRA_UPDATE" Type="Self.CONTRA_UPDATE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CONTRA_CAUSE">
+        <PropertyRef Name="Cause" />
+      </Principal>
+      <Dependent Role="CONTRA_UPDATE">
+        <PropertyRef Name="Cause" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CONTRA_UPDATE_合約資料">
+    <End Role="合約資料" Type="Self.合約資料" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="CONTRA_UPDATE" Type="Self.CONTRA_UPDATE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="合約資料">
+        <PropertyRef Name="No" />
+      </Principal>
+      <Dependent Role="CONTRA_UPDATE">
+        <PropertyRef Name="ContraCorreCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COOP_UNIT_CONNECT_COOP_UNIT">
+    <End Role="COOP_UNIT" Type="Self.COOP_UNIT" Multiplicity="0..1" />
+    <End Role="COOP_UNIT_CONNECT" Type="Self.COOP_UNIT_CONNECT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COOP_UNIT">
+        <PropertyRef Name="PartnerName" />
+      </Principal>
+      <Dependent Role="COOP_UNIT_CONNECT">
+        <PropertyRef Name="PartnerName" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MER_TYPE_SERVICE_TYPE">
+    <End Role="SERVICE_TYPE" Type="Self.SERVICE_TYPE" Multiplicity="0..1" />
+    <End Role="MER_TYPE" Type="Self.MER_TYPE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SERVICE_TYPE">
+        <PropertyRef Name="ServiceType" />
+      </Principal>
+      <Dependent Role="MER_TYPE">
+        <PropertyRef Name="ServiceType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MPOS_TID_正式商店設定資料">
+    <End Role="正式商店設定資料" Type="Self.正式商店設定資料" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="MPOS_TID" Type="Self.MPOS_TID" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="正式商店設定資料">
+        <PropertyRef Name="No" />
+      </Principal>
+      <Dependent Role="MPOS_TID">
+        <PropertyRef Name="MPOSCorreCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OnCmpData_正式商店設定資料">
+    <End Role="正式商店設定資料" Type="Self.正式商店設定資料" Multiplicity="1" />
+    <End Role="OnCmpData" Type="Self.OnCmpData" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="正式商店設定資料">
+        <PropertyRef Name="No" />
+      </Principal>
+      <Dependent Role="OnCmpData">
+        <PropertyRef Name="OnCmpCorreCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RM_LOGIN_QUESTION_TRADE_RM_NOTICE_UNIT">
+    <End Role="RM_NOTICE_UNIT" Type="Self.RM_NOTICE_UNIT" Multiplicity="0..1" />
+    <End Role="RM_LOGIN_QUESTION_TRADE" Type="Self.RM_LOGIN_QUESTION_TRADE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RM_NOTICE_UNIT">
+        <PropertyRef Name="NoticeUnit" />
+      </Principal>
+      <Dependent Role="RM_LOGIN_QUESTION_TRADE">
+        <PropertyRef Name="NoticeUnit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RM_REGISTER_REASON_RM_LOGIN_QUESTION_TRADE">
+    <End Role="RM_LOGIN_QUESTION_TRADE" Type="Self.RM_LOGIN_QUESTION_TRADE" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="RM_REGISTER_REASON" Type="Self.RM_REGISTER_REASON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RM_LOGIN_QUESTION_TRADE">
+        <PropertyRef Name="NumCorrespondingly" />
+      </Principal>
+      <Dependent Role="RM_REGISTER_REASON">
+        <PropertyRef Name="NumCorrespondingly" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RM_REGISTER_REASON_RM_REGISTER_REASON_CODE">
+    <End Role="RM_REGISTER_REASON_CODE" Type="Self.RM_REGISTER_REASON_CODE" Multiplicity="0..1" />
+    <End Role="RM_REGISTER_REASON" Type="Self.RM_REGISTER_REASON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RM_REGISTER_REASON_CODE">
+        <PropertyRef Name="RegReasonCode" />
+      </Principal>
+      <Dependent Role="RM_REGISTER_REASON">
+        <PropertyRef Name="RegReasonCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SETTLE_IP_客戶基本資料">
+    <End Role="客戶基本資料" Type="Self.客戶基本資料" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SETTLE_IP" Type="Self.SETTLE_IP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="客戶基本資料">
+        <PropertyRef Name="CustName" />
+      </Principal>
+      <Dependent Role="SETTLE_IP">
+        <PropertyRef Name="CustName" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TRADE_STATISTICAL_客戶基本資料">
+    <End Role="客戶基本資料" Type="Self.客戶基本資料" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TRADE_STATISTICAL" Type="Self.TRADE_STATISTICAL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="客戶基本資料">
+        <PropertyRef Name="CustName" />
+      </Principal>
+      <Dependent Role="TRADE_STATISTICAL">
+        <PropertyRef Name="CustName" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_正式商店設定資料_ACQUIRE_BANK">
+    <End Role="ACQUIRE_BANK" Type="Self.ACQUIRE_BANK" Multiplicity="0..1" />
+    <End Role="正式商店設定資料" Type="Self.正式商店設定資料" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ACQUIRE_BANK">
+        <PropertyRef Name="AcquireBank" />
+      </Principal>
+      <Dependent Role="正式商店設定資料">
+        <PropertyRef Name="AcquireBank" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_正式商店設定資料_ACQUIRE_MODE">
+    <End Role="ACQUIRE_MODE" Type="Self.ACQUIRE_MODE" Multiplicity="0..1" />
+    <End Role="正式商店設定資料" Type="Self.正式商店設定資料" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ACQUIRE_MODE">
+        <PropertyRef Name="AcquireMode" />
+      </Principal>
+      <Dependent Role="正式商店設定資料">
+        <PropertyRef Name="AcquireMode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_正式商店設定資料_Alipay_Product">
+    <End Role="Alipay_Product" Type="Self.Alipay_Product" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="正式商店設定資料" Type="Self.正式商店設定資料" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Alipay_Product">
+        <PropertyRef Name="Product" />
+      </Principal>
+      <Dependent Role="正式商店設定資料">
+        <PropertyRef Name="Alipay_Product" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_正式商店設定資料_AUTO_SETTLE_TIME1">
+    <End Role="AUTO_SETTLE_TIME" Type="Self.AUTO_SETTLE_TIME" Multiplicity="0..1" />
+    <End Role="正式商店設定資料" Type="Self.正式商店設定資料" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AUTO_SETTLE_TIME">
+        <PropertyRef Name="AutoSettleTime" />
+      </Principal>
+      <Dependent Role="正式商店設定資料">
+        <PropertyRef Name="AutoSettleTime" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_正式商店設定資料_HOSTS">
+    <End Role="HOSTS" Type="Self.HOSTS" Multiplicity="0..1" />
+    <End Role="正式商店設定資料" Type="Self.正式商店設定資料" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HOSTS">
+        <PropertyRef Name="HostID" />
+      </Principal>
+      <Dependent Role="正式商店設定資料">
+        <PropertyRef Name="HostID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_正式商店設定資料_HOSTS1">
+    <End Role="HOSTS" Type="Self.HOSTS" Multiplicity="0..1" />
+    <End Role="正式商店設定資料" Type="Self.正式商店設定資料" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HOSTS">
+        <PropertyRef Name="HostID" />
+      </Principal>
+      <Dependent Role="正式商店設定資料">
+        <PropertyRef Name="FrontHostID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_正式商店設定資料_MALL_TYPE">
+    <End Role="MALL_TYPE" Type="Self.MALL_TYPE" Multiplicity="0..1" />
+    <End Role="正式商店設定資料" Type="Self.正式商店設定資料" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MALL_TYPE">
+        <PropertyRef Name="MallType" />
+      </Principal>
+      <Dependent Role="正式商店設定資料">
+        <PropertyRef Name="MallType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_正式商店設定資料_MER_STATE">
+    <End Role="MER_STATE" Type="Self.MER_STATE" Multiplicity="0..1" />
+    <End Role="正式商店設定資料" Type="Self.正式商店設定資料" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MER_STATE">
+        <PropertyRef Name="MerState" />
+      </Principal>
+      <Dependent Role="正式商店設定資料">
+        <PropertyRef Name="MerState" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_正式商店設定資料_MER_TYPE">
+    <End Role="MER_TYPE" Type="Self.MER_TYPE" Multiplicity="0..1" />
+    <End Role="正式商店設定資料" Type="Self.正式商店設定資料" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MER_TYPE">
+        <PropertyRef Name="MerType" />
+      </Principal>
+      <Dependent Role="正式商店設定資料">
+        <PropertyRef Name="MerType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_正式商店設定資料_OBJ_VER">
+    <End Role="OBJ_VER" Type="Self.OBJ_VER" Multiplicity="0..1" />
+    <End Role="正式商店設定資料" Type="Self.正式商店設定資料" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OBJ_VER">
+        <PropertyRef Name="ObjVer" />
+      </Principal>
+      <Dependent Role="正式商店設定資料">
+        <PropertyRef Name="ObjVer_N" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_正式商店設定資料_SETTLE_CYCLE">
+    <End Role="SETTLE_CYCLE" Type="Self.SETTLE_CYCLE" Multiplicity="0..1" />
+    <End Role="正式商店設定資料" Type="Self.正式商店設定資料" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SETTLE_CYCLE">
+        <PropertyRef Name="SettleCycle" />
+      </Principal>
+      <Dependent Role="正式商店設定資料">
+        <PropertyRef Name="SettleCycle" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_正式商店設定資料_客戶基本資料1">
+    <End Role="客戶基本資料" Type="Self.客戶基本資料" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="正式商店設定資料" Type="Self.正式商店設定資料" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="客戶基本資料">
+        <PropertyRef Name="CustName" />
+      </Principal>
+      <Dependent Role="正式商店設定資料">
+        <PropertyRef Name="CustName" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_合約資料_CONTRA_KIND">
+    <End Role="CONTRA_KIND" Type="Self.CONTRA_KIND" Multiplicity="0..1" />
+    <End Role="合約資料" Type="Self.合約資料" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CONTRA_KIND">
+        <PropertyRef Name="ContraKind" />
+      </Principal>
+      <Dependent Role="合約資料">
+        <PropertyRef Name="ContraKind" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_合約資料_CONTRA_STATE">
+    <End Role="CONTRA_STATE" Type="Self.CONTRA_STATE" Multiplicity="0..1" />
+    <End Role="~合約資料" Type="Self.~合約資料" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CONTRA_STATE">
+        <PropertyRef Name="ContraStates" />
+      </Principal>
+      <Dependent Role="~合約資料">
+        <PropertyRef Name="ContraState" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_合約資料_CONTRA_STATE1">
+    <End Role="CONTRA_STATE" Type="Self.CONTRA_STATE" Multiplicity="0..1" />
+    <End Role="合約資料" Type="Self.合約資料" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CONTRA_STATE">
+        <PropertyRef Name="ContraStates" />
+      </Principal>
+      <Dependent Role="合約資料">
+        <PropertyRef Name="ContraState" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_合約資料_EMPLOYEE">
+    <End Role="EMPLOYEE" Type="Self.EMPLOYEE" Multiplicity="0..1" />
+    <End Role="~合約資料" Type="Self.~合約資料" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMPLOYEE">
+        <PropertyRef Name="Em_Name" />
+      </Principal>
+      <Dependent Role="~合約資料">
+        <PropertyRef Name="NewebSales" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_合約資料_MALL_TYPE">
+    <End Role="MALL_TYPE" Type="Self.MALL_TYPE" Multiplicity="0..1" />
+    <End Role="合約資料" Type="Self.合約資料" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MALL_TYPE">
+        <PropertyRef Name="MallType" />
+      </Principal>
+      <Dependent Role="合約資料">
+        <PropertyRef Name="MallType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_合約資料_SERVICE_TYPE">
+    <End Role="SERVICE_TYPE" Type="Self.SERVICE_TYPE" Multiplicity="0..1" />
+    <End Role="~合約資料" Type="Self.~合約資料" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SERVICE_TYPE">
+        <PropertyRef Name="ServiceType" />
+      </Principal>
+      <Dependent Role="~合約資料">
+        <PropertyRef Name="ServiceType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_合約資料_SERVICE_TYPE1">
+    <End Role="SERVICE_TYPE" Type="Self.SERVICE_TYPE" Multiplicity="0..1" />
+    <End Role="合約資料" Type="Self.合約資料" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SERVICE_TYPE">
+        <PropertyRef Name="ServiceType" />
+      </Principal>
+      <Dependent Role="合約資料">
+        <PropertyRef Name="ServiceType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_合約資料_客戶基本資料">
+    <End Role="客戶基本資料" Type="Self.客戶基本資料" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="合約資料" Type="Self.合約資料" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="客戶基本資料">
+        <PropertyRef Name="CustName" />
+      </Principal>
+      <Dependent Role="合約資料">
+        <PropertyRef Name="CustName" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_客戶技術窗口資料_客戶基本資料">
+    <End Role="客戶基本資料" Type="Self.客戶基本資料" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="客戶技術窗口資料" Type="Self.客戶技術窗口資料" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="客戶基本資料">
+        <PropertyRef Name="CustName" />
+      </Principal>
+      <Dependent Role="客戶技術窗口資料">
+        <PropertyRef Name="CustName" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_客戶客服窗口資料_客戶基本資料">
+    <End Role="客戶基本資料" Type="Self.客戶基本資料" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="客戶客服窗口資料" Type="Self.客戶客服窗口資料" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="客戶基本資料">
+        <PropertyRef Name="CustName" />
+      </Principal>
+      <Dependent Role="客戶客服窗口資料">
+        <PropertyRef Name="CustName" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_客戶基本資料_EMPLOYEE">
+    <End Role="EMPLOYEE" Type="Self.EMPLOYEE" Multiplicity="0..1" />
+    <End Role="客戶基本資料" Type="Self.客戶基本資料" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMPLOYEE">
+        <PropertyRef Name="Em_Name" />
+      </Principal>
+      <Dependent Role="客戶基本資料">
+        <PropertyRef Name="NewebSales" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_客戶帳務窗口資料_客戶基本資料">
+    <End Role="客戶基本資料" Type="Self.客戶基本資料" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="客戶帳務窗口資料" Type="Self.客戶帳務窗口資料" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="客戶基本資料">
+        <PropertyRef Name="CustName" />
+      </Principal>
+      <Dependent Role="客戶帳務窗口資料">
+        <PropertyRef Name="CustName" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_客戶報表窗口資料_客戶基本資料">
+    <End Role="客戶基本資料" Type="Self.客戶基本資料" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="客戶報表窗口資料" Type="Self.客戶報表窗口資料" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="客戶基本資料">
+        <PropertyRef Name="CustName" />
+      </Principal>
+      <Dependent Role="客戶報表窗口資料">
+        <PropertyRef Name="CustName" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_客戶業務窗口資料_客戶基本資料">
+    <End Role="客戶基本資料" Type="Self.客戶基本資料" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="客戶業務窗口資料" Type="Self.客戶業務窗口資料" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="客戶基本資料">
+        <PropertyRef Name="CustName" />
+      </Principal>
+      <Dependent Role="客戶業務窗口資料">
+        <PropertyRef Name="CustName" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_測式商店設定資料_HOSTS">
+    <End Role="HOSTS" Type="Self.HOSTS" Multiplicity="0..1" />
+    <End Role="測式商店設定資料" Type="Self.測式商店設定資料" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HOSTS">
+        <PropertyRef Name="HostID" />
+      </Principal>
+      <Dependent Role="測式商店設定資料">
+        <PropertyRef Name="HostID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_測式商店設定資料_MER_STATE">
+    <End Role="MER_STATE" Type="Self.MER_STATE" Multiplicity="0..1" />
+    <End Role="測式商店設定資料" Type="Self.測式商店設定資料" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MER_STATE">
+        <PropertyRef Name="MerState" />
+      </Principal>
+      <Dependent Role="測式商店設定資料">
+        <PropertyRef Name="MerState" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_測式商店設定資料_MER_TYPE">
+    <End Role="MER_TYPE" Type="Self.MER_TYPE" Multiplicity="0..1" />
+    <End Role="測式商店設定資料" Type="Self.測式商店設定資料" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MER_TYPE">
+        <PropertyRef Name="MerType" />
+      </Principal>
+      <Dependent Role="測式商店設定資料">
+        <PropertyRef Name="MerType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_測式商店設定資料_客戶基本資料">
+    <End Role="客戶基本資料" Type="Self.客戶基本資料" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="測式商店設定資料" Type="Self.測式商店設定資料" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="客戶基本資料">
+        <PropertyRef Name="CustName" />
+      </Principal>
+      <Dependent Role="測式商店設定資料">
+        <PropertyRef Name="CustName" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_測試商店備註欄_測式商店設定資料">
+    <End Role="測式商店設定資料" Type="Self.測式商店設定資料" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="測試商店備註欄" Type="Self.測試商店備註欄" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="測式商店設定資料">
+        <PropertyRef Name="No" />
+      </Principal>
+      <Dependent Role="測試商店備註欄">
+        <PropertyRef Name="RelNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="f1待確認__生效中" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" StoreFunctionName="1待確認-&gt;生效中" />
+  <Function Name="f3準備續約__終止" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" StoreFunctionName="3準備續約-&gt;終止" />
+  <Function Name="dt_addtosourcecontrol" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vchSourceSafeINI" Type="varchar" Mode="In" />
+    <Parameter Name="vchProjectName" Type="varchar" Mode="In" />
+    <Parameter Name="vchComment" Type="varchar" Mode="In" />
+    <Parameter Name="vchLoginName" Type="varchar" Mode="In" />
+    <Parameter Name="vchPassword" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="dt_addtosourcecontrol_u" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vchSourceSafeINI" Type="nvarchar" Mode="In" />
+    <Parameter Name="vchProjectName" Type="nvarchar" Mode="In" />
+    <Parameter Name="vchComment" Type="nvarchar" Mode="In" />
+    <Parameter Name="vchLoginName" Type="nvarchar" Mode="In" />
+    <Parameter Name="vchPassword" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="dt_adduserobject" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="dt_adduserobject_vcs" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vchProperty" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="dt_checkinobject" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="chObjectType" Type="char" Mode="In" />
+    <Parameter Name="vchObjectName" Type="varchar" Mode="In" />
+    <Parameter Name="vchComment" Type="varchar" Mode="In" />
+    <Parameter Name="vchLoginName" Type="varchar" Mode="In" />
+    <Parameter Name="vchPassword" Type="varchar" Mode="In" />
+    <Parameter Name="iVCSFlags" Type="int" Mode="In" />
+    <Parameter Name="iActionFlag" Type="int" Mode="In" />
+    <Parameter Name="txStream1" Type="text" Mode="In" />
+    <Parameter Name="txStream2" Type="text" Mode="In" />
+    <Parameter Name="txStream3" Type="text" Mode="In" />
+  </Function>
+  <Function Name="dt_checkinobject_u" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="chObjectType" Type="char" Mode="In" />
+    <Parameter Name="vchObjectName" Type="nvarchar" Mode="In" />
+    <Parameter Name="vchComment" Type="nvarchar" Mode="In" />
+    <Parameter Name="vchLoginName" Type="nvarchar" Mode="In" />
+    <Parameter Name="vchPassword" Type="nvarchar" Mode="In" />
+    <Parameter Name="iVCSFlags" Type="int" Mode="In" />
+    <Parameter Name="iActionFlag" Type="int" Mode="In" />
+    <Parameter Name="txStream1" Type="text" Mode="In" />
+    <Parameter Name="txStream2" Type="text" Mode="In" />
+    <Parameter Name="txStream3" Type="text" Mode="In" />
+  </Function>
+  <Function Name="dt_checkoutobject" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="chObjectType" Type="char" Mode="In" />
+    <Parameter Name="vchObjectName" Type="varchar" Mode="In" />
+    <Parameter Name="vchComment" Type="varchar" Mode="In" />
+    <Parameter Name="vchLoginName" Type="varchar" Mode="In" />
+    <Parameter Name="vchPassword" Type="varchar" Mode="In" />
+    <Parameter Name="iVCSFlags" Type="int" Mode="In" />
+    <Parameter Name="iActionFlag" Type="int" Mode="In" />
+  </Function>
+  <Function Name="dt_checkoutobject_u" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="chObjectType" Type="char" Mode="In" />
+    <Parameter Name="vchObjectName" Type="nvarchar" Mode="In" />
+    <Parameter Name="vchComment" Type="nvarchar" Mode="In" />
+    <Parameter Name="vchLoginName" Type="nvarchar" Mode="In" />
+    <Parameter Name="vchPassword" Type="nvarchar" Mode="In" />
+    <Parameter Name="iVCSFlags" Type="int" Mode="In" />
+    <Parameter Name="iActionFlag" Type="int" Mode="In" />
+  </Function>
+  <Function Name="dt_displayoaerror" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="iObject" Type="int" Mode="In" />
+    <Parameter Name="iresult" Type="int" Mode="In" />
+  </Function>
+  <Function Name="dt_displayoaerror_u" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="iObject" Type="int" Mode="In" />
+    <Parameter Name="iresult" Type="int" Mode="In" />
+  </Function>
+  <Function Name="dt_droppropertiesbyid" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="property" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="dt_dropuserobjectbyid" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="dt_generateansiname" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="name" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="dt_getobjwithprop" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="property" Type="varchar" Mode="In" />
+    <Parameter Name="value" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="dt_getobjwithprop_u" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="property" Type="varchar" Mode="In" />
+    <Parameter Name="uvalue" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="dt_getpropertiesbyid" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="property" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="dt_getpropertiesbyid_u" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="property" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="dt_getpropertiesbyid_vcs" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="property" Type="varchar" Mode="In" />
+    <Parameter Name="value" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="dt_getpropertiesbyid_vcs_u" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="property" Type="varchar" Mode="In" />
+    <Parameter Name="value" Type="nvarchar" Mode="InOut" />
+  </Function>
+  <Function Name="dt_isundersourcecontrol" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vchLoginName" Type="varchar" Mode="In" />
+    <Parameter Name="vchPassword" Type="varchar" Mode="In" />
+    <Parameter Name="iWhoToo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="dt_isundersourcecontrol_u" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vchLoginName" Type="nvarchar" Mode="In" />
+    <Parameter Name="vchPassword" Type="nvarchar" Mode="In" />
+    <Parameter Name="iWhoToo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="dt_removefromsourcecontrol" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="dt_setpropertybyid" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="property" Type="varchar" Mode="In" />
+    <Parameter Name="value" Type="varchar" Mode="In" />
+    <Parameter Name="lvalue" Type="image" Mode="In" />
+  </Function>
+  <Function Name="dt_setpropertybyid_u" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="property" Type="varchar" Mode="In" />
+    <Parameter Name="uvalue" Type="nvarchar" Mode="In" />
+    <Parameter Name="lvalue" Type="image" Mode="In" />
+  </Function>
+  <Function Name="dt_validateloginparams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vchLoginName" Type="varchar" Mode="In" />
+    <Parameter Name="vchPassword" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="dt_validateloginparams_u" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vchLoginName" Type="nvarchar" Mode="In" />
+    <Parameter Name="vchPassword" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="dt_vcsenabled" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="dt_verstamp006" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="dt_verstamp007" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="dt_whocheckedout" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="chObjectType" Type="char" Mode="In" />
+    <Parameter Name="vchObjectName" Type="varchar" Mode="In" />
+    <Parameter Name="vchLoginName" Type="varchar" Mode="In" />
+    <Parameter Name="vchPassword" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="dt_whocheckedout_u" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="chObjectType" Type="char" Mode="In" />
+    <Parameter Name="vchObjectName" Type="nvarchar" Mode="In" />
+    <Parameter Name="vchLoginName" Type="nvarchar" Mode="In" />
+    <Parameter Name="vchPassword" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="EMAIL_TARGET" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="EMAIL_UNIQUE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="fun_stext" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
+    <Parameter Name="temp" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_ContraRenewal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_MERSTATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_OnCmpDataPwdMask" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DateCount" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="新商家資料庫代收ModelStoreContainer">
+    <EntitySet Name="~AUTO_SETTLE_TIME" EntityType="Self.~AUTO_SETTLE_TIME" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="~MER_TYPE" EntityType="Self.~MER_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="~合約狀態" EntityType="Self.~合約狀態" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="~合約資料" EntityType="Self.~合約資料" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="~服務型態" EntityType="Self.~服務型態" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ACQUIRE_BANK" EntityType="Self.ACQUIRE_BANK" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ACQUIRE_MODE" EntityType="Self.ACQUIRE_MODE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADV_FUNC" EntityType="Self.ADV_FUNC" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Alipay_Product" EntityType="Self.Alipay_Product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AUTHORITY_FUNCTION" EntityType="Self.AUTHORITY_FUNCTION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AUTHORITY_SETTLEMENT" EntityType="Self.AUTHORITY_SETTLEMENT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AUTO_SERIAL_NUM" EntityType="Self.AUTO_SERIAL_NUM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AUTO_SETTLE_TIME" EntityType="Self.AUTO_SETTLE_TIME" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BANK_BRANCH_CODE" EntityType="Self.BANK_BRANCH_CODE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BANK_HQ" EntityType="Self.BANK_HQ" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BANK_MODE" EntityType="Self.BANK_MODE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BATCH_TYPE" EntityType="Self.BATCH_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CONT_ENAB_FUNC" EntityType="Self.CONT_ENAB_FUNC" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CONT_ENAB_FUNC_TEMP" EntityType="Self.CONT_ENAB_FUNC_TEMP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CONTRA_CAUSE" EntityType="Self.CONTRA_CAUSE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CONTRA_KIND" EntityType="Self.CONTRA_KIND" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CONTRA_RENEW" EntityType="Self.CONTRA_RENEW" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CONTRA_STATE" EntityType="Self.CONTRA_STATE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CONTRA_UPDATE" EntityType="Self.CONTRA_UPDATE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="COOP_MODE" EntityType="Self.COOP_MODE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="COOP_UNIT" EntityType="Self.COOP_UNIT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="COOP_UNIT_CONNECT" EntityType="Self.COOP_UNIT_CONNECT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DISTRIBUTOR_LIST" EntityType="Self.DISTRIBUTOR_LIST" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="dtproperties" EntityType="Self.dtproperties" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EMPLOYEE" EntityType="Self.EMPLOYEE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FAQ_CLASS_CS" EntityType="Self.FAQ_CLASS_CS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FAQ_CS" EntityType="Self.FAQ_CS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FAQ_QUE_RECORD" EntityType="Self.FAQ_QUE_RECORD" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FAQ_RELATIVE_LINK" EntityType="Self.FAQ_RELATIVE_LINK" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FAQ_UPDATE_COUNT" EntityType="Self.FAQ_UPDATE_COUNT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HOSTS" EntityType="Self.HOSTS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MALL_TYPE" EntityType="Self.MALL_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MER_STATE" EntityType="Self.MER_STATE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MER_TX_BATCH" EntityType="Self.MER_TX_BATCH" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MER_TX_BATCH_TEMP" EntityType="Self.MER_TX_BATCH_TEMP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MER_TX_BATCH_TEMP_BLOCK" EntityType="Self.MER_TX_BATCH_TEMP_BLOCK" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MER_TYPE" EntityType="Self.MER_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MPOS_TID" EntityType="Self.MPOS_TID" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OBJ_VER" EntityType="Self.OBJ_VER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OnCmpData" EntityType="Self.OnCmpData" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RM_LOGIN_QUESTION_TRADE" EntityType="Self.RM_LOGIN_QUESTION_TRADE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RM_NOTICE_UNIT" EntityType="Self.RM_NOTICE_UNIT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RM_REGISTER_QUERY_TEMP" EntityType="Self.RM_REGISTER_QUERY_TEMP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RM_REGISTER_REASON" EntityType="Self.RM_REGISTER_REASON" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RM_REGISTER_REASON_CODE" EntityType="Self.RM_REGISTER_REASON_CODE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RM_REGISTER_REASON_TEMP" EntityType="Self.RM_REGISTER_REASON_TEMP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SERVER_NAME" EntityType="Self.SERVER_NAME" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SERVICE_TYPE" EntityType="Self.SERVICE_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SETTLE_CYCLE" EntityType="Self.SETTLE_CYCLE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SETTLE_IP" EntityType="Self.SETTLE_IP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TEMP_ADVANCE_QUERY" EntityType="Self.TEMP_ADVANCE_QUERY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TEMP_ADVANCE_QUERY_STORE" EntityType="Self.TEMP_ADVANCE_QUERY_STORE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TEMP_SELECT_EMAIL" EntityType="Self.TEMP_SELECT_EMAIL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TRADE_STATISTICAL" EntityType="Self.TRADE_STATISTICAL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="正式商店設定資料" EntityType="Self.正式商店設定資料" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="合約資料" EntityType="Self.合約資料" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="客戶技術窗口資料" EntityType="Self.客戶技術窗口資料" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="客戶客服窗口資料" EntityType="Self.客戶客服窗口資料" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="客戶基本資料" EntityType="Self.客戶基本資料" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="客戶帳務窗口資料" EntityType="Self.客戶帳務窗口資料" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="客戶報表窗口資料" EntityType="Self.客戶報表窗口資料" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="客戶業務窗口資料" EntityType="Self.客戶業務窗口資料" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="停用連線服務原因" EntityType="Self.停用連線服務原因" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="國內發卡銀行" EntityType="Self.國內發卡銀行" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="測式商店設定資料" EntityType="Self.測式商店設定資料" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="測試商店備註欄" EntityType="Self.測試商店備註欄" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="測試商店備註欄暫存" EntityType="Self.測試商店備註欄暫存" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="測試商店進階查詢暫存" EntityType="Self.測試商店進階查詢暫存" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="~CASHSYS" EntityType="Self.~CASHSYS" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [~CASHSYS].[No] AS [No], 
+    [~CASHSYS].[PaymentFun] AS [PaymentFun], 
+    [~CASHSYS].[PaymentCode] AS [PaymentCode], 
+    [~CASHSYS].[Description] AS [Description]
+    FROM [dbo].[~CASHSYS] AS [~CASHSYS]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ezPay代收代付" EntityType="Self.ezPay代收代付" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ezPay代收代付].[商家編號] AS [商家編號], 
+    [ezPay代收代付].[商家名稱] AS [商家名稱], 
+    [ezPay代收代付].[英文名稱] AS [英文名稱], 
+    [ezPay代收代付].[帳號] AS [帳號], 
+    [ezPay代收代付].[密碼] AS [密碼], 
+    [ezPay代收代付].[商家型態] AS [商家型態], 
+    [ezPay代收代付].[通知否] AS [通知否], 
+    [ezPay代收代付].[上線日期] AS [上線日期], 
+    [ezPay代收代付].[傳真號碼] AS [傳真號碼], 
+    [ezPay代收代付].[客服聯絡人1] AS [客服聯絡人1], 
+    [ezPay代收代付].[客服電話1] AS [客服電話1], 
+    [ezPay代收代付].[客服依媚兒1] AS [客服依媚兒1], 
+    [ezPay代收代付].[客服聯絡人2] AS [客服聯絡人2], 
+    [ezPay代收代付].[客服電話2] AS [客服電話2], 
+    [ezPay代收代付].[客服依媚兒2] AS [客服依媚兒2], 
+    [ezPay代收代付].[客服聯絡人3] AS [客服聯絡人3], 
+    [ezPay代收代付].[客服電話3] AS [客服電話3], 
+    [ezPay代收代付].[客服依媚兒3] AS [客服依媚兒3], 
+    [ezPay代收代付].[會計聯絡人] AS [會計聯絡人], 
+    [ezPay代收代付].[會計電話] AS [會計電話], 
+    [ezPay代收代付].[會計依媚兒] AS [會計依媚兒], 
+    [ezPay代收代付].[撥款週期] AS [撥款週期], 
+    [ezPay代收代付].[商家區隔] AS [商家區隔], 
+    [ezPay代收代付].[代收費率] AS [代收費率], 
+    [ezPay代收代付].[業務] AS [業務], 
+    [ezPay代收代付].[下線日期] AS [下線日期], 
+    [ezPay代收代付].[商品] AS [商品]
+    FROM [dbo].[ezPay代收代付] AS [ezPay代收代付]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_CONT_ENAB_FUNC_ADV_FUNC" Association="Self.FK_CONT_ENAB_FUNC_ADV_FUNC">
+      <End Role="ADV_FUNC" EntitySet="ADV_FUNC" />
+      <End Role="CONT_ENAB_FUNC" EntitySet="CONT_ENAB_FUNC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CONT_ENAB_FUNC_合約資料" Association="Self.FK_CONT_ENAB_FUNC_合約資料">
+      <End Role="合約資料" EntitySet="合約資料" />
+      <End Role="CONT_ENAB_FUNC" EntitySet="CONT_ENAB_FUNC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CONTRA_RENEW_合約資料" Association="Self.FK_CONTRA_RENEW_合約資料">
+      <End Role="合約資料" EntitySet="合約資料" />
+      <End Role="CONTRA_RENEW" EntitySet="CONTRA_RENEW" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CONTRA_UPDATE_CONTRA_CAUSE" Association="Self.FK_CONTRA_UPDATE_CONTRA_CAUSE">
+      <End Role="CONTRA_CAUSE" EntitySet="CONTRA_CAUSE" />
+      <End Role="CONTRA_UPDATE" EntitySet="CONTRA_UPDATE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CONTRA_UPDATE_合約資料" Association="Self.FK_CONTRA_UPDATE_合約資料">
+      <End Role="合約資料" EntitySet="合約資料" />
+      <End Role="CONTRA_UPDATE" EntitySet="CONTRA_UPDATE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COOP_UNIT_CONNECT_COOP_UNIT" Association="Self.FK_COOP_UNIT_CONNECT_COOP_UNIT">
+      <End Role="COOP_UNIT" EntitySet="COOP_UNIT" />
+      <End Role="COOP_UNIT_CONNECT" EntitySet="COOP_UNIT_CONNECT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MER_TYPE_SERVICE_TYPE" Association="Self.FK_MER_TYPE_SERVICE_TYPE">
+      <End Role="SERVICE_TYPE" EntitySet="SERVICE_TYPE" />
+      <End Role="MER_TYPE" EntitySet="MER_TYPE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MPOS_TID_正式商店設定資料" Association="Self.FK_MPOS_TID_正式商店設定資料">
+      <End Role="正式商店設定資料" EntitySet="正式商店設定資料" />
+      <End Role="MPOS_TID" EntitySet="MPOS_TID" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OnCmpData_正式商店設定資料" Association="Self.FK_OnCmpData_正式商店設定資料">
+      <End Role="正式商店設定資料" EntitySet="正式商店設定資料" />
+      <End Role="OnCmpData" EntitySet="OnCmpData" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RM_LOGIN_QUESTION_TRADE_RM_NOTICE_UNIT" Association="Self.FK_RM_LOGIN_QUESTION_TRADE_RM_NOTICE_UNIT">
+      <End Role="RM_NOTICE_UNIT" EntitySet="RM_NOTICE_UNIT" />
+      <End Role="RM_LOGIN_QUESTION_TRADE" EntitySet="RM_LOGIN_QUESTION_TRADE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RM_REGISTER_REASON_RM_LOGIN_QUESTION_TRADE" Association="Self.FK_RM_REGISTER_REASON_RM_LOGIN_QUESTION_TRADE">
+      <End Role="RM_LOGIN_QUESTION_TRADE" EntitySet="RM_LOGIN_QUESTION_TRADE" />
+      <End Role="RM_REGISTER_REASON" EntitySet="RM_REGISTER_REASON" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RM_REGISTER_REASON_RM_REGISTER_REASON_CODE" Association="Self.FK_RM_REGISTER_REASON_RM_REGISTER_REASON_CODE">
+      <End Role="RM_REGISTER_REASON_CODE" EntitySet="RM_REGISTER_REASON_CODE" />
+      <End Role="RM_REGISTER_REASON" EntitySet="RM_REGISTER_REASON" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SETTLE_IP_客戶基本資料" Association="Self.FK_SETTLE_IP_客戶基本資料">
+      <End Role="客戶基本資料" EntitySet="客戶基本資料" />
+      <End Role="SETTLE_IP" EntitySet="SETTLE_IP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TRADE_STATISTICAL_客戶基本資料" Association="Self.FK_TRADE_STATISTICAL_客戶基本資料">
+      <End Role="客戶基本資料" EntitySet="客戶基本資料" />
+      <End Role="TRADE_STATISTICAL" EntitySet="TRADE_STATISTICAL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_正式商店設定資料_ACQUIRE_BANK" Association="Self.FK_正式商店設定資料_ACQUIRE_BANK">
+      <End Role="ACQUIRE_BANK" EntitySet="ACQUIRE_BANK" />
+      <End Role="正式商店設定資料" EntitySet="正式商店設定資料" />
+    </AssociationSet>
+    <AssociationSet Name="FK_正式商店設定資料_ACQUIRE_MODE" Association="Self.FK_正式商店設定資料_ACQUIRE_MODE">
+      <End Role="ACQUIRE_MODE" EntitySet="ACQUIRE_MODE" />
+      <End Role="正式商店設定資料" EntitySet="正式商店設定資料" />
+    </AssociationSet>
+    <AssociationSet Name="FK_正式商店設定資料_Alipay_Product" Association="Self.FK_正式商店設定資料_Alipay_Product">
+      <End Role="Alipay_Product" EntitySet="Alipay_Product" />
+      <End Role="正式商店設定資料" EntitySet="正式商店設定資料" />
+    </AssociationSet>
+    <AssociationSet Name="FK_正式商店設定資料_AUTO_SETTLE_TIME1" Association="Self.FK_正式商店設定資料_AUTO_SETTLE_TIME1">
+      <End Role="AUTO_SETTLE_TIME" EntitySet="AUTO_SETTLE_TIME" />
+      <End Role="正式商店設定資料" EntitySet="正式商店設定資料" />
+    </AssociationSet>
+    <AssociationSet Name="FK_正式商店設定資料_HOSTS" Association="Self.FK_正式商店設定資料_HOSTS">
+      <End Role="HOSTS" EntitySet="HOSTS" />
+      <End Role="正式商店設定資料" EntitySet="正式商店設定資料" />
+    </AssociationSet>
+    <AssociationSet Name="FK_正式商店設定資料_HOSTS1" Association="Self.FK_正式商店設定資料_HOSTS1">
+      <End Role="HOSTS" EntitySet="HOSTS" />
+      <End Role="正式商店設定資料" EntitySet="正式商店設定資料" />
+    </AssociationSet>
+    <AssociationSet Name="FK_正式商店設定資料_MALL_TYPE" Association="Self.FK_正式商店設定資料_MALL_TYPE">
+      <End Role="MALL_TYPE" EntitySet="MALL_TYPE" />
+      <End Role="正式商店設定資料" EntitySet="正式商店設定資料" />
+    </AssociationSet>
+    <AssociationSet Name="FK_正式商店設定資料_MER_STATE" Association="Self.FK_正式商店設定資料_MER_STATE">
+      <End Role="MER_STATE" EntitySet="MER_STATE" />
+      <End Role="正式商店設定資料" EntitySet="正式商店設定資料" />
+    </AssociationSet>
+    <AssociationSet Name="FK_正式商店設定資料_MER_TYPE" Association="Self.FK_正式商店設定資料_MER_TYPE">
+      <End Role="MER_TYPE" EntitySet="MER_TYPE" />
+      <End Role="正式商店設定資料" EntitySet="正式商店設定資料" />
+    </AssociationSet>
+    <AssociationSet Name="FK_正式商店設定資料_OBJ_VER" Association="Self.FK_正式商店設定資料_OBJ_VER">
+      <End Role="OBJ_VER" EntitySet="OBJ_VER" />
+      <End Role="正式商店設定資料" EntitySet="正式商店設定資料" />
+    </AssociationSet>
+    <AssociationSet Name="FK_正式商店設定資料_SETTLE_CYCLE" Association="Self.FK_正式商店設定資料_SETTLE_CYCLE">
+      <End Role="SETTLE_CYCLE" EntitySet="SETTLE_CYCLE" />
+      <End Role="正式商店設定資料" EntitySet="正式商店設定資料" />
+    </AssociationSet>
+    <AssociationSet Name="FK_正式商店設定資料_客戶基本資料1" Association="Self.FK_正式商店設定資料_客戶基本資料1">
+      <End Role="客戶基本資料" EntitySet="客戶基本資料" />
+      <End Role="正式商店設定資料" EntitySet="正式商店設定資料" />
+    </AssociationSet>
+    <AssociationSet Name="FK_合約資料_CONTRA_KIND" Association="Self.FK_合約資料_CONTRA_KIND">
+      <End Role="CONTRA_KIND" EntitySet="CONTRA_KIND" />
+      <End Role="合約資料" EntitySet="合約資料" />
+    </AssociationSet>
+    <AssociationSet Name="FK_合約資料_CONTRA_STATE" Association="Self.FK_合約資料_CONTRA_STATE">
+      <End Role="CONTRA_STATE" EntitySet="CONTRA_STATE" />
+      <End Role="~合約資料" EntitySet="~合約資料" />
+    </AssociationSet>
+    <AssociationSet Name="FK_合約資料_CONTRA_STATE1" Association="Self.FK_合約資料_CONTRA_STATE1">
+      <End Role="CONTRA_STATE" EntitySet="CONTRA_STATE" />
+      <End Role="合約資料" EntitySet="合約資料" />
+    </AssociationSet>
+    <AssociationSet Name="FK_合約資料_EMPLOYEE" Association="Self.FK_合約資料_EMPLOYEE">
+      <End Role="EMPLOYEE" EntitySet="EMPLOYEE" />
+      <End Role="~合約資料" EntitySet="~合約資料" />
+    </AssociationSet>
+    <AssociationSet Name="FK_合約資料_MALL_TYPE" Association="Self.FK_合約資料_MALL_TYPE">
+      <End Role="MALL_TYPE" EntitySet="MALL_TYPE" />
+      <End Role="合約資料" EntitySet="合約資料" />
+    </AssociationSet>
+    <AssociationSet Name="FK_合約資料_SERVICE_TYPE" Association="Self.FK_合約資料_SERVICE_TYPE">
+      <End Role="SERVICE_TYPE" EntitySet="SERVICE_TYPE" />
+      <End Role="~合約資料" EntitySet="~合約資料" />
+    </AssociationSet>
+    <AssociationSet Name="FK_合約資料_SERVICE_TYPE1" Association="Self.FK_合約資料_SERVICE_TYPE1">
+      <End Role="SERVICE_TYPE" EntitySet="SERVICE_TYPE" />
+      <End Role="合約資料" EntitySet="合約資料" />
+    </AssociationSet>
+    <AssociationSet Name="FK_合約資料_客戶基本資料" Association="Self.FK_合約資料_客戶基本資料">
+      <End Role="客戶基本資料" EntitySet="客戶基本資料" />
+      <End Role="合約資料" EntitySet="合約資料" />
+    </AssociationSet>
+    <AssociationSet Name="FK_客戶技術窗口資料_客戶基本資料" Association="Self.FK_客戶技術窗口資料_客戶基本資料">
+      <End Role="客戶基本資料" EntitySet="客戶基本資料" />
+      <End Role="客戶技術窗口資料" EntitySet="客戶技術窗口資料" />
+    </AssociationSet>
+    <AssociationSet Name="FK_客戶客服窗口資料_客戶基本資料" Association="Self.FK_客戶客服窗口資料_客戶基本資料">
+      <End Role="客戶基本資料" EntitySet="客戶基本資料" />
+      <End Role="客戶客服窗口資料" EntitySet="客戶客服窗口資料" />
+    </AssociationSet>
+    <AssociationSet Name="FK_客戶基本資料_EMPLOYEE" Association="Self.FK_客戶基本資料_EMPLOYEE">
+      <End Role="EMPLOYEE" EntitySet="EMPLOYEE" />
+      <End Role="客戶基本資料" EntitySet="客戶基本資料" />
+    </AssociationSet>
+    <AssociationSet Name="FK_客戶帳務窗口資料_客戶基本資料" Association="Self.FK_客戶帳務窗口資料_客戶基本資料">
+      <End Role="客戶基本資料" EntitySet="客戶基本資料" />
+      <End Role="客戶帳務窗口資料" EntitySet="客戶帳務窗口資料" />
+    </AssociationSet>
+    <AssociationSet Name="FK_客戶報表窗口資料_客戶基本資料" Association="Self.FK_客戶報表窗口資料_客戶基本資料">
+      <End Role="客戶基本資料" EntitySet="客戶基本資料" />
+      <End Role="客戶報表窗口資料" EntitySet="客戶報表窗口資料" />
+    </AssociationSet>
+    <AssociationSet Name="FK_客戶業務窗口資料_客戶基本資料" Association="Self.FK_客戶業務窗口資料_客戶基本資料">
+      <End Role="客戶基本資料" EntitySet="客戶基本資料" />
+      <End Role="客戶業務窗口資料" EntitySet="客戶業務窗口資料" />
+    </AssociationSet>
+    <AssociationSet Name="FK_測式商店設定資料_HOSTS" Association="Self.FK_測式商店設定資料_HOSTS">
+      <End Role="HOSTS" EntitySet="HOSTS" />
+      <End Role="測式商店設定資料" EntitySet="測式商店設定資料" />
+    </AssociationSet>
+    <AssociationSet Name="FK_測式商店設定資料_MER_STATE" Association="Self.FK_測式商店設定資料_MER_STATE">
+      <End Role="MER_STATE" EntitySet="MER_STATE" />
+      <End Role="測式商店設定資料" EntitySet="測式商店設定資料" />
+    </AssociationSet>
+    <AssociationSet Name="FK_測式商店設定資料_MER_TYPE" Association="Self.FK_測式商店設定資料_MER_TYPE">
+      <End Role="MER_TYPE" EntitySet="MER_TYPE" />
+      <End Role="測式商店設定資料" EntitySet="測式商店設定資料" />
+    </AssociationSet>
+    <AssociationSet Name="FK_測式商店設定資料_客戶基本資料" Association="Self.FK_測式商店設定資料_客戶基本資料">
+      <End Role="客戶基本資料" EntitySet="客戶基本資料" />
+      <End Role="測式商店設定資料" EntitySet="測式商店設定資料" />
+    </AssociationSet>
+    <AssociationSet Name="FK_測試商店備註欄_測式商店設定資料" Association="Self.FK_測試商店備註欄_測式商店設定資料">
+      <End Role="測式商店設定資料" EntitySet="測式商店設定資料" />
+      <End Role="測試商店備註欄" EntitySet="測試商店備註欄" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LINEBOTModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'LINEBOT.dbo.LAT_LON' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+  <EntityType Name="LAT_LON">
+    <Key>
+      <PropertyRef Name="UID" />
+    </Key>
+    <Property Name="UID" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="LAT" Type="nvarchar" MaxLength="255" />
+    <Property Name="LON" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'LINEBOT.dbo.PARKING' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+  <EntityType Name="PARKING">
+    <Key>
+      <PropertyRef Name="UID" />
+    </Key>
+    <Property Name="UID" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="LAT" Type="nvarchar" MaxLength="255" />
+    <Property Name="LON" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityContainer Name="LINEBOTModelStoreContainer">
+    <EntitySet Name="LAT_LON" EntityType="Self.LAT_LON" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [LAT_LON].[UID] AS [UID], 
+    [LAT_LON].[LAT] AS [LAT], 
+    [LAT_LON].[LON] AS [LON]
+    FROM [dbo].[LAT_LON] AS [LAT_LON]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PARKING" EntityType="Self.PARKING" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [PARKING].[UID] AS [UID], 
+    [PARKING].[LAT] AS [LAT], 
+    [PARKING].[LON] AS [LON]
+    FROM [dbo].[PARKING] AS [PARKING]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

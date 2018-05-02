@@ -1,0 +1,53 @@
+﻿@model IEnumerable<MerchantDB.Models.客戶基本資料>
+
+@{
+    ViewBag.Title = "查詢客戶資料";
+}
+
+
+<h2>@ViewBag.Title</h2>
+
+
+<p>
+    @Html.ActionLink("建立客戶資料", "Create")
+</p>
+
+@using (Html.BeginForm("Index", "Customer"))
+{
+
+    @Html.RadioButton("OptionValue", "CustName", true)
+    @Html.Label("依客戶名稱")<br />
+    @Html.RadioButton("OptionValue", "BusinessNo")
+    @Html.Label("依統一編號")<br />
+    @Html.RadioButton("OptionValue", "CustTel")
+    @Html.Label("依客戶電話")<br />
+    @Html.RadioButton("OptionValue", "AcctNum")
+    @Html.Label("依撥款帳號")<br />
+    @Html.RadioButton("OptionValue", "SalesMail_Phone")
+    @Html.Label("依業務Email/電話")<br />
+
+    <p>
+        Title:@Html.TextBox("searchString")
+        <input type="submit" value="Filter" />
+    </p>
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CustName)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.ActionLink(@Html.DisplayFor(modelItem => item.CustName).ToString(), "Details", new { id = item.CustName})
+            </td>
+        </tr>
+    }
+</table>
+
+

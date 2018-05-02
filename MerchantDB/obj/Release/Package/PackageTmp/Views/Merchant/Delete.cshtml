@@ -1,0 +1,1064 @@
+﻿@model MerchantDB.Models.正式商店設定資料
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>正式商店設定資料</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MerNo_F)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MerNo_F)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MerNo_T)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MerNo_T)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MerName_En)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MerName_En)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MerName_Ch)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MerName_Ch)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Account)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Account)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PassWord)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PassWord)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.New_PassWord)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.New_PassWord)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CooperMode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CooperMode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CMID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CMID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CTID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CTID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mall_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mall_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Org_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Org_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BankMode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BankMode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MerType2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MerType2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OnRemarks)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OnRemarks)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BatchType_N)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BatchType_N)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OnNtcTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OnNtcTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OnCmpTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OnCmpTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OffNtcTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OffNtcTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OffCmpTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OffCmpTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OffRemarks)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OffRemarks)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReportMail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReportMail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VBV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VBV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MerNo_New)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MerNo_New)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RSP_CardNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RSP_CardNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SysOn_TimeSt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SysOn_TimeSt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SysOff_TimeSt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SysOff_TimeSt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Total_Rate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Total_Rate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bank_Rate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bank_Rate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Neweb_Rate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Neweb_Rate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mall_Rate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mall_Rate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Credit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Credit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ACH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ACH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RateExp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RateExp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BusinessItem)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BusinessItem)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OnLineCs)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OnLineCs)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OffLineCs)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OffLineCs)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IS_IM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IS_IM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IS_CTID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IS_CTID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RPCCMerNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RPCCMerNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MallTypeNote)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MallTypeNote)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IMRate_3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IMRate_3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IMRate_6)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IMRate_6)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IMRate_9)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IMRate_9)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IMRate_12)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IMRate_12)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IMRate_18)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IMRate_18)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IMRate_24)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IMRate_24)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IMRate_36)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IMRate_36)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Created)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Created)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Is_UnionPay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Is_UnionPay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IS_RPRecCCNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IS_RPRecCCNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IS_RPFirstCap)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IS_RPFirstCap)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IS_RPAutoDelFail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IS_RPAutoDelFail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HostIPs)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HostIPs)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AdminIPs)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AdminIPs)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RPUploadIPs)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RPUploadIPs)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReportGiven)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReportGiven)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AsyncTxtNoteURL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AsyncTxtNoteURL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MerLogo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MerLogo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MerTxtNote)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MerTxtNote)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mer_Graph)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mer_Graph)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContraNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContraNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SinSerChar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SinSerChar)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MerNo_Old)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MerNo_Old)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SMS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SMS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BlackList)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BlackList)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CS_VAP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CS_VAP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CS_IBON)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CS_IBON)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CS_CS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CS_CS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CS_VAPCHK)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CS_VAPCHK)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CS_WEBATMCHK)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CS_WEBATMCHK)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CS_IBONCHK)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CS_IBONCHK)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CS_FAMIPORTCHK)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CS_FAMIPORTCHK)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CS_LIFEETCHK)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CS_LIFEETCHK)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CS_OKGOCHK)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CS_OKGOCHK)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CS_ALIPAYCHK)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CS_ALIPAYCHK)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CS_ALIPAYWAPCHK)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CS_ALIPAYWAPCHK)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CS_CSCHK)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CS_CSCHK)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AliFee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AliFee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AliRatio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AliRatio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AliMallFee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AliMallFee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AliMallRatio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AliMallRatio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ali_Overtime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ali_Overtime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AliWap_Fee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AliWap_Fee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AliWap_Ratio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AliWap_Ratio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AliWapMall_Fee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AliWapMall_Fee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AliWapMall_Ratio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AliWapMall_Ratio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AliWap_Overtime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AliWap_Overtime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Is_Autobilling)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Is_Autobilling)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MPOSCorreCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MPOSCorreCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.P33)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.P33)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TransferFee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TransferFee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Custname_Extn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Custname_Extn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Custname_Rept)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Custname_Rept)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Custname_Bill)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Custname_Bill)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.abroadBankRate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.abroadBankRate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.abroadMallRate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.abroadMallRate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.abroadNewebRate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.abroadNewebRate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.abroadTotalRate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.abroadTotalRate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.abroadACH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.abroadACH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.abroadRateExp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.abroadRateExp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CAUTION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CAUTION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sales)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sales)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isApplePay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isApplePay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isAndroidPay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isAndroidPay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EBPP_TOTALFEE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EBPP_TOTALFEE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EBPP_STOREFEE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EBPP_STOREFEE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EBPP_QWAREFEE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EBPP_QWAREFEE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EBPP_ENTITIESBILL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EBPP_ENTITIESBILL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EBPP_IBONBILL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EBPP_IBONBILL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TICKET_PUBLISHERNO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TICKET_PUBLISHERNO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TICKET_ACCOUNT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TICKET_ACCOUNT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TICKET_PWD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TICKET_PWD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EBPP_From)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EBPP_From)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IS_QRMPP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IS_QRMPP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ACQUIRE_BANK.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ACQUIRE_BANK.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ACQUIRE_MODE.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ACQUIRE_MODE.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Alipay_Product1.Product)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Alipay_Product1.Product)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AUTO_SETTLE_TIME.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AUTO_SETTLE_TIME.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HOST.ENV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HOST.ENV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HOST1.ENV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HOST1.ENV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MALL_TYPE.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MALL_TYPE.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MER_STATE.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MER_STATE.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MER_TYPE.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MER_TYPE.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OBJ_VER.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OBJ_VER.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OnCmpData.Merno_F)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OnCmpData.Merno_F)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SETTLE_CYCLE.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SETTLE_CYCLE.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.客戶基本資料.CustName_En)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.客戶基本資料.CustName_En)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

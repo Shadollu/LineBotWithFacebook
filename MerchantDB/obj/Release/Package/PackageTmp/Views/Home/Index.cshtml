@@ -1,0 +1,21 @@
+﻿@{
+
+    ViewBag.Title = "上班不做事";
+
+}
+
+<div class="jumbotron">
+    <p class="lead">測試Line匿名機器人</p>
+
+    @using (Html.BeginForm("Index", "Home"))
+    {
+        <p>
+            訊息:@Html.TextBox("SendValue")
+            <input type="submit" value="送出" />
+        </p>
+    }
+
+</div>
+
+
+

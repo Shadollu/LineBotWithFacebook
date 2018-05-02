@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LINEBOTModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="LAT_LON">
+    <Key>
+      <PropertyRef Name="UID" />
+    </Key>
+    <Property Name="UID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LAT" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LON" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="COUNTRY" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="PARKING">
+    <Key>
+      <PropertyRef Name="UID" />
+    </Key>
+    <Property Name="UID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LAT" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LON" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="LINEBOTEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="LAT_LON" EntityType="Self.LAT_LON" />
+    <EntitySet Name="PARKING" EntityType="Self.PARKING" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,2620 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TestDB2ModelStoreContainer" CdmEntityContainer="TestDB2Entities">
+    <EntitySetMapping Name="C_AUTO_SETTLE_TIME">
+      <EntityTypeMapping TypeName="TestDB2Model.C_AUTO_SETTLE_TIME">
+        <MappingFragment StoreEntitySet="~AUTO_SETTLE_TIME">
+          <ScalarProperty Name="AutoSettleTime" ColumnName="AutoSettleTime" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_MER_TYPE">
+      <EntityTypeMapping TypeName="TestDB2Model.C_MER_TYPE">
+        <MappingFragment StoreEntitySet="~MER_TYPE">
+          <ScalarProperty Name="MerType" ColumnName="MerType" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_合約狀態">
+      <EntityTypeMapping TypeName="TestDB2Model.C_合約狀態">
+        <MappingFragment StoreEntitySet="~合約狀態">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_合約資料">
+      <EntityTypeMapping TypeName="TestDB2Model.C_合約資料">
+        <MappingFragment StoreEntitySet="~合約資料">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+          <ScalarProperty Name="ContraNo" ColumnName="ContraNo" />
+          <ScalarProperty Name="ContraYear" ColumnName="ContraYear" />
+          <ScalarProperty Name="MallType" ColumnName="MallType" />
+          <ScalarProperty Name="ContraState" ColumnName="ContraState" />
+          <ScalarProperty Name="ServiceType" ColumnName="ServiceType" />
+          <ScalarProperty Name="ContraEntDate" ColumnName="ContraEntDate" />
+          <ScalarProperty Name="ContraSendDate" ColumnName="ContraSendDate" />
+          <ScalarProperty Name="InvDate" ColumnName="InvDate" />
+          <ScalarProperty Name="Rent" ColumnName="Rent" />
+          <ScalarProperty Name="EarMoney" ColumnName="EarMoney" />
+          <ScalarProperty Name="ContraSignDate" ColumnName="ContraSignDate" />
+          <ScalarProperty Name="Contra_IniDate" ColumnName="Contra_IniDate" />
+          <ScalarProperty Name="Contra_ValDate" ColumnName="Contra_ValDate" />
+          <ScalarProperty Name="Contra_ExpDate" ColumnName="Contra_ExpDate" />
+          <ScalarProperty Name="ContraStopDate" ColumnName="ContraStopDate" />
+          <ScalarProperty Name="Total_Rate" ColumnName="Total_Rate" />
+          <ScalarProperty Name="Bank_Rate" ColumnName="Bank_Rate" />
+          <ScalarProperty Name="Neweb_Rate" ColumnName="Neweb_Rate" />
+          <ScalarProperty Name="Mall_Rate" ColumnName="Mall_Rate" />
+          <ScalarProperty Name="RentExp" ColumnName="RentExp" />
+          <ScalarProperty Name="RateExp" ColumnName="RateExp" />
+          <ScalarProperty Name="NewebSales" ColumnName="NewebSales" />
+          <ScalarProperty Name="Distributor" ColumnName="Distributor" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="SinSerChar" ColumnName="SinSerChar" />
+          <ScalarProperty Name="IM" ColumnName="IM" />
+          <ScalarProperty Name="RP" ColumnName="RP" />
+          <ScalarProperty Name="FAX" ColumnName="FAX" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_服務型態">
+      <EntityTypeMapping TypeName="TestDB2Model.C_服務型態">
+        <MappingFragment StoreEntitySet="~服務型態">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="ServiceType" ColumnName="ServiceType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ACQUIRE_BANK">
+      <EntityTypeMapping TypeName="TestDB2Model.ACQUIRE_BANK">
+        <MappingFragment StoreEntitySet="ACQUIRE_BANK">
+          <ScalarProperty Name="AcquireBank" ColumnName="AcquireBank" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ENV" ColumnName="ENV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ACQUIRE_MODE">
+      <EntityTypeMapping TypeName="TestDB2Model.ACQUIRE_MODE">
+        <MappingFragment StoreEntitySet="ACQUIRE_MODE">
+          <ScalarProperty Name="AcquireMode" ColumnName="AcquireMode" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADV_FUNC">
+      <EntityTypeMapping TypeName="TestDB2Model.ADV_FUNC">
+        <MappingFragment StoreEntitySet="ADV_FUNC">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="FuncCode" ColumnName="FuncCode" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Alipay_Product">
+      <EntityTypeMapping TypeName="TestDB2Model.Alipay_Product">
+        <MappingFragment StoreEntitySet="Alipay_Product">
+          <ScalarProperty Name="Product" ColumnName="Product" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AUTHORITY_FUNCTION">
+      <EntityTypeMapping TypeName="TestDB2Model.AUTHORITY_FUNCTION">
+        <MappingFragment StoreEntitySet="AUTHORITY_FUNCTION">
+          <ScalarProperty Name="Num" ColumnName="Num" />
+          <ScalarProperty Name="業務部門系統主表單" ColumnName="業務部門系統主表單" />
+          <ScalarProperty Name="篩選客戶資料" ColumnName="篩選客戶資料" />
+          <ScalarProperty Name="篩選合約資料" ColumnName="篩選合約資料" />
+          <ScalarProperty Name="篩選正式商店資料" ColumnName="篩選正式商店資料" />
+          <ScalarProperty Name="維護客戶資料" ColumnName="維護客戶資料" />
+          <ScalarProperty Name="維護合約資料" ColumnName="維護合約資料" />
+          <ScalarProperty Name="維護正式商店資料" ColumnName="維護正式商店資料" />
+          <ScalarProperty Name="測試商店資料維護" ColumnName="測試商店資料維護" />
+          <ScalarProperty Name="帳務發票寄送標籤選項" ColumnName="帳務發票寄送標籤選項" />
+          <ScalarProperty Name="風管登錄問題交易維護" ColumnName="風管登錄問題交易維護" />
+          <ScalarProperty Name="風管詳細登錄問題交易" ColumnName="風管詳細登錄問題交易" />
+          <ScalarProperty Name="客服FAQ" ColumnName="客服FAQ" />
+          <ScalarProperty Name="業務進階查詢_正式商店" ColumnName="業務進階查詢_正式商店" />
+          <ScalarProperty Name="業務進階查詢_合約資料" ColumnName="業務進階查詢_合約資料" />
+          <ScalarProperty Name="測試商店進階查詢" ColumnName="測試商店進階查詢" />
+          <ScalarProperty Name="合作單位資料篩選" ColumnName="合作單位資料篩選" />
+          <ScalarProperty Name="維護合約詳細資料New" ColumnName="維護合約詳細資料New" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AUTHORITY_SETTLEMENT">
+      <EntityTypeMapping TypeName="TestDB2Model.AUTHORITY_SETTLEMENT">
+        <MappingFragment StoreEntitySet="AUTHORITY_SETTLEMENT">
+          <ScalarProperty Name="Num" ColumnName="Num" />
+          <ScalarProperty Name="UserRole" ColumnName="UserRole" />
+          <ScalarProperty Name="FormName" ColumnName="FormName" />
+          <ScalarProperty Name="FunctionName" ColumnName="FunctionName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AUTO_SERIAL_NUM">
+      <EntityTypeMapping TypeName="TestDB2Model.AUTO_SERIAL_NUM">
+        <MappingFragment StoreEntitySet="AUTO_SERIAL_NUM">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="ContraKind" ColumnName="ContraKind" />
+          <ScalarProperty Name="DateT" ColumnName="DateT" />
+          <ScalarProperty Name="SerialNumber" ColumnName="SerialNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AUTO_SETTLE_TIME">
+      <EntityTypeMapping TypeName="TestDB2Model.AUTO_SETTLE_TIME">
+        <MappingFragment StoreEntitySet="AUTO_SETTLE_TIME">
+          <ScalarProperty Name="AutoSettleTime" ColumnName="AutoSettleTime" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BANK_BRANCH_CODE">
+      <EntityTypeMapping TypeName="TestDB2Model.BANK_BRANCH_CODE">
+        <MappingFragment StoreEntitySet="BANK_BRANCH_CODE">
+          <ScalarProperty Name="BranchCode" ColumnName="BranchCode" />
+          <ScalarProperty Name="BranchName" ColumnName="BranchName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BANK_HQ">
+      <EntityTypeMapping TypeName="TestDB2Model.BANK_HQ">
+        <MappingFragment StoreEntitySet="BANK_HQ">
+          <ScalarProperty Name="BankCode_HQ" ColumnName="BankCode_HQ" />
+          <ScalarProperty Name="BankName_HQ" ColumnName="BankName_HQ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BANK_MODE">
+      <EntityTypeMapping TypeName="TestDB2Model.BANK_MODE">
+        <MappingFragment StoreEntitySet="BANK_MODE">
+          <ScalarProperty Name="BankMode" ColumnName="BankMode" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BATCH_TYPE">
+      <EntityTypeMapping TypeName="TestDB2Model.BATCH_TYPE">
+        <MappingFragment StoreEntitySet="BATCH_TYPE">
+          <ScalarProperty Name="BatchType" ColumnName="BatchType" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CONT_ENAB_FUNC">
+      <EntityTypeMapping TypeName="TestDB2Model.CONT_ENAB_FUNC">
+        <MappingFragment StoreEntitySet="CONT_ENAB_FUNC">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="ContraCorreCode" ColumnName="ContraCorreCode" />
+          <ScalarProperty Name="FuncCode" ColumnName="FuncCode" />
+          <ScalarProperty Name="BR_Var" ColumnName="BR_Var" />
+          <ScalarProperty Name="BR_Fix" ColumnName="BR_Fix" />
+          <ScalarProperty Name="NR_Var" ColumnName="NR_Var" />
+          <ScalarProperty Name="NR_Fix" ColumnName="NR_Fix" />
+          <ScalarProperty Name="Excharge" ColumnName="Excharge" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="SettleCycle" ColumnName="SettleCycle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CONT_ENAB_FUNC_TEMP">
+      <EntityTypeMapping TypeName="TestDB2Model.CONT_ENAB_FUNC_TEMP">
+        <MappingFragment StoreEntitySet="CONT_ENAB_FUNC_TEMP">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="ContraCorreCode" ColumnName="ContraCorreCode" />
+          <ScalarProperty Name="FuncCode" ColumnName="FuncCode" />
+          <ScalarProperty Name="BR_Var" ColumnName="BR_Var" />
+          <ScalarProperty Name="BR_Fix" ColumnName="BR_Fix" />
+          <ScalarProperty Name="NR_Var" ColumnName="NR_Var" />
+          <ScalarProperty Name="NR_Fix" ColumnName="NR_Fix" />
+          <ScalarProperty Name="Excharge" ColumnName="Excharge" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="SettleCycle" ColumnName="SettleCycle" />
+          <ScalarProperty Name="RegisterPerson" ColumnName="RegisterPerson" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CONTRA_CAUSE">
+      <EntityTypeMapping TypeName="TestDB2Model.CONTRA_CAUSE">
+        <MappingFragment StoreEntitySet="CONTRA_CAUSE">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="Cause" ColumnName="Cause" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CONTRA_KIND">
+      <EntityTypeMapping TypeName="TestDB2Model.CONTRA_KIND">
+        <MappingFragment StoreEntitySet="CONTRA_KIND">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="ContraKind" ColumnName="ContraKind" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CONTRA_RENEW">
+      <EntityTypeMapping TypeName="TestDB2Model.CONTRA_RENEW">
+        <MappingFragment StoreEntitySet="CONTRA_RENEW">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="ContraCorreCode" ColumnName="ContraCorreCode" />
+          <ScalarProperty Name="Contra_IniDate" ColumnName="Contra_IniDate" />
+          <ScalarProperty Name="Contra_ValDate" ColumnName="Contra_ValDate" />
+          <ScalarProperty Name="Contra_ExpDate" ColumnName="Contra_ExpDate" />
+          <ScalarProperty Name="SignSales" ColumnName="SignSales" />
+          <ScalarProperty Name="Rent" ColumnName="Rent" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="InvDate" ColumnName="InvDate" />
+          <ScalarProperty Name="DepositDate" ColumnName="DepositDate" />
+          <ScalarProperty Name="RentExp" ColumnName="RentExp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CONTRA_STATE">
+      <EntityTypeMapping TypeName="TestDB2Model.CONTRA_STATE">
+        <MappingFragment StoreEntitySet="CONTRA_STATE">
+          <ScalarProperty Name="ContraStates" ColumnName="ContraStates" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CONTRA_UPDATE">
+      <EntityTypeMapping TypeName="TestDB2Model.CONTRA_UPDATE">
+        <MappingFragment StoreEntitySet="CONTRA_UPDATE">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="ContraCorreCode" ColumnName="ContraCorreCode" />
+          <ScalarProperty Name="Updated" ColumnName="Updated" />
+          <ScalarProperty Name="Cause" ColumnName="Cause" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COOP_MODE">
+      <EntityTypeMapping TypeName="TestDB2Model.COOP_MODE">
+        <MappingFragment StoreEntitySet="COOP_MODE">
+          <ScalarProperty Name="CooperMode" ColumnName="CooperMode" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COOP_UNIT">
+      <EntityTypeMapping TypeName="TestDB2Model.COOP_UNIT">
+        <MappingFragment StoreEntitySet="COOP_UNIT">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="PartnerName" ColumnName="PartnerName" />
+          <ScalarProperty Name="PartnerType" ColumnName="PartnerType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COOP_UNIT_CONNECT">
+      <EntityTypeMapping TypeName="TestDB2Model.COOP_UNIT_CONNECT">
+        <MappingFragment StoreEntitySet="COOP_UNIT_CONNECT">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="PartnerName" ColumnName="PartnerName" />
+          <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+          <ScalarProperty Name="ContactTel" ColumnName="ContactTel" />
+          <ScalarProperty Name="ContactMobile" ColumnName="ContactMobile" />
+          <ScalarProperty Name="ContactEmail" ColumnName="ContactEmail" />
+          <ScalarProperty Name="ContactType" ColumnName="ContactType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DISTRIBUTOR_LIST">
+      <EntityTypeMapping TypeName="TestDB2Model.DISTRIBUTOR_LIST">
+        <MappingFragment StoreEntitySet="DISTRIBUTOR_LIST">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="ContraYear" ColumnName="ContraYear" />
+          <ScalarProperty Name="Customer" ColumnName="Customer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dtproperties">
+      <EntityTypeMapping TypeName="TestDB2Model.dtproperties">
+        <MappingFragment StoreEntitySet="dtproperties">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="objectid" ColumnName="objectid" />
+          <ScalarProperty Name="property" ColumnName="property" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="uvalue" ColumnName="uvalue" />
+          <ScalarProperty Name="lvalue" ColumnName="lvalue" />
+          <ScalarProperty Name="version" ColumnName="version" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EMPLOYEE">
+      <EntityTypeMapping TypeName="TestDB2Model.EMPLOYEE">
+        <MappingFragment StoreEntitySet="EMPLOYEE">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="Em_Name" ColumnName="Em_Name" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FAQ_CLASS_CS">
+      <EntityTypeMapping TypeName="TestDB2Model.FAQ_CLASS_CS">
+        <MappingFragment StoreEntitySet="FAQ_CLASS_CS">
+          <ScalarProperty Name="FaqGroupCode" ColumnName="FaqGroupCode" />
+          <ScalarProperty Name="FaqGroupName" ColumnName="FaqGroupName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FAQ_CS">
+      <EntityTypeMapping TypeName="TestDB2Model.FAQ_CS">
+        <MappingFragment StoreEntitySet="FAQ_CS">
+          <ScalarProperty Name="FAQ_No" ColumnName="FAQ_No" />
+          <ScalarProperty Name="QueType" ColumnName="QueType" />
+          <ScalarProperty Name="QueSubject" ColumnName="QueSubject" />
+          <ScalarProperty Name="Phenomenon" ColumnName="Phenomenon" />
+          <ScalarProperty Name="Confirmation" ColumnName="Confirmation" />
+          <ScalarProperty Name="Suggestion" ColumnName="Suggestion" />
+          <ScalarProperty Name="Cause" ColumnName="Cause" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="Udated" ColumnName="Udated" />
+          <ScalarProperty Name="Creator" ColumnName="Creator" />
+          <ScalarProperty Name="Reviser" ColumnName="Reviser" />
+          <ScalarProperty Name="QueCount" ColumnName="QueCount" />
+          <ScalarProperty Name="UpdateCount" ColumnName="UpdateCount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FAQ_QUE_RECORD">
+      <EntityTypeMapping TypeName="TestDB2Model.FAQ_QUE_RECORD">
+        <MappingFragment StoreEntitySet="FAQ_QUE_RECORD">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="QueRecord" ColumnName="QueRecord" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FAQ_RELATIVE_LINK">
+      <EntityTypeMapping TypeName="TestDB2Model.FAQ_RELATIVE_LINK">
+        <MappingFragment StoreEntitySet="FAQ_RELATIVE_LINK">
+          <ScalarProperty Name="FAQ_No" ColumnName="FAQ_No" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FAQ_UPDATE_COUNT">
+      <EntityTypeMapping TypeName="TestDB2Model.FAQ_UPDATE_COUNT">
+        <MappingFragment StoreEntitySet="FAQ_UPDATE_COUNT">
+          <ScalarProperty Name="Reviser" ColumnName="Reviser" />
+          <ScalarProperty Name="UpdateCount" ColumnName="UpdateCount" />
+          <ScalarProperty Name="CreateCount" ColumnName="CreateCount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HOSTS">
+      <EntityTypeMapping TypeName="TestDB2Model.HOSTS">
+        <MappingFragment StoreEntitySet="HOSTS">
+          <ScalarProperty Name="HostID" ColumnName="HostID" />
+          <ScalarProperty Name="ENV" ColumnName="ENV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MALL_TYPE">
+      <EntityTypeMapping TypeName="TestDB2Model.MALL_TYPE">
+        <MappingFragment StoreEntitySet="MALL_TYPE">
+          <ScalarProperty Name="MallType" ColumnName="MallType" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ENV" ColumnName="ENV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MER_STATE">
+      <EntityTypeMapping TypeName="TestDB2Model.MER_STATE">
+        <MappingFragment StoreEntitySet="MER_STATE">
+          <ScalarProperty Name="MerState" ColumnName="MerState" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ENV" ColumnName="ENV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MER_TX_BATCH">
+      <EntityTypeMapping TypeName="TestDB2Model.MER_TX_BATCH">
+        <MappingFragment StoreEntitySet="MER_TX_BATCH">
+          <ScalarProperty Name="NUM" ColumnName="NUM" />
+          <ScalarProperty Name="MERCHANTNUMBER" ColumnName="MERCHANTNUMBER" />
+          <ScalarProperty Name="BATCHNUMBER" ColumnName="BATCHNUMBER" />
+          <ScalarProperty Name="CAPTUREDATE" ColumnName="CAPTUREDATE" />
+          <ScalarProperty Name="TOTALCOUNT" ColumnName="TOTALCOUNT" />
+          <ScalarProperty Name="TOTALAMOUNT" ColumnName="TOTALAMOUNT" />
+          <ScalarProperty Name="TOTALCREDCOUNT" ColumnName="TOTALCREDCOUNT" />
+          <ScalarProperty Name="TOTALCREDAMOUNT" ColumnName="TOTALCREDAMOUNT" />
+          <ScalarProperty Name="SERVICE_TYPE" ColumnName="SERVICE_TYPE" />
+          <ScalarProperty Name="ACQUIRE_BANK" ColumnName="ACQUIRE_BANK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MER_TX_BATCH_TEMP">
+      <EntityTypeMapping TypeName="TestDB2Model.MER_TX_BATCH_TEMP">
+        <MappingFragment StoreEntitySet="MER_TX_BATCH_TEMP">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+          <ScalarProperty Name="BusinessNo" ColumnName="BusinessNo" />
+          <ScalarProperty Name="AcctTitle" ColumnName="AcctTitle" />
+          <ScalarProperty Name="AcctNum" ColumnName="AcctNum" />
+          <ScalarProperty Name="AcctBank" ColumnName="AcctBank" />
+          <ScalarProperty Name="BankBranch" ColumnName="BankBranch" />
+          <ScalarProperty Name="InvAddress" ColumnName="InvAddress" />
+          <ScalarProperty Name="AddresseeName" ColumnName="AddresseeName" />
+          <ScalarProperty Name="InvZipcode" ColumnName="InvZipcode" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="MerchantNum" ColumnName="MerchantNum" />
+          <ScalarProperty Name="SettleType" ColumnName="SettleType" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Whether_Choose" ColumnName="Whether_Choose" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MER_TX_BATCH_TEMP_BLOCK">
+      <EntityTypeMapping TypeName="TestDB2Model.MER_TX_BATCH_TEMP_BLOCK">
+        <MappingFragment StoreEntitySet="MER_TX_BATCH_TEMP_BLOCK">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+          <ScalarProperty Name="BusinessNo" ColumnName="BusinessNo" />
+          <ScalarProperty Name="AcctTitle" ColumnName="AcctTitle" />
+          <ScalarProperty Name="AcctNum" ColumnName="AcctNum" />
+          <ScalarProperty Name="AcctBank" ColumnName="AcctBank" />
+          <ScalarProperty Name="BankBranch" ColumnName="BankBranch" />
+          <ScalarProperty Name="InvAddress" ColumnName="InvAddress" />
+          <ScalarProperty Name="AddresseeName" ColumnName="AddresseeName" />
+          <ScalarProperty Name="InvZipcode" ColumnName="InvZipcode" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="MerchantNum" ColumnName="MerchantNum" />
+          <ScalarProperty Name="SettleType" ColumnName="SettleType" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Whether_Choose" ColumnName="Whether_Choose" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MER_TYPE">
+      <EntityTypeMapping TypeName="TestDB2Model.MER_TYPE">
+        <MappingFragment StoreEntitySet="MER_TYPE">
+          <ScalarProperty Name="MerType" ColumnName="MerType" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ServiceType" ColumnName="ServiceType" />
+          <ScalarProperty Name="ENV" ColumnName="ENV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MPOS_TID">
+      <EntityTypeMapping TypeName="TestDB2Model.MPOS_TID">
+        <MappingFragment StoreEntitySet="MPOS_TID">
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+          <ScalarProperty Name="MerNo_F" ColumnName="MerNo_F" />
+          <ScalarProperty Name="Machine_No" ColumnName="Machine_No" />
+          <ScalarProperty Name="MID" ColumnName="MID" />
+          <ScalarProperty Name="TID" ColumnName="TID" />
+          <ScalarProperty Name="OnCmpTime" ColumnName="OnCmpTime" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="MPOSCorreCode" ColumnName="MPOSCorreCode" />
+          <ScalarProperty Name="No" ColumnName="No" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OBJ_VER">
+      <EntityTypeMapping TypeName="TestDB2Model.OBJ_VER">
+        <MappingFragment StoreEntitySet="OBJ_VER">
+          <ScalarProperty Name="ObjVer" ColumnName="ObjVer" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OnCmpData">
+      <EntityTypeMapping TypeName="TestDB2Model.OnCmpData">
+        <MappingFragment StoreEntitySet="OnCmpData">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="OnCmpCorreCode" ColumnName="OnCmpCorreCode" />
+          <ScalarProperty Name="Merno_F" ColumnName="Merno_F" />
+          <ScalarProperty Name="Custname" ColumnName="Custname" />
+          <ScalarProperty Name="Mertype" ColumnName="Mertype" />
+          <ScalarProperty Name="SystemAccount" ColumnName="SystemAccount" />
+          <ScalarProperty Name="SystemPassword" ColumnName="SystemPassword" />
+          <ScalarProperty Name="TransAccount" ColumnName="TransAccount" />
+          <ScalarProperty Name="TransPassword" ColumnName="TransPassword" />
+          <ScalarProperty Name="ReportAccount" ColumnName="ReportAccount" />
+          <ScalarProperty Name="ReportPassword" ColumnName="ReportPassword" />
+          <ScalarProperty Name="R_code" ColumnName="R_code" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="MappingCode" ColumnName="MappingCode" />
+          <ScalarProperty Name="SFTPAccount" ColumnName="SFTPAccount" />
+          <ScalarProperty Name="SFTPPassword" ColumnName="SFTPPassword" />
+          <ScalarProperty Name="VPOS_Account" ColumnName="VPOS_Account" />
+          <ScalarProperty Name="VPOS_Password" ColumnName="VPOS_Password" />
+          <ScalarProperty Name="quick_Ticket" ColumnName="quick_Ticket" />
+          <ScalarProperty Name="Trans_Code" ColumnName="Trans_Code" />
+          <ScalarProperty Name="sendMail_Time" ColumnName="sendMail_Time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RM_LOGIN_QUESTION_TRADE">
+      <EntityTypeMapping TypeName="TestDB2Model.RM_LOGIN_QUESTION_TRADE">
+        <MappingFragment StoreEntitySet="RM_LOGIN_QUESTION_TRADE">
+          <ScalarProperty Name="NumCorrespondingly" ColumnName="NumCorrespondingly" />
+          <ScalarProperty Name="MerNo" ColumnName="MerNo" />
+          <ScalarProperty Name="OrderNum" ColumnName="OrderNum" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="AuthCode" ColumnName="AuthCode" />
+          <ScalarProperty Name="CreditCard" ColumnName="CreditCard" />
+          <ScalarProperty Name="NoticeDate" ColumnName="NoticeDate" />
+          <ScalarProperty Name="AuthDate" ColumnName="AuthDate" />
+          <ScalarProperty Name="IS_Receipt" ColumnName="IS_Receipt" />
+          <ScalarProperty Name="RefundDate" ColumnName="RefundDate" />
+          <ScalarProperty Name="DisputeCollectDate" ColumnName="DisputeCollectDate" />
+          <ScalarProperty Name="DeFundDate" ColumnName="DeFundDate" />
+          <ScalarProperty Name="ReasonRemarks" ColumnName="ReasonRemarks" />
+          <ScalarProperty Name="NoticeUnit" ColumnName="NoticeUnit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RM_NOTICE_UNIT">
+      <EntityTypeMapping TypeName="TestDB2Model.RM_NOTICE_UNIT">
+        <MappingFragment StoreEntitySet="RM_NOTICE_UNIT">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="NoticeUnit" ColumnName="NoticeUnit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RM_REGISTER_QUERY_TEMP">
+      <EntityTypeMapping TypeName="TestDB2Model.RM_REGISTER_QUERY_TEMP">
+        <MappingFragment StoreEntitySet="RM_REGISTER_QUERY_TEMP">
+          <ScalarProperty Name="Num" ColumnName="Num" />
+          <ScalarProperty Name="QueryPerson" ColumnName="QueryPerson" />
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+          <ScalarProperty Name="MerNo" ColumnName="MerNo" />
+          <ScalarProperty Name="OrderNum" ColumnName="OrderNum" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="AuthCode" ColumnName="AuthCode" />
+          <ScalarProperty Name="CreditCard" ColumnName="CreditCard" />
+          <ScalarProperty Name="NoticeDate" ColumnName="NoticeDate" />
+          <ScalarProperty Name="AuthDate" ColumnName="AuthDate" />
+          <ScalarProperty Name="IS_Receipt" ColumnName="IS_Receipt" />
+          <ScalarProperty Name="RefundDate" ColumnName="RefundDate" />
+          <ScalarProperty Name="DisputeCollectDate" ColumnName="DisputeCollectDate" />
+          <ScalarProperty Name="DeFundDate" ColumnName="DeFundDate" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="RegReasonCode" ColumnName="RegReasonCode" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+          <ScalarProperty Name="NoticeUnit" ColumnName="NoticeUnit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RM_REGISTER_REASON">
+      <EntityTypeMapping TypeName="TestDB2Model.RM_REGISTER_REASON">
+        <MappingFragment StoreEntitySet="RM_REGISTER_REASON">
+          <ScalarProperty Name="Num" ColumnName="Num" />
+          <ScalarProperty Name="NumCorrespondingly" ColumnName="NumCorrespondingly" />
+          <ScalarProperty Name="RegReasonCode" ColumnName="RegReasonCode" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RM_REGISTER_REASON_CODE">
+      <EntityTypeMapping TypeName="TestDB2Model.RM_REGISTER_REASON_CODE">
+        <MappingFragment StoreEntitySet="RM_REGISTER_REASON_CODE">
+          <ScalarProperty Name="RegReasonCode" ColumnName="RegReasonCode" />
+          <ScalarProperty Name="RegisterReason" ColumnName="RegisterReason" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RM_REGISTER_REASON_TEMP">
+      <EntityTypeMapping TypeName="TestDB2Model.RM_REGISTER_REASON_TEMP">
+        <MappingFragment StoreEntitySet="RM_REGISTER_REASON_TEMP">
+          <ScalarProperty Name="Num" ColumnName="Num" />
+          <ScalarProperty Name="NumCorrespondingly" ColumnName="NumCorrespondingly" />
+          <ScalarProperty Name="RegReasonCode" ColumnName="RegReasonCode" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+          <ScalarProperty Name="RegisterPerson" ColumnName="RegisterPerson" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SERVER_NAME">
+      <EntityTypeMapping TypeName="TestDB2Model.SERVER_NAME">
+        <MappingFragment StoreEntitySet="SERVER_NAME">
+          <ScalarProperty Name="ServerName" ColumnName="ServerName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SERVICE_TYPE">
+      <EntityTypeMapping TypeName="TestDB2Model.SERVICE_TYPE">
+        <MappingFragment StoreEntitySet="SERVICE_TYPE">
+          <ScalarProperty Name="ServiceType" ColumnName="ServiceType" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SETTLE_CYCLE">
+      <EntityTypeMapping TypeName="TestDB2Model.SETTLE_CYCLE">
+        <MappingFragment StoreEntitySet="SETTLE_CYCLE">
+          <ScalarProperty Name="SettleCycle" ColumnName="SettleCycle" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SETTLE_IP">
+      <EntityTypeMapping TypeName="TestDB2Model.SETTLE_IP">
+        <MappingFragment StoreEntitySet="SETTLE_IP">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+          <ScalarProperty Name="HostIPs" ColumnName="HostIPs" />
+          <ScalarProperty Name="AdminIPs" ColumnName="AdminIPs" />
+          <ScalarProperty Name="RPUploadIPs" ColumnName="RPUploadIPs" />
+          <ScalarProperty Name="MerNo" ColumnName="MerNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="TestDB2Model.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TEMP_ADVANCE_QUERY">
+      <EntityTypeMapping TypeName="TestDB2Model.TEMP_ADVANCE_QUERY">
+        <MappingFragment StoreEntitySet="TEMP_ADVANCE_QUERY">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="QueryPerson" ColumnName="QueryPerson" />
+          <ScalarProperty Name="ContraKind" ColumnName="ContraKind" />
+          <ScalarProperty Name="ContraNo" ColumnName="ContraNo" />
+          <ScalarProperty Name="ContraYear" ColumnName="ContraYear" />
+          <ScalarProperty Name="ContraMonth" ColumnName="ContraMonth" />
+          <ScalarProperty Name="MallType" ColumnName="MallType" />
+          <ScalarProperty Name="ServiceType" ColumnName="ServiceType" />
+          <ScalarProperty Name="ContraState" ColumnName="ContraState" />
+          <ScalarProperty Name="Distributor" ColumnName="Distributor" />
+          <ScalarProperty Name="ContraEntDate" ColumnName="ContraEntDate" />
+          <ScalarProperty Name="ContraSendDate" ColumnName="ContraSendDate" />
+          <ScalarProperty Name="Contra_IniDate" ColumnName="Contra_IniDate" />
+          <ScalarProperty Name="Contra_ExpDate" ColumnName="Contra_ExpDate" />
+          <ScalarProperty Name="ContraStopDate" ColumnName="ContraStopDate" />
+          <ScalarProperty Name="Capital" ColumnName="Capital" />
+          <ScalarProperty Name="BusinessNo" ColumnName="BusinessNo" />
+          <ScalarProperty Name="NewebSales" ColumnName="NewebSales" />
+          <ScalarProperty Name="NewebSales_C" ColumnName="NewebSales_C" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TEMP_ADVANCE_QUERY_STORE">
+      <EntityTypeMapping TypeName="TestDB2Model.TEMP_ADVANCE_QUERY_STORE">
+        <MappingFragment StoreEntitySet="TEMP_ADVANCE_QUERY_STORE">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="QueryPerson" ColumnName="QueryPerson" />
+          <ScalarProperty Name="MerNo_F" ColumnName="MerNo_F" />
+          <ScalarProperty Name="AcquireMode" ColumnName="AcquireMode" />
+          <ScalarProperty Name="AcquireBank" ColumnName="AcquireBank" />
+          <ScalarProperty Name="MerType" ColumnName="MerType" />
+          <ScalarProperty Name="MallType" ColumnName="MallType" />
+          <ScalarProperty Name="SettleCycle" ColumnName="SettleCycle" />
+          <ScalarProperty Name="MID" ColumnName="MID" />
+          <ScalarProperty Name="TID" ColumnName="TID" />
+          <ScalarProperty Name="CMID" ColumnName="CMID" />
+          <ScalarProperty Name="CTID" ColumnName="CTID" />
+          <ScalarProperty Name="BusinessItem" ColumnName="BusinessItem" />
+          <ScalarProperty Name="VBV" ColumnName="VBV" />
+          <ScalarProperty Name="Capital" ColumnName="Capital" />
+          <ScalarProperty Name="BusinessNo" ColumnName="BusinessNo" />
+          <ScalarProperty Name="NewebSales" ColumnName="NewebSales" />
+          <ScalarProperty Name="MerState" ColumnName="MerState" />
+          <ScalarProperty Name="IS_CTID" ColumnName="IS_CTID" />
+          <ScalarProperty Name="IS_IM" ColumnName="IS_IM" />
+          <ScalarProperty Name="OnNtcTime" ColumnName="OnNtcTime" />
+          <ScalarProperty Name="OffNtcTime" ColumnName="OffNtcTime" />
+          <ScalarProperty Name="OnLineCs" ColumnName="OnLineCs" />
+          <ScalarProperty Name="OffLineCs" ColumnName="OffLineCs" />
+          <ScalarProperty Name="HostID" ColumnName="HostID" />
+          <ScalarProperty Name="FrontHostID" ColumnName="FrontHostID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TEMP_SELECT_EMAIL">
+      <EntityTypeMapping TypeName="TestDB2Model.TEMP_SELECT_EMAIL">
+        <MappingFragment StoreEntitySet="TEMP_SELECT_EMAIL">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="MerState" ColumnName="MerState" />
+          <ScalarProperty Name="HostID" ColumnName="HostID" />
+          <ScalarProperty Name="MerType" ColumnName="MerType" />
+          <ScalarProperty Name="MallType" ColumnName="MallType" />
+          <ScalarProperty Name="AcquireBank" ColumnName="AcquireBank" />
+          <ScalarProperty Name="AcquireMode" ColumnName="AcquireMode" />
+          <ScalarProperty Name="VBV" ColumnName="VBV" />
+          <ScalarProperty Name="QueryPerson" ColumnName="QueryPerson" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRADE_STATISTICAL">
+      <EntityTypeMapping TypeName="TestDB2Model.TRADE_STATISTICAL">
+        <MappingFragment StoreEntitySet="TRADE_STATISTICAL">
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+          <ScalarProperty Name="ServiceType" ColumnName="ServiceType" />
+          <ScalarProperty Name="LastWeekAmount" ColumnName="LastWeekAmount" />
+          <ScalarProperty Name="LastWeekCount" ColumnName="LastWeekCount" />
+          <ScalarProperty Name="LastWeekCredAmount" ColumnName="LastWeekCredAmount" />
+          <ScalarProperty Name="LastWeekCredCount" ColumnName="LastWeekCredCount" />
+          <ScalarProperty Name="LastMonthAmount" ColumnName="LastMonthAmount" />
+          <ScalarProperty Name="LastMonthCount" ColumnName="LastMonthCount" />
+          <ScalarProperty Name="LastMonthCredAmount" ColumnName="LastMonthCredAmount" />
+          <ScalarProperty Name="LastMonthCredCount" ColumnName="LastMonthCredCount" />
+          <ScalarProperty Name="ThreeMonthsAmount" ColumnName="ThreeMonthsAmount" />
+          <ScalarProperty Name="ThreeMonthsCount" ColumnName="ThreeMonthsCount" />
+          <ScalarProperty Name="ThreeMonthsCredAmount" ColumnName="ThreeMonthsCredAmount" />
+          <ScalarProperty Name="ThreeMonthsCredCount" ColumnName="ThreeMonthsCredCount" />
+          <ScalarProperty Name="LastWeekUpdateDate" ColumnName="LastWeekUpdateDate" />
+          <ScalarProperty Name="LastMonthUpdateDate" ColumnName="LastMonthUpdateDate" />
+          <ScalarProperty Name="ThreeMonthsUpdateDate" ColumnName="ThreeMonthsUpdateDate" />
+          <ScalarProperty Name="TradeDateFinally" ColumnName="TradeDateFinally" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="正式商店設定資料">
+      <EntityTypeMapping TypeName="TestDB2Model.正式商店設定資料">
+        <MappingFragment StoreEntitySet="正式商店設定資料">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="MerNo_F" ColumnName="MerNo_F" />
+          <ScalarProperty Name="MerNo_T" ColumnName="MerNo_T" />
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+          <ScalarProperty Name="MerName_En" ColumnName="MerName_En" />
+          <ScalarProperty Name="MerName_Ch" ColumnName="MerName_Ch" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="PassWord" ColumnName="PassWord" />
+          <ScalarProperty Name="New_PassWord" ColumnName="New_PassWord" />
+          <ScalarProperty Name="CooperMode" ColumnName="CooperMode" />
+          <ScalarProperty Name="MID" ColumnName="MID" />
+          <ScalarProperty Name="TID" ColumnName="TID" />
+          <ScalarProperty Name="CMID" ColumnName="CMID" />
+          <ScalarProperty Name="CTID" ColumnName="CTID" />
+          <ScalarProperty Name="Mall_ID" ColumnName="Mall_ID" />
+          <ScalarProperty Name="Org_ID" ColumnName="Org_ID" />
+          <ScalarProperty Name="HostID" ColumnName="HostID" />
+          <ScalarProperty Name="BankMode" ColumnName="BankMode" />
+          <ScalarProperty Name="MerState" ColumnName="MerState" />
+          <ScalarProperty Name="MerType2" ColumnName="MerType2" />
+          <ScalarProperty Name="OnRemarks" ColumnName="OnRemarks" />
+          <ScalarProperty Name="BatchType_N" ColumnName="BatchType_N" />
+          <ScalarProperty Name="OnNtcTime" ColumnName="OnNtcTime" />
+          <ScalarProperty Name="OnCmpTime" ColumnName="OnCmpTime" />
+          <ScalarProperty Name="OffNtcTime" ColumnName="OffNtcTime" />
+          <ScalarProperty Name="OffCmpTime" ColumnName="OffCmpTime" />
+          <ScalarProperty Name="OffRemarks" ColumnName="OffRemarks" />
+          <ScalarProperty Name="ObjVer_N" ColumnName="ObjVer_N" />
+          <ScalarProperty Name="ReportMail" ColumnName="ReportMail" />
+          <ScalarProperty Name="VBV" ColumnName="VBV" />
+          <ScalarProperty Name="MerNo_New" ColumnName="MerNo_New" />
+          <ScalarProperty Name="RSP_CardNo" ColumnName="RSP_CardNo" />
+          <ScalarProperty Name="SysOn_TimeSt" ColumnName="SysOn_TimeSt" />
+          <ScalarProperty Name="SysOff_TimeSt" ColumnName="SysOff_TimeSt" />
+          <ScalarProperty Name="Total_Rate" ColumnName="Total_Rate" />
+          <ScalarProperty Name="Bank_Rate" ColumnName="Bank_Rate" />
+          <ScalarProperty Name="Neweb_Rate" ColumnName="Neweb_Rate" />
+          <ScalarProperty Name="Mall_Rate" ColumnName="Mall_Rate" />
+          <ScalarProperty Name="Credit" ColumnName="Credit" />
+          <ScalarProperty Name="Credit_Plus" ColumnName="Credit_Plus" />
+          <ScalarProperty Name="RateExp" ColumnName="RateExp" />
+          <ScalarProperty Name="BusinessItem" ColumnName="BusinessItem" />
+          <ScalarProperty Name="OnLineCs" ColumnName="OnLineCs" />
+          <ScalarProperty Name="OffLineCs" ColumnName="OffLineCs" />
+          <ScalarProperty Name="IS_IM" ColumnName="IS_IM" />
+          <ScalarProperty Name="IS_CTID" ColumnName="IS_CTID" />
+          <ScalarProperty Name="RPCCMerNo" ColumnName="RPCCMerNo" />
+          <ScalarProperty Name="MallType" ColumnName="MallType" />
+          <ScalarProperty Name="MallTypeNote" ColumnName="MallTypeNote" />
+          <ScalarProperty Name="IMRate_3" ColumnName="IMRate_3" />
+          <ScalarProperty Name="IMRate_6" ColumnName="IMRate_6" />
+          <ScalarProperty Name="IMRate_9" ColumnName="IMRate_9" />
+          <ScalarProperty Name="IMRate_12" ColumnName="IMRate_12" />
+          <ScalarProperty Name="IMRate_18" ColumnName="IMRate_18" />
+          <ScalarProperty Name="IMRate_24" ColumnName="IMRate_24" />
+          <ScalarProperty Name="IMRate_36" ColumnName="IMRate_36" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="MerType" ColumnName="MerType" />
+          <ScalarProperty Name="AcquireBank" ColumnName="AcquireBank" />
+          <ScalarProperty Name="AcquireMode" ColumnName="AcquireMode" />
+          <ScalarProperty Name="Is_UnionPay" ColumnName="Is_UnionPay" />
+          <ScalarProperty Name="SettleCycle" ColumnName="SettleCycle" />
+          <ScalarProperty Name="IS_RPRecCCNo" ColumnName="IS_RPRecCCNo" />
+          <ScalarProperty Name="IS_RPFirstCap" ColumnName="IS_RPFirstCap" />
+          <ScalarProperty Name="IS_RPAutoDelFail" ColumnName="IS_RPAutoDelFail" />
+          <ScalarProperty Name="HostIPs" ColumnName="HostIPs" />
+          <ScalarProperty Name="AdminIPs" ColumnName="AdminIPs" />
+          <ScalarProperty Name="RPUploadIPs" ColumnName="RPUploadIPs" />
+          <ScalarProperty Name="AutoSettleTime" ColumnName="AutoSettleTime" />
+          <ScalarProperty Name="ReportGiven" ColumnName="ReportGiven" />
+          <ScalarProperty Name="AsyncTxtNoteURL" ColumnName="AsyncTxtNoteURL" />
+          <ScalarProperty Name="MerLogo" ColumnName="MerLogo" />
+          <ScalarProperty Name="MerTxtNote" ColumnName="MerTxtNote" />
+          <ScalarProperty Name="Mer_Graph" ColumnName="Mer_Graph" />
+          <ScalarProperty Name="ContraNo" ColumnName="ContraNo" />
+          <ScalarProperty Name="SinSerChar" ColumnName="SinSerChar" />
+          <ScalarProperty Name="FrontHostID" ColumnName="FrontHostID" />
+          <ScalarProperty Name="MerNo_Old" ColumnName="MerNo_Old" />
+          <ScalarProperty Name="SMS" ColumnName="SMS" />
+          <ScalarProperty Name="BlackList" ColumnName="BlackList" />
+          <ScalarProperty Name="CS_VAP" ColumnName="CS_VAP" />
+          <ScalarProperty Name="CS_IBON" ColumnName="CS_IBON" />
+          <ScalarProperty Name="CS_CS" ColumnName="CS_CS" />
+          <ScalarProperty Name="CS_VAPCHK" ColumnName="CS_VAPCHK" />
+          <ScalarProperty Name="CS_WEBATMCHK" ColumnName="CS_WEBATMCHK" />
+          <ScalarProperty Name="CS_IBONCHK" ColumnName="CS_IBONCHK" />
+          <ScalarProperty Name="CS_FAMIPORTCHK" ColumnName="CS_FAMIPORTCHK" />
+          <ScalarProperty Name="CS_LIFEETCHK" ColumnName="CS_LIFEETCHK" />
+          <ScalarProperty Name="CS_OKGOCHK" ColumnName="CS_OKGOCHK" />
+          <ScalarProperty Name="CS_ALIPAYCHK" ColumnName="CS_ALIPAYCHK" />
+          <ScalarProperty Name="CS_ALIPAYWAPCHK" ColumnName="CS_ALIPAYWAPCHK" />
+          <ScalarProperty Name="CS_CSCHK" ColumnName="CS_CSCHK" />
+          <ScalarProperty Name="AliFee" ColumnName="AliFee" />
+          <ScalarProperty Name="AliRatio" ColumnName="AliRatio" />
+          <ScalarProperty Name="AliMallFee" ColumnName="AliMallFee" />
+          <ScalarProperty Name="AliMallRatio" ColumnName="AliMallRatio" />
+          <ScalarProperty Name="Ali_Overtime" ColumnName="Ali_Overtime" />
+          <ScalarProperty Name="AliWap_Fee" ColumnName="AliWap_Fee" />
+          <ScalarProperty Name="AliWap_Ratio" ColumnName="AliWap_Ratio" />
+          <ScalarProperty Name="AliWapMall_Fee" ColumnName="AliWapMall_Fee" />
+          <ScalarProperty Name="AliWapMall_Ratio" ColumnName="AliWapMall_Ratio" />
+          <ScalarProperty Name="AliWap_Overtime" ColumnName="AliWap_Overtime" />
+          <ScalarProperty Name="Is_Autobilling" ColumnName="Is_Autobilling" />
+          <ScalarProperty Name="MPOSCorreCode" ColumnName="MPOSCorreCode" />
+          <ScalarProperty Name="Alipay_Product" ColumnName="Alipay_Product" />
+          <ScalarProperty Name="P33" ColumnName="P33" />
+          <ScalarProperty Name="TransferFee" ColumnName="TransferFee" />
+          <ScalarProperty Name="Custname_Extn" ColumnName="Custname_Extn" />
+          <ScalarProperty Name="Custname_Rept" ColumnName="Custname_Rept" />
+          <ScalarProperty Name="Custname_Bill" ColumnName="Custname_Bill" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="合約資料">
+      <EntityTypeMapping TypeName="TestDB2Model.合約資料">
+        <MappingFragment StoreEntitySet="合約資料">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+          <ScalarProperty Name="ContraNo" ColumnName="ContraNo" />
+          <ScalarProperty Name="ContraYear" ColumnName="ContraYear" />
+          <ScalarProperty Name="ContraMonth" ColumnName="ContraMonth" />
+          <ScalarProperty Name="MallType" ColumnName="MallType" />
+          <ScalarProperty Name="ContraState" ColumnName="ContraState" />
+          <ScalarProperty Name="ServiceType" ColumnName="ServiceType" />
+          <ScalarProperty Name="ContraEntDate" ColumnName="ContraEntDate" />
+          <ScalarProperty Name="ContraSendDate" ColumnName="ContraSendDate" />
+          <ScalarProperty Name="InvDate" ColumnName="InvDate" />
+          <ScalarProperty Name="Rent" ColumnName="Rent" />
+          <ScalarProperty Name="EarMoney" ColumnName="EarMoney" />
+          <ScalarProperty Name="ContraSignDate" ColumnName="ContraSignDate" />
+          <ScalarProperty Name="Contra_IniDate" ColumnName="Contra_IniDate" />
+          <ScalarProperty Name="Contra_ValDate" ColumnName="Contra_ValDate" />
+          <ScalarProperty Name="Contra_ExpDate" ColumnName="Contra_ExpDate" />
+          <ScalarProperty Name="ContraStopDate" ColumnName="ContraStopDate" />
+          <ScalarProperty Name="Total_Rate" ColumnName="Total_Rate" />
+          <ScalarProperty Name="Bank_Rate" ColumnName="Bank_Rate" />
+          <ScalarProperty Name="Neweb_Rate" ColumnName="Neweb_Rate" />
+          <ScalarProperty Name="Mall_Rate" ColumnName="Mall_Rate" />
+          <ScalarProperty Name="RentExp" ColumnName="RentExp" />
+          <ScalarProperty Name="RateExp" ColumnName="RateExp" />
+          <ScalarProperty Name="NewebSales" ColumnName="NewebSales" />
+          <ScalarProperty Name="Distributor" ColumnName="Distributor" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="SinSerChar" ColumnName="SinSerChar" />
+          <ScalarProperty Name="IM" ColumnName="IM" />
+          <ScalarProperty Name="RP" ColumnName="RP" />
+          <ScalarProperty Name="FAX" ColumnName="FAX" />
+          <ScalarProperty Name="ContraKind" ColumnName="ContraKind" />
+          <ScalarProperty Name="ContraNo_Last" ColumnName="ContraNo_Last" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="DepositDate" ColumnName="DepositDate" />
+          <ScalarProperty Name="AcctTitle" ColumnName="AcctTitle" />
+          <ScalarProperty Name="AcctNum" ColumnName="AcctNum" />
+          <ScalarProperty Name="AcctBank" ColumnName="AcctBank" />
+          <ScalarProperty Name="BankBranch" ColumnName="BankBranch" />
+          <ScalarProperty Name="AcquireBank" ColumnName="AcquireBank" />
+          <ScalarProperty Name="Is_MAST" ColumnName="Is_MAST" />
+          <ScalarProperty Name="ContraType" ColumnName="ContraType" />
+          <ScalarProperty Name="isNewebPay" ColumnName="isNewebPay" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="客戶技術窗口資料">
+      <EntityTypeMapping TypeName="TestDB2Model.客戶技術窗口資料">
+        <MappingFragment StoreEntitySet="客戶技術窗口資料">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+          <ScalarProperty Name="TechName" ColumnName="TechName" />
+          <ScalarProperty Name="TechTel" ColumnName="TechTel" />
+          <ScalarProperty Name="TechMail" ColumnName="TechMail" />
+          <ScalarProperty Name="TechICQ" ColumnName="TechICQ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="客戶客服窗口資料">
+      <EntityTypeMapping TypeName="TestDB2Model.客戶客服窗口資料">
+        <MappingFragment StoreEntitySet="客戶客服窗口資料">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+          <ScalarProperty Name="CsName" ColumnName="CsName" />
+          <ScalarProperty Name="CsTel" ColumnName="CsTel" />
+          <ScalarProperty Name="CsMail" ColumnName="CsMail" />
+          <ScalarProperty Name="CsIM" ColumnName="CsIM" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="客戶基本資料">
+      <EntityTypeMapping TypeName="TestDB2Model.客戶基本資料">
+        <MappingFragment StoreEntitySet="客戶基本資料">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+          <ScalarProperty Name="CustName_En" ColumnName="CustName_En" />
+          <ScalarProperty Name="BusinessNo" ColumnName="BusinessNo" />
+          <ScalarProperty Name="CustName_Extn" ColumnName="CustName_Extn" />
+          <ScalarProperty Name="CustName_Rept" ColumnName="CustName_Rept" />
+          <ScalarProperty Name="CustName_Bill" ColumnName="CustName_Bill" />
+          <ScalarProperty Name="AcctTitle" ColumnName="AcctTitle" />
+          <ScalarProperty Name="AcctNum" ColumnName="AcctNum" />
+          <ScalarProperty Name="AcctBank" ColumnName="AcctBank" />
+          <ScalarProperty Name="BankBranch" ColumnName="BankBranch" />
+          <ScalarProperty Name="InvAddress" ColumnName="InvAddress" />
+          <ScalarProperty Name="CustTel" ColumnName="CustTel" />
+          <ScalarProperty Name="CustFax" ColumnName="CustFax" />
+          <ScalarProperty Name="CustURL" ColumnName="CustURL" />
+          <ScalarProperty Name="MerURL" ColumnName="MerURL" />
+          <ScalarProperty Name="FileNo" ColumnName="FileNo" />
+          <ScalarProperty Name="Capital" ColumnName="Capital" />
+          <ScalarProperty Name="Director" ColumnName="Director" />
+          <ScalarProperty Name="DirectorID" ColumnName="DirectorID" />
+          <ScalarProperty Name="AuthPerson" ColumnName="AuthPerson" />
+          <ScalarProperty Name="AuthMail" ColumnName="AuthMail" />
+          <ScalarProperty Name="AuthTel" ColumnName="AuthTel" />
+          <ScalarProperty Name="NewebSales" ColumnName="NewebSales" />
+          <ScalarProperty Name="CustAdrs" ColumnName="CustAdrs" />
+          <ScalarProperty Name="CustName_EnCode" ColumnName="CustName_EnCode" />
+          <ScalarProperty Name="AddresseeName" ColumnName="AddresseeName" />
+          <ScalarProperty Name="InvZipcode" ColumnName="InvZipcode" />
+          <ScalarProperty Name="CustZipcode" ColumnName="CustZipcode" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="IS_Distributor" ColumnName="IS_Distributor" />
+          <ScalarProperty Name="InspectStatus" ColumnName="InspectStatus" />
+          <ScalarProperty Name="ProjectRecord" ColumnName="ProjectRecord" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="客戶帳務窗口資料">
+      <EntityTypeMapping TypeName="TestDB2Model.客戶帳務窗口資料">
+        <MappingFragment StoreEntitySet="客戶帳務窗口資料">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+          <ScalarProperty Name="AcctName" ColumnName="AcctName" />
+          <ScalarProperty Name="AcctTel" ColumnName="AcctTel" />
+          <ScalarProperty Name="AcctMail" ColumnName="AcctMail" />
+          <ScalarProperty Name="AcctICQ" ColumnName="AcctICQ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="客戶報表窗口資料">
+      <EntityTypeMapping TypeName="TestDB2Model.客戶報表窗口資料">
+        <MappingFragment StoreEntitySet="客戶報表窗口資料">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+          <ScalarProperty Name="ReptName" ColumnName="ReptName" />
+          <ScalarProperty Name="ReptTel" ColumnName="ReptTel" />
+          <ScalarProperty Name="ReptMail" ColumnName="ReptMail" />
+          <ScalarProperty Name="MerNo" ColumnName="MerNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="客戶業務窗口資料">
+      <EntityTypeMapping TypeName="TestDB2Model.客戶業務窗口資料">
+        <MappingFragment StoreEntitySet="客戶業務窗口資料">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+          <ScalarProperty Name="SalesName" ColumnName="SalesName" />
+          <ScalarProperty Name="SalesTel" ColumnName="SalesTel" />
+          <ScalarProperty Name="SalesMail" ColumnName="SalesMail" />
+          <ScalarProperty Name="SalesICQ" ColumnName="SalesICQ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="停用連線服務原因">
+      <EntityTypeMapping TypeName="TestDB2Model.停用連線服務原因">
+        <MappingFragment StoreEntitySet="停用連線服務原因">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="國內發卡銀行">
+      <EntityTypeMapping TypeName="TestDB2Model.國內發卡銀行">
+        <MappingFragment StoreEntitySet="國內發卡銀行">
+          <ScalarProperty Name="BankCode" ColumnName="BankCode" />
+          <ScalarProperty Name="CardBrand" ColumnName="CardBrand" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="CardType" ColumnName="CardType" />
+          <ScalarProperty Name="CardSubtype" ColumnName="CardSubtype" />
+          <ScalarProperty Name="CountryOrigin" ColumnName="CountryOrigin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="測式商店設定資料">
+      <EntityTypeMapping TypeName="TestDB2Model.測式商店設定資料">
+        <MappingFragment StoreEntitySet="測式商店設定資料">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="MerNo_T" ColumnName="MerNo_T" />
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+          <ScalarProperty Name="CooperMode" ColumnName="CooperMode" />
+          <ScalarProperty Name="MerState" ColumnName="MerState" />
+          <ScalarProperty Name="MerType2" ColumnName="MerType2" />
+          <ScalarProperty Name="MerType" ColumnName="MerType" />
+          <ScalarProperty Name="HostID" ColumnName="HostID" />
+          <ScalarProperty Name="Test_Ntc_Date" ColumnName="Test_Ntc_Date" />
+          <ScalarProperty Name="Test_Cmp_Date" ColumnName="Test_Cmp_Date" />
+          <ScalarProperty Name="Auth" ColumnName="Auth" />
+          <ScalarProperty Name="NewebSales" ColumnName="NewebSales" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="InspectStatus" ColumnName="InspectStatus" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="IS_IM" ColumnName="IS_IM" />
+          <ScalarProperty Name="IS_CTID" ColumnName="IS_CTID" />
+          <ScalarProperty Name="OnlyTest" ColumnName="OnlyTest" />
+          <ScalarProperty Name="TestDelDate" ColumnName="TestDelDate" />
+          <ScalarProperty Name="TestPassword" ColumnName="TestPassword" />
+          <ScalarProperty Name="CS_VAPCHK" ColumnName="CS_VAPCHK" />
+          <ScalarProperty Name="CS_WEBATMCHK" ColumnName="CS_WEBATMCHK" />
+          <ScalarProperty Name="CS_IBONCHK" ColumnName="CS_IBONCHK" />
+          <ScalarProperty Name="CS_FAMIPORTCHK" ColumnName="CS_FAMIPORTCHK" />
+          <ScalarProperty Name="CS_LIFEETCHK" ColumnName="CS_LIFEETCHK" />
+          <ScalarProperty Name="CS_OKGOCHK" ColumnName="CS_OKGOCHK" />
+          <ScalarProperty Name="CS_AlipayCHK" ColumnName="CS_AlipayCHK" />
+          <ScalarProperty Name="CS_AlipayWAPCHK" ColumnName="CS_AlipayWAPCHK" />
+          <ScalarProperty Name="CS_CSCHK" ColumnName="CS_CSCHK" />
+          <ScalarProperty Name="VAP_MerState" ColumnName="VAP_MerState" />
+          <ScalarProperty Name="MMK_MerState" ColumnName="MMK_MerState" />
+          <ScalarProperty Name="CS_MerState" ColumnName="CS_MerState" />
+          <ScalarProperty Name="ALIPAY_MerState" ColumnName="ALIPAY_MerState" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="測試商店備註欄">
+      <EntityTypeMapping TypeName="TestDB2Model.測試商店備註欄">
+        <MappingFragment StoreEntitySet="測試商店備註欄">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="RelNum" ColumnName="RelNum" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="RemarksDate" ColumnName="RemarksDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="測試商店備註欄暫存">
+      <EntityTypeMapping TypeName="TestDB2Model.測試商店備註欄暫存">
+        <MappingFragment StoreEntitySet="測試商店備註欄暫存">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="RemarksDate" ColumnName="RemarksDate" />
+          <ScalarProperty Name="LoginName" ColumnName="LoginName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="測試商店進階查詢暫存">
+      <EntityTypeMapping TypeName="TestDB2Model.測試商店進階查詢暫存">
+        <MappingFragment StoreEntitySet="測試商店進階查詢暫存">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="QueryPerson" ColumnName="QueryPerson" />
+          <ScalarProperty Name="MerNo_T" ColumnName="MerNo_T" />
+          <ScalarProperty Name="MerState" ColumnName="MerState" />
+          <ScalarProperty Name="MerType" ColumnName="MerType" />
+          <ScalarProperty Name="HostID" ColumnName="HostID" />
+          <ScalarProperty Name="NewebSales" ColumnName="NewebSales" />
+          <ScalarProperty Name="CustName_EnCode" ColumnName="CustName_EnCode" />
+          <ScalarProperty Name="TestPassword" ColumnName="TestPassword" />
+          <ScalarProperty Name="Test_Ntc_Date" ColumnName="Test_Ntc_Date" />
+          <ScalarProperty Name="Test_Cmp_Date" ColumnName="Test_Cmp_Date" />
+          <ScalarProperty Name="TestDelDate" ColumnName="TestDelDate" />
+          <ScalarProperty Name="Auth" ColumnName="Auth" />
+          <ScalarProperty Name="IS_IM" ColumnName="IS_IM" />
+          <ScalarProperty Name="IS_CTID" ColumnName="IS_CTID" />
+          <ScalarProperty Name="OnlyTest" ColumnName="OnlyTest" />
+          <ScalarProperty Name="OnNtcTime" ColumnName="OnNtcTime" />
+          <ScalarProperty Name="OffNtcTime" ColumnName="OffNtcTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_CASHSYS">
+      <EntityTypeMapping TypeName="TestDB2Model.C_CASHSYS">
+        <MappingFragment StoreEntitySet="~CASHSYS">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="PaymentFun" ColumnName="PaymentFun" />
+          <ScalarProperty Name="PaymentCode" ColumnName="PaymentCode" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ezPay代收代付">
+      <EntityTypeMapping TypeName="TestDB2Model.ezPay代收代付">
+        <MappingFragment StoreEntitySet="ezPay代收代付">
+          <ScalarProperty Name="商家編號" ColumnName="商家編號" />
+          <ScalarProperty Name="商家名稱" ColumnName="商家名稱" />
+          <ScalarProperty Name="英文名稱" ColumnName="英文名稱" />
+          <ScalarProperty Name="帳號" ColumnName="帳號" />
+          <ScalarProperty Name="密碼" ColumnName="密碼" />
+          <ScalarProperty Name="商家型態" ColumnName="商家型態" />
+          <ScalarProperty Name="通知否" ColumnName="通知否" />
+          <ScalarProperty Name="上線日期" ColumnName="上線日期" />
+          <ScalarProperty Name="傳真號碼" ColumnName="傳真號碼" />
+          <ScalarProperty Name="客服聯絡人1" ColumnName="客服聯絡人1" />
+          <ScalarProperty Name="客服電話1" ColumnName="客服電話1" />
+          <ScalarProperty Name="客服依媚兒1" ColumnName="客服依媚兒1" />
+          <ScalarProperty Name="客服聯絡人2" ColumnName="客服聯絡人2" />
+          <ScalarProperty Name="客服電話2" ColumnName="客服電話2" />
+          <ScalarProperty Name="客服依媚兒2" ColumnName="客服依媚兒2" />
+          <ScalarProperty Name="客服聯絡人3" ColumnName="客服聯絡人3" />
+          <ScalarProperty Name="客服電話3" ColumnName="客服電話3" />
+          <ScalarProperty Name="客服依媚兒3" ColumnName="客服依媚兒3" />
+          <ScalarProperty Name="會計聯絡人" ColumnName="會計聯絡人" />
+          <ScalarProperty Name="會計電話" ColumnName="會計電話" />
+          <ScalarProperty Name="會計依媚兒" ColumnName="會計依媚兒" />
+          <ScalarProperty Name="撥款週期" ColumnName="撥款週期" />
+          <ScalarProperty Name="商家區隔" ColumnName="商家區隔" />
+          <ScalarProperty Name="代收費率" ColumnName="代收費率" />
+          <ScalarProperty Name="業務" ColumnName="業務" />
+          <ScalarProperty Name="下線日期" ColumnName="下線日期" />
+          <ScalarProperty Name="商品" ColumnName="商品" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo__AUTO_SETTLE_TIME">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo__AUTO_SETTLE_TIME">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_~AUTO_SETTLE_TIME">
+          <ScalarProperty Name="AutoSettleTime" ColumnName="AutoSettleTime" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo__MER_TYPE">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo__MER_TYPE">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_~MER_TYPE">
+          <ScalarProperty Name="MerType" ColumnName="MerType" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo__合約狀態">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo__合約狀態">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_~合約狀態">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo__合約資料">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo__合約資料">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_~合約資料">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+          <ScalarProperty Name="ContraNo" ColumnName="ContraNo" />
+          <ScalarProperty Name="ContraYear" ColumnName="ContraYear" />
+          <ScalarProperty Name="MallType" ColumnName="MallType" />
+          <ScalarProperty Name="ContraState" ColumnName="ContraState" />
+          <ScalarProperty Name="ServiceType" ColumnName="ServiceType" />
+          <ScalarProperty Name="ContraEntDate" ColumnName="ContraEntDate" />
+          <ScalarProperty Name="ContraSendDate" ColumnName="ContraSendDate" />
+          <ScalarProperty Name="InvDate" ColumnName="InvDate" />
+          <ScalarProperty Name="Rent" ColumnName="Rent" />
+          <ScalarProperty Name="EarMoney" ColumnName="EarMoney" />
+          <ScalarProperty Name="ContraSignDate" ColumnName="ContraSignDate" />
+          <ScalarProperty Name="Contra_IniDate" ColumnName="Contra_IniDate" />
+          <ScalarProperty Name="Contra_ValDate" ColumnName="Contra_ValDate" />
+          <ScalarProperty Name="Contra_ExpDate" ColumnName="Contra_ExpDate" />
+          <ScalarProperty Name="ContraStopDate" ColumnName="ContraStopDate" />
+          <ScalarProperty Name="Total_Rate" ColumnName="Total_Rate" />
+          <ScalarProperty Name="Bank_Rate" ColumnName="Bank_Rate" />
+          <ScalarProperty Name="Neweb_Rate" ColumnName="Neweb_Rate" />
+          <ScalarProperty Name="Mall_Rate" ColumnName="Mall_Rate" />
+          <ScalarProperty Name="RentExp" ColumnName="RentExp" />
+          <ScalarProperty Name="RateExp" ColumnName="RateExp" />
+          <ScalarProperty Name="NewebSales" ColumnName="NewebSales" />
+          <ScalarProperty Name="Distributor" ColumnName="Distributor" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="SinSerChar" ColumnName="SinSerChar" />
+          <ScalarProperty Name="IM" ColumnName="IM" />
+          <ScalarProperty Name="RP" ColumnName="RP" />
+          <ScalarProperty Name="FAX" ColumnName="FAX" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo__服務型態">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo__服務型態">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_~服務型態">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="ServiceType" ColumnName="ServiceType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_ACQUIRE_BANK">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_ACQUIRE_BANK">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_ACQUIRE_BANK">
+          <ScalarProperty Name="AcquireBank" ColumnName="AcquireBank" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_ACQUIRE_MODE">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_ACQUIRE_MODE">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_ACQUIRE_MODE">
+          <ScalarProperty Name="AcquireMode" ColumnName="AcquireMode" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_ADV_FUNC">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_ADV_FUNC">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_ADV_FUNC">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="FuncCode" ColumnName="FuncCode" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_AUTHORITY_FUNCTION">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_AUTHORITY_FUNCTION">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_AUTHORITY_FUNCTION">
+          <ScalarProperty Name="Num" ColumnName="Num" />
+          <ScalarProperty Name="業務部門系統主表單" ColumnName="業務部門系統主表單" />
+          <ScalarProperty Name="篩選客戶資料" ColumnName="篩選客戶資料" />
+          <ScalarProperty Name="篩選合約資料" ColumnName="篩選合約資料" />
+          <ScalarProperty Name="篩選正式商店資料" ColumnName="篩選正式商店資料" />
+          <ScalarProperty Name="維護客戶資料" ColumnName="維護客戶資料" />
+          <ScalarProperty Name="維護合約資料" ColumnName="維護合約資料" />
+          <ScalarProperty Name="維護正式商店資料" ColumnName="維護正式商店資料" />
+          <ScalarProperty Name="測試商店資料維護" ColumnName="測試商店資料維護" />
+          <ScalarProperty Name="帳務發票寄送標籤選項" ColumnName="帳務發票寄送標籤選項" />
+          <ScalarProperty Name="風管登錄問題交易維護" ColumnName="風管登錄問題交易維護" />
+          <ScalarProperty Name="風管詳細登錄問題交易" ColumnName="風管詳細登錄問題交易" />
+          <ScalarProperty Name="客服FAQ" ColumnName="客服FAQ" />
+          <ScalarProperty Name="業務進階查詢_正式商店" ColumnName="業務進階查詢_正式商店" />
+          <ScalarProperty Name="業務進階查詢_合約資料" ColumnName="業務進階查詢_合約資料" />
+          <ScalarProperty Name="測試商店進階查詢" ColumnName="測試商店進階查詢" />
+          <ScalarProperty Name="合作單位資料篩選" ColumnName="合作單位資料篩選" />
+          <ScalarProperty Name="維護合約詳細資料New" ColumnName="維護合約詳細資料New" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_AUTHORITY_SETTLEMENT">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_AUTHORITY_SETTLEMENT">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_AUTHORITY_SETTLEMENT">
+          <ScalarProperty Name="Num" ColumnName="Num" />
+          <ScalarProperty Name="UserRole" ColumnName="UserRole" />
+          <ScalarProperty Name="FormName" ColumnName="FormName" />
+          <ScalarProperty Name="FunctionName" ColumnName="FunctionName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_AUTO_SERIAL_NUM">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_AUTO_SERIAL_NUM">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_AUTO_SERIAL_NUM">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="ContraKind" ColumnName="ContraKind" />
+          <ScalarProperty Name="DateT" ColumnName="DateT" />
+          <ScalarProperty Name="SerialNumber" ColumnName="SerialNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_AUTO_SETTLE_TIME">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_AUTO_SETTLE_TIME">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_AUTO_SETTLE_TIME">
+          <ScalarProperty Name="AutoSettleTime" ColumnName="AutoSettleTime" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_BANK_BRANCH_CODE">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_BANK_BRANCH_CODE">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_BANK_BRANCH_CODE">
+          <ScalarProperty Name="BranchCode" ColumnName="BranchCode" />
+          <ScalarProperty Name="BranchName" ColumnName="BranchName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_BANK_HQ">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_BANK_HQ">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_BANK_HQ">
+          <ScalarProperty Name="BankCode_HQ" ColumnName="BankCode_HQ" />
+          <ScalarProperty Name="BankName_HQ" ColumnName="BankName_HQ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_BANK_MODE">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_BANK_MODE">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_BANK_MODE">
+          <ScalarProperty Name="BankMode" ColumnName="BankMode" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_BATCH_TYPE">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_BATCH_TYPE">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_BATCH_TYPE">
+          <ScalarProperty Name="BatchType" ColumnName="BatchType" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_CONT_ENAB_FUNC">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_CONT_ENAB_FUNC">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_CONT_ENAB_FUNC">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="ContraCorreCode" ColumnName="ContraCorreCode" />
+          <ScalarProperty Name="FuncCode" ColumnName="FuncCode" />
+          <ScalarProperty Name="BR_Var" ColumnName="BR_Var" />
+          <ScalarProperty Name="BR_Fix" ColumnName="BR_Fix" />
+          <ScalarProperty Name="NR_Var" ColumnName="NR_Var" />
+          <ScalarProperty Name="NR_Fix" ColumnName="NR_Fix" />
+          <ScalarProperty Name="Excharge" ColumnName="Excharge" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="SettleCycle" ColumnName="SettleCycle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_CONT_ENAB_FUNC_TEMP">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_CONT_ENAB_FUNC_TEMP">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_CONT_ENAB_FUNC_TEMP">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="ContraCorreCode" ColumnName="ContraCorreCode" />
+          <ScalarProperty Name="FuncCode" ColumnName="FuncCode" />
+          <ScalarProperty Name="BR_Var" ColumnName="BR_Var" />
+          <ScalarProperty Name="BR_Fix" ColumnName="BR_Fix" />
+          <ScalarProperty Name="NR_Var" ColumnName="NR_Var" />
+          <ScalarProperty Name="NR_Fix" ColumnName="NR_Fix" />
+          <ScalarProperty Name="Excharge" ColumnName="Excharge" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="SettleCycle" ColumnName="SettleCycle" />
+          <ScalarProperty Name="RegisterPerson" ColumnName="RegisterPerson" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_CONTRA_CAUSE">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_CONTRA_CAUSE">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_CONTRA_CAUSE">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="Cause" ColumnName="Cause" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_CONTRA_KIND">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_CONTRA_KIND">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_CONTRA_KIND">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="ContraKind" ColumnName="ContraKind" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_CONTRA_RENEW">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_CONTRA_RENEW">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_CONTRA_RENEW">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="ContraCorreCode" ColumnName="ContraCorreCode" />
+          <ScalarProperty Name="Contra_IniDate" ColumnName="Contra_IniDate" />
+          <ScalarProperty Name="Contra_ValDate" ColumnName="Contra_ValDate" />
+          <ScalarProperty Name="Contra_ExpDate" ColumnName="Contra_ExpDate" />
+          <ScalarProperty Name="SignSales" ColumnName="SignSales" />
+          <ScalarProperty Name="Rent" ColumnName="Rent" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="InvDate" ColumnName="InvDate" />
+          <ScalarProperty Name="DepositDate" ColumnName="DepositDate" />
+          <ScalarProperty Name="RentExp" ColumnName="RentExp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_CONTRA_STATE">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_CONTRA_STATE">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_CONTRA_STATE">
+          <ScalarProperty Name="ContraStates" ColumnName="ContraStates" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_CONTRA_UPDATE">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_CONTRA_UPDATE">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_CONTRA_UPDATE">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="ContraCorreCode" ColumnName="ContraCorreCode" />
+          <ScalarProperty Name="Updated" ColumnName="Updated" />
+          <ScalarProperty Name="Cause" ColumnName="Cause" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_COOP_MODE">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_COOP_MODE">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_COOP_MODE">
+          <ScalarProperty Name="CooperMode" ColumnName="CooperMode" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_COOP_UNIT">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_COOP_UNIT">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_COOP_UNIT">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="PartnerName" ColumnName="PartnerName" />
+          <ScalarProperty Name="PartnerType" ColumnName="PartnerType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_COOP_UNIT_CONNECT">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_COOP_UNIT_CONNECT">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_COOP_UNIT_CONNECT">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="PartnerName" ColumnName="PartnerName" />
+          <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+          <ScalarProperty Name="ContactTel" ColumnName="ContactTel" />
+          <ScalarProperty Name="ContactMobile" ColumnName="ContactMobile" />
+          <ScalarProperty Name="ContactEmail" ColumnName="ContactEmail" />
+          <ScalarProperty Name="ContactType" ColumnName="ContactType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_DISTRIBUTOR_LIST">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_DISTRIBUTOR_LIST">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_DISTRIBUTOR_LIST">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="ContraYear" ColumnName="ContraYear" />
+          <ScalarProperty Name="Customer" ColumnName="Customer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_EMAIL_AUTH">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_EMAIL_AUTH">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_EMAIL_AUTH">
+          <ScalarProperty Name="eMail" ColumnName="eMail" />
+          <ScalarProperty Name="Recipient" ColumnName="Recipient" />
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_EMPLOYEE">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_EMPLOYEE">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_EMPLOYEE">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="Em_Name" ColumnName="Em_Name" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_ezPay代收代付">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_ezPay代收代付">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_ezPay代收代付">
+          <ScalarProperty Name="商家編號" ColumnName="商家編號" />
+          <ScalarProperty Name="商家名稱" ColumnName="商家名稱" />
+          <ScalarProperty Name="英文名稱" ColumnName="英文名稱" />
+          <ScalarProperty Name="帳號" ColumnName="帳號" />
+          <ScalarProperty Name="密碼" ColumnName="密碼" />
+          <ScalarProperty Name="商家型態" ColumnName="商家型態" />
+          <ScalarProperty Name="通知否" ColumnName="通知否" />
+          <ScalarProperty Name="上線日期" ColumnName="上線日期" />
+          <ScalarProperty Name="傳真號碼" ColumnName="傳真號碼" />
+          <ScalarProperty Name="客服聯絡人1" ColumnName="客服聯絡人1" />
+          <ScalarProperty Name="客服電話1" ColumnName="客服電話1" />
+          <ScalarProperty Name="客服依媚兒1" ColumnName="客服依媚兒1" />
+          <ScalarProperty Name="客服聯絡人2" ColumnName="客服聯絡人2" />
+          <ScalarProperty Name="客服電話2" ColumnName="客服電話2" />
+          <ScalarProperty Name="客服依媚兒2" ColumnName="客服依媚兒2" />
+          <ScalarProperty Name="客服聯絡人3" ColumnName="客服聯絡人3" />
+          <ScalarProperty Name="客服電話3" ColumnName="客服電話3" />
+          <ScalarProperty Name="客服依媚兒3" ColumnName="客服依媚兒3" />
+          <ScalarProperty Name="會計聯絡人" ColumnName="會計聯絡人" />
+          <ScalarProperty Name="會計電話" ColumnName="會計電話" />
+          <ScalarProperty Name="會計依媚兒" ColumnName="會計依媚兒" />
+          <ScalarProperty Name="撥款週期" ColumnName="撥款週期" />
+          <ScalarProperty Name="商家區隔" ColumnName="商家區隔" />
+          <ScalarProperty Name="代收費率" ColumnName="代收費率" />
+          <ScalarProperty Name="業務" ColumnName="業務" />
+          <ScalarProperty Name="下線日期" ColumnName="下線日期" />
+          <ScalarProperty Name="商品" ColumnName="商品" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_FAQ_CLASS_CS">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_FAQ_CLASS_CS">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_FAQ_CLASS_CS">
+          <ScalarProperty Name="FaqGroupCode" ColumnName="FaqGroupCode" />
+          <ScalarProperty Name="FaqGroupName" ColumnName="FaqGroupName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_FAQ_CS">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_FAQ_CS">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_FAQ_CS">
+          <ScalarProperty Name="FAQ_No" ColumnName="FAQ_No" />
+          <ScalarProperty Name="QueType" ColumnName="QueType" />
+          <ScalarProperty Name="QueSubject" ColumnName="QueSubject" />
+          <ScalarProperty Name="Phenomenon" ColumnName="Phenomenon" />
+          <ScalarProperty Name="Confirmation" ColumnName="Confirmation" />
+          <ScalarProperty Name="Suggestion" ColumnName="Suggestion" />
+          <ScalarProperty Name="Cause" ColumnName="Cause" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="Udated" ColumnName="Udated" />
+          <ScalarProperty Name="Creator" ColumnName="Creator" />
+          <ScalarProperty Name="Reviser" ColumnName="Reviser" />
+          <ScalarProperty Name="QueCount" ColumnName="QueCount" />
+          <ScalarProperty Name="UpdateCount" ColumnName="UpdateCount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_FAQ_QUE_RECORD">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_FAQ_QUE_RECORD">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_FAQ_QUE_RECORD">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="QueRecord" ColumnName="QueRecord" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_FAQ_RELATIVE_LINK">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_FAQ_RELATIVE_LINK">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_FAQ_RELATIVE_LINK">
+          <ScalarProperty Name="FAQ_No" ColumnName="FAQ_No" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_FAQ_UPDATE_COUNT">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_FAQ_UPDATE_COUNT">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_FAQ_UPDATE_COUNT">
+          <ScalarProperty Name="Reviser" ColumnName="Reviser" />
+          <ScalarProperty Name="UpdateCount" ColumnName="UpdateCount" />
+          <ScalarProperty Name="CreateCount" ColumnName="CreateCount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_HOSTS">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_HOSTS">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_HOSTS">
+          <ScalarProperty Name="HostID" ColumnName="HostID" />
+          <ScalarProperty Name="ENV" ColumnName="ENV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_MALL_TYPE">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_MALL_TYPE">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_MALL_TYPE">
+          <ScalarProperty Name="MallType" ColumnName="MallType" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_MER_STATE">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_MER_STATE">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_MER_STATE">
+          <ScalarProperty Name="MerState" ColumnName="MerState" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ENV" ColumnName="ENV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_MER_TX_BATCH">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_MER_TX_BATCH">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_MER_TX_BATCH">
+          <ScalarProperty Name="NUM" ColumnName="NUM" />
+          <ScalarProperty Name="MERCHANTNUMBER" ColumnName="MERCHANTNUMBER" />
+          <ScalarProperty Name="BATCHNUMBER" ColumnName="BATCHNUMBER" />
+          <ScalarProperty Name="CAPTUREDATE" ColumnName="CAPTUREDATE" />
+          <ScalarProperty Name="TOTALCOUNT" ColumnName="TOTALCOUNT" />
+          <ScalarProperty Name="TOTALAMOUNT" ColumnName="TOTALAMOUNT" />
+          <ScalarProperty Name="TOTALCREDCOUNT" ColumnName="TOTALCREDCOUNT" />
+          <ScalarProperty Name="TOTALCREDAMOUNT" ColumnName="TOTALCREDAMOUNT" />
+          <ScalarProperty Name="SERVICE_TYPE" ColumnName="SERVICE_TYPE" />
+          <ScalarProperty Name="ACQUIRE_BANK" ColumnName="ACQUIRE_BANK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_MER_TX_BATCH_TEMP">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_MER_TX_BATCH_TEMP">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_MER_TX_BATCH_TEMP">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+          <ScalarProperty Name="BusinessNo" ColumnName="BusinessNo" />
+          <ScalarProperty Name="AcctTitle" ColumnName="AcctTitle" />
+          <ScalarProperty Name="AcctNum" ColumnName="AcctNum" />
+          <ScalarProperty Name="AcctBank" ColumnName="AcctBank" />
+          <ScalarProperty Name="BankBranch" ColumnName="BankBranch" />
+          <ScalarProperty Name="InvAddress" ColumnName="InvAddress" />
+          <ScalarProperty Name="AddresseeName" ColumnName="AddresseeName" />
+          <ScalarProperty Name="InvZipcode" ColumnName="InvZipcode" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="MerchantNum" ColumnName="MerchantNum" />
+          <ScalarProperty Name="SettleType" ColumnName="SettleType" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Whether_Choose" ColumnName="Whether_Choose" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_MER_TX_BATCH_TEMP_BLOCK">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_MER_TX_BATCH_TEMP_BLOCK">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_MER_TX_BATCH_TEMP_BLOCK">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+          <ScalarProperty Name="BusinessNo" ColumnName="BusinessNo" />
+          <ScalarProperty Name="AcctTitle" ColumnName="AcctTitle" />
+          <ScalarProperty Name="AcctNum" ColumnName="AcctNum" />
+          <ScalarProperty Name="AcctBank" ColumnName="AcctBank" />
+          <ScalarProperty Name="BankBranch" ColumnName="BankBranch" />
+          <ScalarProperty Name="InvAddress" ColumnName="InvAddress" />
+          <ScalarProperty Name="AddresseeName" ColumnName="AddresseeName" />
+          <ScalarProperty Name="InvZipcode" ColumnName="InvZipcode" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="MerchantNum" ColumnName="MerchantNum" />
+          <ScalarProperty Name="SettleType" ColumnName="SettleType" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Whether_Choose" ColumnName="Whether_Choose" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_MER_TYPE">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_MER_TYPE">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_MER_TYPE">
+          <ScalarProperty Name="MerType" ColumnName="MerType" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ServiceType" ColumnName="ServiceType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_OBJ_VER">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_OBJ_VER">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_OBJ_VER">
+          <ScalarProperty Name="ObjVer" ColumnName="ObjVer" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_RM_LOGIN_QUESTION_TRADE">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_RM_LOGIN_QUESTION_TRADE">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_RM_LOGIN_QUESTION_TRADE">
+          <ScalarProperty Name="NumCorrespondingly" ColumnName="NumCorrespondingly" />
+          <ScalarProperty Name="MerNo" ColumnName="MerNo" />
+          <ScalarProperty Name="OrderNum" ColumnName="OrderNum" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="AuthCode" ColumnName="AuthCode" />
+          <ScalarProperty Name="CreditCard" ColumnName="CreditCard" />
+          <ScalarProperty Name="NoticeDate" ColumnName="NoticeDate" />
+          <ScalarProperty Name="AuthDate" ColumnName="AuthDate" />
+          <ScalarProperty Name="IS_Receipt" ColumnName="IS_Receipt" />
+          <ScalarProperty Name="RefundDate" ColumnName="RefundDate" />
+          <ScalarProperty Name="DisputeCollectDate" ColumnName="DisputeCollectDate" />
+          <ScalarProperty Name="DeFundDate" ColumnName="DeFundDate" />
+          <ScalarProperty Name="ReasonRemarks" ColumnName="ReasonRemarks" />
+          <ScalarProperty Name="NoticeUnit" ColumnName="NoticeUnit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_RM_NOTICE_UNIT">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_RM_NOTICE_UNIT">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_RM_NOTICE_UNIT">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="NoticeUnit" ColumnName="NoticeUnit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_RM_REGISTER_QUERY_TEMP">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_RM_REGISTER_QUERY_TEMP">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_RM_REGISTER_QUERY_TEMP">
+          <ScalarProperty Name="Num" ColumnName="Num" />
+          <ScalarProperty Name="QueryPerson" ColumnName="QueryPerson" />
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+          <ScalarProperty Name="MerNo" ColumnName="MerNo" />
+          <ScalarProperty Name="OrderNum" ColumnName="OrderNum" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="AuthCode" ColumnName="AuthCode" />
+          <ScalarProperty Name="CreditCard" ColumnName="CreditCard" />
+          <ScalarProperty Name="NoticeDate" ColumnName="NoticeDate" />
+          <ScalarProperty Name="AuthDate" ColumnName="AuthDate" />
+          <ScalarProperty Name="IS_Receipt" ColumnName="IS_Receipt" />
+          <ScalarProperty Name="RefundDate" ColumnName="RefundDate" />
+          <ScalarProperty Name="DisputeCollectDate" ColumnName="DisputeCollectDate" />
+          <ScalarProperty Name="DeFundDate" ColumnName="DeFundDate" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="RegReasonCode" ColumnName="RegReasonCode" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+          <ScalarProperty Name="NoticeUnit" ColumnName="NoticeUnit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_RM_REGISTER_REASON">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_RM_REGISTER_REASON">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_RM_REGISTER_REASON">
+          <ScalarProperty Name="Num" ColumnName="Num" />
+          <ScalarProperty Name="NumCorrespondingly" ColumnName="NumCorrespondingly" />
+          <ScalarProperty Name="RegReasonCode" ColumnName="RegReasonCode" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_RM_REGISTER_REASON_CODE">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_RM_REGISTER_REASON_CODE">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_RM_REGISTER_REASON_CODE">
+          <ScalarProperty Name="RegReasonCode" ColumnName="RegReasonCode" />
+          <ScalarProperty Name="RegisterReason" ColumnName="RegisterReason" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_RM_REGISTER_REASON_TEMP">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_RM_REGISTER_REASON_TEMP">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_RM_REGISTER_REASON_TEMP">
+          <ScalarProperty Name="Num" ColumnName="Num" />
+          <ScalarProperty Name="NumCorrespondingly" ColumnName="NumCorrespondingly" />
+          <ScalarProperty Name="RegReasonCode" ColumnName="RegReasonCode" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+          <ScalarProperty Name="RegisterPerson" ColumnName="RegisterPerson" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_SERVER_NAME">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_SERVER_NAME">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_SERVER_NAME">
+          <ScalarProperty Name="ServerName" ColumnName="ServerName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_SERVICE_TYPE">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_SERVICE_TYPE">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_SERVICE_TYPE">
+          <ScalarProperty Name="ServiceType" ColumnName="ServiceType" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_SETTLE_CYCLE">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_SETTLE_CYCLE">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_SETTLE_CYCLE">
+          <ScalarProperty Name="SettleCycle" ColumnName="SettleCycle" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_SETTLE_IP">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_SETTLE_IP">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_SETTLE_IP">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+          <ScalarProperty Name="HostIPs" ColumnName="HostIPs" />
+          <ScalarProperty Name="AdminIPs" ColumnName="AdminIPs" />
+          <ScalarProperty Name="RPUploadIPs" ColumnName="RPUploadIPs" />
+          <ScalarProperty Name="MerNo" ColumnName="MerNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_TEMP_ADVANCE_QUERY">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_TEMP_ADVANCE_QUERY">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_TEMP_ADVANCE_QUERY">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="QueryPerson" ColumnName="QueryPerson" />
+          <ScalarProperty Name="ContraKind" ColumnName="ContraKind" />
+          <ScalarProperty Name="ContraNo" ColumnName="ContraNo" />
+          <ScalarProperty Name="ContraYear" ColumnName="ContraYear" />
+          <ScalarProperty Name="ContraMonth" ColumnName="ContraMonth" />
+          <ScalarProperty Name="MallType" ColumnName="MallType" />
+          <ScalarProperty Name="ServiceType" ColumnName="ServiceType" />
+          <ScalarProperty Name="ContraState" ColumnName="ContraState" />
+          <ScalarProperty Name="Distributor" ColumnName="Distributor" />
+          <ScalarProperty Name="ContraEntDate" ColumnName="ContraEntDate" />
+          <ScalarProperty Name="ContraSendDate" ColumnName="ContraSendDate" />
+          <ScalarProperty Name="Contra_IniDate" ColumnName="Contra_IniDate" />
+          <ScalarProperty Name="Contra_ExpDate" ColumnName="Contra_ExpDate" />
+          <ScalarProperty Name="ContraStopDate" ColumnName="ContraStopDate" />
+          <ScalarProperty Name="Capital" ColumnName="Capital" />
+          <ScalarProperty Name="BusinessNo" ColumnName="BusinessNo" />
+          <ScalarProperty Name="NewebSales" ColumnName="NewebSales" />
+          <ScalarProperty Name="NewebSales_C" ColumnName="NewebSales_C" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_TEMP_ADVANCE_QUERY_STORE">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_TEMP_ADVANCE_QUERY_STORE">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_TEMP_ADVANCE_QUERY_STORE">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="QueryPerson" ColumnName="QueryPerson" />
+          <ScalarProperty Name="MerNo_F" ColumnName="MerNo_F" />
+          <ScalarProperty Name="AcquireMode" ColumnName="AcquireMode" />
+          <ScalarProperty Name="AcquireBank" ColumnName="AcquireBank" />
+          <ScalarProperty Name="MerType" ColumnName="MerType" />
+          <ScalarProperty Name="MallType" ColumnName="MallType" />
+          <ScalarProperty Name="SettleCycle" ColumnName="SettleCycle" />
+          <ScalarProperty Name="MID" ColumnName="MID" />
+          <ScalarProperty Name="TID" ColumnName="TID" />
+          <ScalarProperty Name="CMID" ColumnName="CMID" />
+          <ScalarProperty Name="CTID" ColumnName="CTID" />
+          <ScalarProperty Name="BusinessItem" ColumnName="BusinessItem" />
+          <ScalarProperty Name="VBV" ColumnName="VBV" />
+          <ScalarProperty Name="Capital" ColumnName="Capital" />
+          <ScalarProperty Name="BusinessNo" ColumnName="BusinessNo" />
+          <ScalarProperty Name="NewebSales" ColumnName="NewebSales" />
+          <ScalarProperty Name="MerState" ColumnName="MerState" />
+          <ScalarProperty Name="IS_CTID" ColumnName="IS_CTID" />
+          <ScalarProperty Name="IS_IM" ColumnName="IS_IM" />
+          <ScalarProperty Name="OnNtcTime" ColumnName="OnNtcTime" />
+          <ScalarProperty Name="OffNtcTime" ColumnName="OffNtcTime" />
+          <ScalarProperty Name="OnLineCs" ColumnName="OnLineCs" />
+          <ScalarProperty Name="OffLineCs" ColumnName="OffLineCs" />
+          <ScalarProperty Name="HostID" ColumnName="HostID" />
+          <ScalarProperty Name="FrontHostID" ColumnName="FrontHostID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_TEMP_SELECT_EMAIL">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_TEMP_SELECT_EMAIL">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_TEMP_SELECT_EMAIL">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="MerState" ColumnName="MerState" />
+          <ScalarProperty Name="HostID" ColumnName="HostID" />
+          <ScalarProperty Name="MerType" ColumnName="MerType" />
+          <ScalarProperty Name="MallType" ColumnName="MallType" />
+          <ScalarProperty Name="AcquireBank" ColumnName="AcquireBank" />
+          <ScalarProperty Name="AcquireMode" ColumnName="AcquireMode" />
+          <ScalarProperty Name="VBV" ColumnName="VBV" />
+          <ScalarProperty Name="QueryPerson" ColumnName="QueryPerson" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_TRADE_STATISTICAL">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_TRADE_STATISTICAL">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_TRADE_STATISTICAL">
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+          <ScalarProperty Name="ServiceType" ColumnName="ServiceType" />
+          <ScalarProperty Name="LastWeekAmount" ColumnName="LastWeekAmount" />
+          <ScalarProperty Name="LastWeekCount" ColumnName="LastWeekCount" />
+          <ScalarProperty Name="LastWeekCredAmount" ColumnName="LastWeekCredAmount" />
+          <ScalarProperty Name="LastWeekCredCount" ColumnName="LastWeekCredCount" />
+          <ScalarProperty Name="LastMonthAmount" ColumnName="LastMonthAmount" />
+          <ScalarProperty Name="LastMonthCount" ColumnName="LastMonthCount" />
+          <ScalarProperty Name="LastMonthCredAmount" ColumnName="LastMonthCredAmount" />
+          <ScalarProperty Name="LastMonthCredCount" ColumnName="LastMonthCredCount" />
+          <ScalarProperty Name="ThreeMonthsAmount" ColumnName="ThreeMonthsAmount" />
+          <ScalarProperty Name="ThreeMonthsCount" ColumnName="ThreeMonthsCount" />
+          <ScalarProperty Name="ThreeMonthsCredAmount" ColumnName="ThreeMonthsCredAmount" />
+          <ScalarProperty Name="ThreeMonthsCredCount" ColumnName="ThreeMonthsCredCount" />
+          <ScalarProperty Name="LastWeekUpdateDate" ColumnName="LastWeekUpdateDate" />
+          <ScalarProperty Name="LastMonthUpdateDate" ColumnName="LastMonthUpdateDate" />
+          <ScalarProperty Name="ThreeMonthsUpdateDate" ColumnName="ThreeMonthsUpdateDate" />
+          <ScalarProperty Name="TradeDateFinally" ColumnName="TradeDateFinally" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_正式商店設定資料">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_正式商店設定資料">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_正式商店設定資料">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="MerNo_F" ColumnName="MerNo_F" />
+          <ScalarProperty Name="MerNo_T" ColumnName="MerNo_T" />
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+          <ScalarProperty Name="MerName_En" ColumnName="MerName_En" />
+          <ScalarProperty Name="MerName_Ch" ColumnName="MerName_Ch" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="PassWord" ColumnName="PassWord" />
+          <ScalarProperty Name="New_PassWord" ColumnName="New_PassWord" />
+          <ScalarProperty Name="CooperMode" ColumnName="CooperMode" />
+          <ScalarProperty Name="MID" ColumnName="MID" />
+          <ScalarProperty Name="TID" ColumnName="TID" />
+          <ScalarProperty Name="CMID" ColumnName="CMID" />
+          <ScalarProperty Name="CTID" ColumnName="CTID" />
+          <ScalarProperty Name="Mall_ID" ColumnName="Mall_ID" />
+          <ScalarProperty Name="Org_ID" ColumnName="Org_ID" />
+          <ScalarProperty Name="HostID" ColumnName="HostID" />
+          <ScalarProperty Name="BankMode" ColumnName="BankMode" />
+          <ScalarProperty Name="MerState" ColumnName="MerState" />
+          <ScalarProperty Name="MerType2" ColumnName="MerType2" />
+          <ScalarProperty Name="OnRemarks" ColumnName="OnRemarks" />
+          <ScalarProperty Name="BatchType_N" ColumnName="BatchType_N" />
+          <ScalarProperty Name="OnNtcTime" ColumnName="OnNtcTime" />
+          <ScalarProperty Name="OnCmpTime" ColumnName="OnCmpTime" />
+          <ScalarProperty Name="OffNtcTime" ColumnName="OffNtcTime" />
+          <ScalarProperty Name="OffCmpTime" ColumnName="OffCmpTime" />
+          <ScalarProperty Name="OffRemarks" ColumnName="OffRemarks" />
+          <ScalarProperty Name="ObjVer_N" ColumnName="ObjVer_N" />
+          <ScalarProperty Name="ReportMail" ColumnName="ReportMail" />
+          <ScalarProperty Name="VBV" ColumnName="VBV" />
+          <ScalarProperty Name="MerNo_New" ColumnName="MerNo_New" />
+          <ScalarProperty Name="RSP_CardNo" ColumnName="RSP_CardNo" />
+          <ScalarProperty Name="SysOn_TimeSt" ColumnName="SysOn_TimeSt" />
+          <ScalarProperty Name="SysOff_TimeSt" ColumnName="SysOff_TimeSt" />
+          <ScalarProperty Name="Total_Rate" ColumnName="Total_Rate" />
+          <ScalarProperty Name="Bank_Rate" ColumnName="Bank_Rate" />
+          <ScalarProperty Name="Neweb_Rate" ColumnName="Neweb_Rate" />
+          <ScalarProperty Name="Mall_Rate" ColumnName="Mall_Rate" />
+          <ScalarProperty Name="RateExp" ColumnName="RateExp" />
+          <ScalarProperty Name="BusinessItem" ColumnName="BusinessItem" />
+          <ScalarProperty Name="OnLineCs" ColumnName="OnLineCs" />
+          <ScalarProperty Name="OffLineCs" ColumnName="OffLineCs" />
+          <ScalarProperty Name="IS_IM" ColumnName="IS_IM" />
+          <ScalarProperty Name="IS_CTID" ColumnName="IS_CTID" />
+          <ScalarProperty Name="RPCCMerNo" ColumnName="RPCCMerNo" />
+          <ScalarProperty Name="MallType" ColumnName="MallType" />
+          <ScalarProperty Name="MallTypeNote" ColumnName="MallTypeNote" />
+          <ScalarProperty Name="IMRate_3" ColumnName="IMRate_3" />
+          <ScalarProperty Name="IMRate_6" ColumnName="IMRate_6" />
+          <ScalarProperty Name="IMRate_9" ColumnName="IMRate_9" />
+          <ScalarProperty Name="IMRate_12" ColumnName="IMRate_12" />
+          <ScalarProperty Name="IMRate_18" ColumnName="IMRate_18" />
+          <ScalarProperty Name="IMRate_24" ColumnName="IMRate_24" />
+          <ScalarProperty Name="IMRate_36" ColumnName="IMRate_36" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="MerType" ColumnName="MerType" />
+          <ScalarProperty Name="AcquireBank" ColumnName="AcquireBank" />
+          <ScalarProperty Name="AcquireMode" ColumnName="AcquireMode" />
+          <ScalarProperty Name="SettleCycle" ColumnName="SettleCycle" />
+          <ScalarProperty Name="IS_RPRecCCNo" ColumnName="IS_RPRecCCNo" />
+          <ScalarProperty Name="IS_RPFirstCap" ColumnName="IS_RPFirstCap" />
+          <ScalarProperty Name="IS_RPAutoDelFail" ColumnName="IS_RPAutoDelFail" />
+          <ScalarProperty Name="HostIPs" ColumnName="HostIPs" />
+          <ScalarProperty Name="AdminIPs" ColumnName="AdminIPs" />
+          <ScalarProperty Name="RPUploadIPs" ColumnName="RPUploadIPs" />
+          <ScalarProperty Name="AutoSettleTime" ColumnName="AutoSettleTime" />
+          <ScalarProperty Name="ReportGiven" ColumnName="ReportGiven" />
+          <ScalarProperty Name="AsyncTxtNoteURL" ColumnName="AsyncTxtNoteURL" />
+          <ScalarProperty Name="MerLogo" ColumnName="MerLogo" />
+          <ScalarProperty Name="MerTxtNote" ColumnName="MerTxtNote" />
+          <ScalarProperty Name="Mer_Graph" ColumnName="Mer_Graph" />
+          <ScalarProperty Name="ContraNo" ColumnName="ContraNo" />
+          <ScalarProperty Name="SinSerChar" ColumnName="SinSerChar" />
+          <ScalarProperty Name="FrontHostID" ColumnName="FrontHostID" />
+          <ScalarProperty Name="MerNo_Old" ColumnName="MerNo_Old" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_正式商店標籤視圖">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_正式商店標籤視圖">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_正式商店標籤視圖">
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+          <ScalarProperty Name="CustZipcode" ColumnName="CustZipcode" />
+          <ScalarProperty Name="CustAdrs" ColumnName="CustAdrs" />
+          <ScalarProperty Name="SalesName" ColumnName="SalesName" />
+          <ScalarProperty Name="SalesTel" ColumnName="SalesTel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_合約資料">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_合約資料">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_合約資料">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+          <ScalarProperty Name="ContraNo" ColumnName="ContraNo" />
+          <ScalarProperty Name="ContraYear" ColumnName="ContraYear" />
+          <ScalarProperty Name="ContraMonth" ColumnName="ContraMonth" />
+          <ScalarProperty Name="MallType" ColumnName="MallType" />
+          <ScalarProperty Name="ContraState" ColumnName="ContraState" />
+          <ScalarProperty Name="ServiceType" ColumnName="ServiceType" />
+          <ScalarProperty Name="ContraEntDate" ColumnName="ContraEntDate" />
+          <ScalarProperty Name="ContraSendDate" ColumnName="ContraSendDate" />
+          <ScalarProperty Name="InvDate" ColumnName="InvDate" />
+          <ScalarProperty Name="Rent" ColumnName="Rent" />
+          <ScalarProperty Name="EarMoney" ColumnName="EarMoney" />
+          <ScalarProperty Name="ContraSignDate" ColumnName="ContraSignDate" />
+          <ScalarProperty Name="Contra_IniDate" ColumnName="Contra_IniDate" />
+          <ScalarProperty Name="Contra_ValDate" ColumnName="Contra_ValDate" />
+          <ScalarProperty Name="Contra_ExpDate" ColumnName="Contra_ExpDate" />
+          <ScalarProperty Name="ContraStopDate" ColumnName="ContraStopDate" />
+          <ScalarProperty Name="Total_Rate" ColumnName="Total_Rate" />
+          <ScalarProperty Name="Bank_Rate" ColumnName="Bank_Rate" />
+          <ScalarProperty Name="Neweb_Rate" ColumnName="Neweb_Rate" />
+          <ScalarProperty Name="Mall_Rate" ColumnName="Mall_Rate" />
+          <ScalarProperty Name="RentExp" ColumnName="RentExp" />
+          <ScalarProperty Name="RateExp" ColumnName="RateExp" />
+          <ScalarProperty Name="NewebSales" ColumnName="NewebSales" />
+          <ScalarProperty Name="Distributor" ColumnName="Distributor" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="SinSerChar" ColumnName="SinSerChar" />
+          <ScalarProperty Name="IM" ColumnName="IM" />
+          <ScalarProperty Name="RP" ColumnName="RP" />
+          <ScalarProperty Name="FAX" ColumnName="FAX" />
+          <ScalarProperty Name="ContraKind" ColumnName="ContraKind" />
+          <ScalarProperty Name="ContraNo_Last" ColumnName="ContraNo_Last" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="DepositDate" ColumnName="DepositDate" />
+          <ScalarProperty Name="AcctTitle" ColumnName="AcctTitle" />
+          <ScalarProperty Name="AcctNum" ColumnName="AcctNum" />
+          <ScalarProperty Name="AcctBank" ColumnName="AcctBank" />
+          <ScalarProperty Name="BankBranch" ColumnName="BankBranch" />
+          <ScalarProperty Name="AcquireBank" ColumnName="AcquireBank" />
+          <ScalarProperty Name="Is_MAST" ColumnName="Is_MAST" />
+          <ScalarProperty Name="ContraType" ColumnName="ContraType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_合約資料標籤視圖">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_合約資料標籤視圖">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_合約資料標籤視圖">
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+          <ScalarProperty Name="CustZipcode" ColumnName="CustZipcode" />
+          <ScalarProperty Name="CustAdrs" ColumnName="CustAdrs" />
+          <ScalarProperty Name="SalesName" ColumnName="SalesName" />
+          <ScalarProperty Name="SalesTel" ColumnName="SalesTel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_客戶技術窗口資料">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_客戶技術窗口資料">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_客戶技術窗口資料">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+          <ScalarProperty Name="TechName" ColumnName="TechName" />
+          <ScalarProperty Name="TechTel" ColumnName="TechTel" />
+          <ScalarProperty Name="TechMail" ColumnName="TechMail" />
+          <ScalarProperty Name="TechICQ" ColumnName="TechICQ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_客戶客服窗口資料">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_客戶客服窗口資料">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_客戶客服窗口資料">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+          <ScalarProperty Name="CsName" ColumnName="CsName" />
+          <ScalarProperty Name="CsTel" ColumnName="CsTel" />
+          <ScalarProperty Name="CsMail" ColumnName="CsMail" />
+          <ScalarProperty Name="CsIM" ColumnName="CsIM" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_客戶基本資料">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_客戶基本資料">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_客戶基本資料">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+          <ScalarProperty Name="CustName_En" ColumnName="CustName_En" />
+          <ScalarProperty Name="BusinessNo" ColumnName="BusinessNo" />
+          <ScalarProperty Name="CustName_Extn" ColumnName="CustName_Extn" />
+          <ScalarProperty Name="CustName_Rept" ColumnName="CustName_Rept" />
+          <ScalarProperty Name="CustName_Bill" ColumnName="CustName_Bill" />
+          <ScalarProperty Name="AcctTitle" ColumnName="AcctTitle" />
+          <ScalarProperty Name="AcctNum" ColumnName="AcctNum" />
+          <ScalarProperty Name="AcctBank" ColumnName="AcctBank" />
+          <ScalarProperty Name="BankBranch" ColumnName="BankBranch" />
+          <ScalarProperty Name="InvAddress" ColumnName="InvAddress" />
+          <ScalarProperty Name="CustTel" ColumnName="CustTel" />
+          <ScalarProperty Name="CustFax" ColumnName="CustFax" />
+          <ScalarProperty Name="CustURL" ColumnName="CustURL" />
+          <ScalarProperty Name="MerURL" ColumnName="MerURL" />
+          <ScalarProperty Name="FileNo" ColumnName="FileNo" />
+          <ScalarProperty Name="Capital" ColumnName="Capital" />
+          <ScalarProperty Name="Director" ColumnName="Director" />
+          <ScalarProperty Name="DirectorID" ColumnName="DirectorID" />
+          <ScalarProperty Name="AuthPerson" ColumnName="AuthPerson" />
+          <ScalarProperty Name="AuthMail" ColumnName="AuthMail" />
+          <ScalarProperty Name="AuthTel" ColumnName="AuthTel" />
+          <ScalarProperty Name="NewebSales" ColumnName="NewebSales" />
+          <ScalarProperty Name="CustAdrs" ColumnName="CustAdrs" />
+          <ScalarProperty Name="CustName_EnCode" ColumnName="CustName_EnCode" />
+          <ScalarProperty Name="AddresseeName" ColumnName="AddresseeName" />
+          <ScalarProperty Name="InvZipcode" ColumnName="InvZipcode" />
+          <ScalarProperty Name="CustZipcode" ColumnName="CustZipcode" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="IS_Distributor" ColumnName="IS_Distributor" />
+          <ScalarProperty Name="InspectStatus" ColumnName="InspectStatus" />
+          <ScalarProperty Name="ProjectRecord" ColumnName="ProjectRecord" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_客戶帳務窗口資料">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_客戶帳務窗口資料">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_客戶帳務窗口資料">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+          <ScalarProperty Name="AcctName" ColumnName="AcctName" />
+          <ScalarProperty Name="AcctTel" ColumnName="AcctTel" />
+          <ScalarProperty Name="AcctMail" ColumnName="AcctMail" />
+          <ScalarProperty Name="AcctICQ" ColumnName="AcctICQ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_客戶報表窗口資料">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_客戶報表窗口資料">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_客戶報表窗口資料">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+          <ScalarProperty Name="ReptName" ColumnName="ReptName" />
+          <ScalarProperty Name="ReptTel" ColumnName="ReptTel" />
+          <ScalarProperty Name="ReptMail" ColumnName="ReptMail" />
+          <ScalarProperty Name="MerNo" ColumnName="MerNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_客戶業務窗口資料">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_客戶業務窗口資料">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_客戶業務窗口資料">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+          <ScalarProperty Name="SalesName" ColumnName="SalesName" />
+          <ScalarProperty Name="SalesTel" ColumnName="SalesTel" />
+          <ScalarProperty Name="SalesMail" ColumnName="SalesMail" />
+          <ScalarProperty Name="SalesICQ" ColumnName="SalesICQ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_停用連線服務原因">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_停用連線服務原因">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_停用連線服務原因">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_國內發卡銀行">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_國內發卡銀行">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_國內發卡銀行">
+          <ScalarProperty Name="BankCode" ColumnName="BankCode" />
+          <ScalarProperty Name="CardBrand" ColumnName="CardBrand" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="CardType" ColumnName="CardType" />
+          <ScalarProperty Name="CardSubtype" ColumnName="CardSubtype" />
+          <ScalarProperty Name="CountryOrigin" ColumnName="CountryOrigin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_測式商店設定資料">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_測式商店設定資料">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_測式商店設定資料">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="MerNo_T" ColumnName="MerNo_T" />
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+          <ScalarProperty Name="CooperMode" ColumnName="CooperMode" />
+          <ScalarProperty Name="MerState" ColumnName="MerState" />
+          <ScalarProperty Name="MerType2" ColumnName="MerType2" />
+          <ScalarProperty Name="MerType" ColumnName="MerType" />
+          <ScalarProperty Name="HostID" ColumnName="HostID" />
+          <ScalarProperty Name="Test_Ntc_Date" ColumnName="Test_Ntc_Date" />
+          <ScalarProperty Name="Test_Cmp_Date" ColumnName="Test_Cmp_Date" />
+          <ScalarProperty Name="Auth" ColumnName="Auth" />
+          <ScalarProperty Name="NewebSales" ColumnName="NewebSales" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="InspectStatus" ColumnName="InspectStatus" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="IS_IM" ColumnName="IS_IM" />
+          <ScalarProperty Name="IS_CTID" ColumnName="IS_CTID" />
+          <ScalarProperty Name="OnlyTest" ColumnName="OnlyTest" />
+          <ScalarProperty Name="TestDelDate" ColumnName="TestDelDate" />
+          <ScalarProperty Name="TestPassword" ColumnName="TestPassword" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_測試商店備註欄">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_測試商店備註欄">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_測試商店備註欄">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="RelNum" ColumnName="RelNum" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="RemarksDate" ColumnName="RemarksDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_測試商店備註欄暫存">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_測試商店備註欄暫存">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_測試商店備註欄暫存">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="RemarksDate" ColumnName="RemarksDate" />
+          <ScalarProperty Name="LoginName" ColumnName="LoginName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_測試商店視圖">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_測試商店視圖">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_測試商店視圖">
+          <ScalarProperty Name="NewebSales" ColumnName="NewebSales" />
+          <ScalarProperty Name="CustName_EnCode" ColumnName="CustName_EnCode" />
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="MerNo_T" ColumnName="MerNo_T" />
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+          <ScalarProperty Name="CooperMode" ColumnName="CooperMode" />
+          <ScalarProperty Name="MerState" ColumnName="MerState" />
+          <ScalarProperty Name="MerType" ColumnName="MerType" />
+          <ScalarProperty Name="HostID" ColumnName="HostID" />
+          <ScalarProperty Name="Test_Ntc_Date" ColumnName="Test_Ntc_Date" />
+          <ScalarProperty Name="Test_Cmp_Date" ColumnName="Test_Cmp_Date" />
+          <ScalarProperty Name="Auth" ColumnName="Auth" />
+          <ScalarProperty Name="InspectStatus" ColumnName="InspectStatus" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="IS_IM" ColumnName="IS_IM" />
+          <ScalarProperty Name="IS_CTID" ColumnName="IS_CTID" />
+          <ScalarProperty Name="OnlyTest" ColumnName="OnlyTest" />
+          <ScalarProperty Name="TestDelDate" ColumnName="TestDelDate" />
+          <ScalarProperty Name="TestPassword" ColumnName="TestPassword" />
+          <ScalarProperty Name="OnNtcTime" ColumnName="OnNtcTime" />
+          <ScalarProperty Name="OffNtcTime" ColumnName="OffNtcTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_測試商店進階查詢暫存">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_測試商店進階查詢暫存">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_測試商店進階查詢暫存">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="QueryPerson" ColumnName="QueryPerson" />
+          <ScalarProperty Name="MerNo_T" ColumnName="MerNo_T" />
+          <ScalarProperty Name="MerState" ColumnName="MerState" />
+          <ScalarProperty Name="MerType" ColumnName="MerType" />
+          <ScalarProperty Name="HostID" ColumnName="HostID" />
+          <ScalarProperty Name="NewebSales" ColumnName="NewebSales" />
+          <ScalarProperty Name="CustName_EnCode" ColumnName="CustName_EnCode" />
+          <ScalarProperty Name="TestPassword" ColumnName="TestPassword" />
+          <ScalarProperty Name="Test_Ntc_Date" ColumnName="Test_Ntc_Date" />
+          <ScalarProperty Name="Test_Cmp_Date" ColumnName="Test_Cmp_Date" />
+          <ScalarProperty Name="TestDelDate" ColumnName="TestDelDate" />
+          <ScalarProperty Name="Auth" ColumnName="Auth" />
+          <ScalarProperty Name="IS_IM" ColumnName="IS_IM" />
+          <ScalarProperty Name="IS_CTID" ColumnName="IS_CTID" />
+          <ScalarProperty Name="OnlyTest" ColumnName="OnlyTest" />
+          <ScalarProperty Name="OnNtcTime" ColumnName="OnNtcTime" />
+          <ScalarProperty Name="OffNtcTime" ColumnName="OffNtcTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_登錄問題交易主選單視圖">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_登錄問題交易主選單視圖">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_登錄問題交易主選單視圖">
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+          <ScalarProperty Name="NumCorrespondingly" ColumnName="NumCorrespondingly" />
+          <ScalarProperty Name="MerNo" ColumnName="MerNo" />
+          <ScalarProperty Name="OrderNum" ColumnName="OrderNum" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="AuthCode" ColumnName="AuthCode" />
+          <ScalarProperty Name="CreditCard" ColumnName="CreditCard" />
+          <ScalarProperty Name="NoticeDate" ColumnName="NoticeDate" />
+          <ScalarProperty Name="AuthDate" ColumnName="AuthDate" />
+          <ScalarProperty Name="IS_Receipt" ColumnName="IS_Receipt" />
+          <ScalarProperty Name="RefundDate" ColumnName="RefundDate" />
+          <ScalarProperty Name="DisputeCollectDate" ColumnName="DisputeCollectDate" />
+          <ScalarProperty Name="DeFundDate" ColumnName="DeFundDate" />
+          <ScalarProperty Name="ReasonRemarks" ColumnName="ReasonRemarks" />
+          <ScalarProperty Name="NoticeUnit" ColumnName="NoticeUnit" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="CountryOrigin" ColumnName="CountryOrigin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_登錄問題交易視圖">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_登錄問題交易視圖">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_登錄問題交易視圖">
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+          <ScalarProperty Name="NumCorrespondingly" ColumnName="NumCorrespondingly" />
+          <ScalarProperty Name="MerNo" ColumnName="MerNo" />
+          <ScalarProperty Name="OrderNum" ColumnName="OrderNum" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="AuthCode" ColumnName="AuthCode" />
+          <ScalarProperty Name="CreditCard" ColumnName="CreditCard" />
+          <ScalarProperty Name="NoticeDate" ColumnName="NoticeDate" />
+          <ScalarProperty Name="AuthDate" ColumnName="AuthDate" />
+          <ScalarProperty Name="IS_Receipt" ColumnName="IS_Receipt" />
+          <ScalarProperty Name="RefundDate" ColumnName="RefundDate" />
+          <ScalarProperty Name="DisputeCollectDate" ColumnName="DisputeCollectDate" />
+          <ScalarProperty Name="DeFundDate" ColumnName="DeFundDate" />
+          <ScalarProperty Name="ReasonRemarks" ColumnName="ReasonRemarks" />
+          <ScalarProperty Name="NoticeUnit" ColumnName="NoticeUnit" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="CountryOrigin" ColumnName="CountryOrigin" />
+          <ScalarProperty Name="RegReasonCode" ColumnName="RegReasonCode" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_登錄問題交易匯出視圖">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_登錄問題交易匯出視圖">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_登錄問題交易匯出視圖">
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+          <ScalarProperty Name="NumCorrespondingly" ColumnName="NumCorrespondingly" />
+          <ScalarProperty Name="MerNo" ColumnName="MerNo" />
+          <ScalarProperty Name="OrderNum" ColumnName="OrderNum" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="AuthCode" ColumnName="AuthCode" />
+          <ScalarProperty Name="CreditCard" ColumnName="CreditCard" />
+          <ScalarProperty Name="NoticeDate" ColumnName="NoticeDate" />
+          <ScalarProperty Name="AuthDate" ColumnName="AuthDate" />
+          <ScalarProperty Name="IS_Receipt" ColumnName="IS_Receipt" />
+          <ScalarProperty Name="RefundDate" ColumnName="RefundDate" />
+          <ScalarProperty Name="DisputeCollectDate" ColumnName="DisputeCollectDate" />
+          <ScalarProperty Name="DeFundDate" ColumnName="DeFundDate" />
+          <ScalarProperty Name="ReasonRemarks" ColumnName="ReasonRemarks" />
+          <ScalarProperty Name="NoticeUnit" ColumnName="NoticeUnit" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="CountryOrigin" ColumnName="CountryOrigin" />
+          <ScalarProperty Name="RegReasonCode" ColumnName="RegReasonCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C192_168_1_TWQ_商家資料庫_dbo_登錄問題原因視圖">
+      <EntityTypeMapping TypeName="TestDB2Model.C192_168_1_TWQ_商家資料庫_dbo_登錄問題原因視圖">
+        <MappingFragment StoreEntitySet="192_168_1_TWQ_商家資料庫_dbo_登錄問題原因視圖">
+          <ScalarProperty Name="NumCorrespondingly" ColumnName="NumCorrespondingly" />
+          <ScalarProperty Name="RegReasonCode" ColumnName="RegReasonCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EMAIL_AUTH">
+      <EntityTypeMapping TypeName="TestDB2Model.EMAIL_AUTH">
+        <MappingFragment StoreEntitySet="EMAIL_AUTH">
+          <ScalarProperty Name="eMail" ColumnName="eMail" />
+          <ScalarProperty Name="Recipient" ColumnName="Recipient" />
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MPOS視圖">
+      <EntityTypeMapping TypeName="TestDB2Model.MPOS視圖">
+        <MappingFragment StoreEntitySet="MPOS視圖">
+          <ScalarProperty Name="CustName_En" ColumnName="CustName_En" />
+          <ScalarProperty Name="BusinessNo" ColumnName="BusinessNo" />
+          <ScalarProperty Name="ProjectRecord" ColumnName="ProjectRecord" />
+          <ScalarProperty Name="InspectStatus" ColumnName="InspectStatus" />
+          <ScalarProperty Name="IS_Distributor" ColumnName="IS_Distributor" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="CustZipcode" ColumnName="CustZipcode" />
+          <ScalarProperty Name="InvZipcode" ColumnName="InvZipcode" />
+          <ScalarProperty Name="AddresseeName" ColumnName="AddresseeName" />
+          <ScalarProperty Name="CustName_EnCode" ColumnName="CustName_EnCode" />
+          <ScalarProperty Name="CustAdrs" ColumnName="CustAdrs" />
+          <ScalarProperty Name="NewebSales" ColumnName="NewebSales" />
+          <ScalarProperty Name="AuthTel" ColumnName="AuthTel" />
+          <ScalarProperty Name="AuthMail" ColumnName="AuthMail" />
+          <ScalarProperty Name="AuthPerson" ColumnName="AuthPerson" />
+          <ScalarProperty Name="DirectorID" ColumnName="DirectorID" />
+          <ScalarProperty Name="InvAddress" ColumnName="InvAddress" />
+          <ScalarProperty Name="CustTel" ColumnName="CustTel" />
+          <ScalarProperty Name="CustFax" ColumnName="CustFax" />
+          <ScalarProperty Name="CustURL" ColumnName="CustURL" />
+          <ScalarProperty Name="MerURL" ColumnName="MerURL" />
+          <ScalarProperty Name="FileNo" ColumnName="FileNo" />
+          <ScalarProperty Name="Capital" ColumnName="Capital" />
+          <ScalarProperty Name="Director" ColumnName="Director" />
+          <ScalarProperty Name="CustName_Extn" ColumnName="CustName_Extn" />
+          <ScalarProperty Name="CustName_Bill" ColumnName="CustName_Bill" />
+          <ScalarProperty Name="CustName_Rept" ColumnName="CustName_Rept" />
+          <ScalarProperty Name="AcctTitle" ColumnName="AcctTitle" />
+          <ScalarProperty Name="AcctNum" ColumnName="AcctNum" />
+          <ScalarProperty Name="AcctBank" ColumnName="AcctBank" />
+          <ScalarProperty Name="BankBranch" ColumnName="BankBranch" />
+          <ScalarProperty Name="MerNo_F" ColumnName="MerNo_F" />
+          <ScalarProperty Name="MerNo_T" ColumnName="MerNo_T" />
+          <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+          <ScalarProperty Name="MerName_En" ColumnName="MerName_En" />
+          <ScalarProperty Name="MerName_Ch" ColumnName="MerName_Ch" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="PassWord" ColumnName="PassWord" />
+          <ScalarProperty Name="New_PassWord" ColumnName="New_PassWord" />
+          <ScalarProperty Name="CooperMode" ColumnName="CooperMode" />
+          <ScalarProperty Name="CMID" ColumnName="CMID" />
+          <ScalarProperty Name="CTID" ColumnName="CTID" />
+          <ScalarProperty Name="Mall_ID" ColumnName="Mall_ID" />
+          <ScalarProperty Name="Org_ID" ColumnName="Org_ID" />
+          <ScalarProperty Name="HostID" ColumnName="HostID" />
+          <ScalarProperty Name="BankMode" ColumnName="BankMode" />
+          <ScalarProperty Name="MerState" ColumnName="MerState" />
+          <ScalarProperty Name="MerType2" ColumnName="MerType2" />
+          <ScalarProperty Name="OnRemarks" ColumnName="OnRemarks" />
+          <ScalarProperty Name="BatchType_N" ColumnName="BatchType_N" />
+          <ScalarProperty Name="OnNtcTime" ColumnName="OnNtcTime" />
+          <ScalarProperty Name="OnCmpTime" ColumnName="OnCmpTime" />
+          <ScalarProperty Name="OffNtcTime" ColumnName="OffNtcTime" />
+          <ScalarProperty Name="OffCmpTime" ColumnName="OffCmpTime" />
+          <ScalarProperty Name="OffRemarks" ColumnName="OffRemarks" />
+          <ScalarProperty Name="ObjVer_N" ColumnName="ObjVer_N" />
+          <ScalarProperty Name="VBV" ColumnName="VBV" />
+          <ScalarProperty Name="ReportMail" ColumnName="ReportMail" />
+          <ScalarProperty Name="MerNo_New" ColumnName="MerNo_New" />
+          <ScalarProperty Name="RSP_CardNo" ColumnName="RSP_CardNo" />
+          <ScalarProperty Name="SysOn_TimeSt" ColumnName="SysOn_TimeSt" />
+          <ScalarProperty Name="SysOff_TimeSt" ColumnName="SysOff_TimeSt" />
+          <ScalarProperty Name="Total_Rate" ColumnName="Total_Rate" />
+          <ScalarProperty Name="Bank_Rate" ColumnName="Bank_Rate" />
+          <ScalarProperty Name="Neweb_Rate" ColumnName="Neweb_Rate" />
+          <ScalarProperty Name="Mall_Rate" ColumnName="Mall_Rate" />
+          <ScalarProperty Name="Credit" ColumnName="Credit" />
+          <ScalarProperty Name="Credit_Plus" ColumnName="Credit_Plus" />
+          <ScalarProperty Name="RateExp" ColumnName="RateExp" />
+          <ScalarProperty Name="BusinessItem" ColumnName="BusinessItem" />
+          <ScalarProperty Name="OnLineCs" ColumnName="OnLineCs" />
+          <ScalarProperty Name="OffLineCs" ColumnName="OffLineCs" />
+          <ScalarProperty Name="IS_IM" ColumnName="IS_IM" />
+          <ScalarProperty Name="IS_CTID" ColumnName="IS_CTID" />
+          <ScalarProperty Name="RPCCMerNo" ColumnName="RPCCMerNo" />
+          <ScalarProperty Name="MallType" ColumnName="MallType" />
+          <ScalarProperty Name="MallTypeNote" ColumnName="MallTypeNote" />
+          <ScalarProperty Name="IMRate_3" ColumnName="IMRate_3" />
+          <ScalarProperty Name="IMRate_6" ColumnName="IMRate_6" />
+          <ScalarProperty Name="IMRate_9" ColumnName="IMRate_9" />
+          <ScalarProperty Name="IMRate_12" ColumnName="IMRate_12" />
+          <ScalarProperty Name="IMRate_18" ColumnName="IMRate_18" />
+          <ScalarProperty Name="IMRate_24" ColumnName="IMRate_24" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="IMRate_36" ColumnName="IMRate_36" />
+          <ScalarProperty Name="MerType" ColumnName="MerType" />
+          <ScalarProperty Name="AcquireBank" ColumnName="AcquireBank" />
+          <ScalarProperty Name="AcquireMode" ColumnName="AcquireMode" />
+          <ScalarProperty Name="Is_UnionPay" ColumnName="Is_UnionPay" />
+          <ScalarProperty Name="SettleCycle" ColumnName="SettleCycle" />
+          <ScalarProperty Name="IS_RPRecCCNo" ColumnName="IS_RPRecCCNo" />
+          <ScalarProperty Name="IS_RPFirstCap" ColumnName="IS_RPFirstCap" />
+          <ScalarProperty Name="IS_RPAutoDelFail" ColumnName="IS_RPAutoDelFail" />
+          <ScalarProperty Name="HostIPs" ColumnName="HostIPs" />
+          <ScalarProperty Name="AdminIPs" ColumnName="AdminIPs" />
+          <ScalarProperty Name="RPUploadIPs" ColumnName="RPUploadIPs" />
+          <ScalarProperty Name="AutoSettleTime" ColumnName="AutoSettleTime" />
+          <ScalarProperty Name="ReportGiven" ColumnName="ReportGiven" />
+          <ScalarProperty Name="AsyncTxtNoteURL" ColumnName="AsyncTxtNoteURL" />
+          <ScalarProperty Name="MerLogo" ColumnName="MerLogo" />
+          <ScalarProperty Name="MerTxtNote" ColumnName="MerTxtNote" />
+          <ScalarProperty Name="Mer_Graph" ColumnName="Mer_Graph" />
+          <ScalarProperty Name="ContraNo" ColumnName="ContraNo" />
+          <ScalarProperty Name="SinSerChar" ColumnName="SinSerChar" />
+          <ScalarProperty Name="FrontHostID" ColumnName="FrontHostID" />
+          <ScalarProperty Name="MerNo_Old" ColumnName="MerNo_Old" />
+          <ScalarProperty Name="SMS" ColumnName="SMS" />
+          <ScalarProperty Name="BlackList" ColumnName="BlackList" />
+          <ScalarProperty Name="CS_VAP" ColumnName="CS_VAP" />
+          <ScalarProperty Name="CS_IBON" ColumnName="CS_IBON" />
+          <ScalarProperty Name="CS_VAPCHK" ColumnName="CS_VAPCHK" />
+          <ScalarProperty Name="CS_CS" ColumnName="CS_CS" />
+          <ScalarProperty Name="CS_WEBATMCHK" ColumnName="CS_WEBATMCHK" />
+          <ScalarProperty Name="CS_IBONCHK" ColumnName="CS_IBONCHK" />
+          <ScalarProperty Name="CS_FAMIPORTCHK" ColumnName="CS_FAMIPORTCHK" />
+          <ScalarProperty Name="CS_LIFEETCHK" ColumnName="CS_LIFEETCHK" />
+          <ScalarProperty Name="CS_OKGOCHK" ColumnName="CS_OKGOCHK" />
+          <ScalarProperty Name="CS_ALIPAYCHK" ColumnName="CS_ALIPAYCHK" />
+          <ScalarProperty Name="CS_ALIPAYWAPCHK" ColumnName="CS_ALIPAYWAPCHK" />
+          <ScalarProperty Name="CS_CSCHK" ColumnName="CS_CSCHK" />
+          <ScalarProperty Name="AliFee" ColumnName="AliFee" />
+          <ScalarProperty Name="AliRatio" ColumnName="AliRatio" />
+          <ScalarProperty Name="AliMallFee" ColumnName="AliMallFee" />
+          <ScalarProperty Name="AliMallRatio" ColumnName="AliMallRatio" />
+          <ScalarProperty Name="Ali_Overtime" ColumnName="Ali_Overtime" />
+          <ScalarProperty Name="AliWap_Fee" ColumnName="AliWap_Fee" />
+          <ScalarProperty Name="AliWap_Ratio" ColumnName="AliWap_Ratio" />
+          <ScalarProperty Name="AliWapMall_Fee" ColumnName="AliWapMall_Fee" />
+          <ScalarProperty Name="AliWapMall_Ratio" ColumnName="AliWapMall_Ratio" />
+          <ScalarProperty Name="AliWap_Overtime" ColumnName="AliWap_Overtime" />
+          <ScalarProperty Name="MPOSCorreCode" ColumnName="MPOSCorreCode" />
+          <ScalarProperty Name="Is_Autobilling" ColumnName="Is_Autobilling" />
+          <ScalarProperty Name="Alipay_Product" ColumnName="Alipay_Product" />
+          <ScalarProperty Name="P33" ColumnName="P33" />
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+          <ScalarProperty Name="Machine_No" ColumnName="Machine_No" />
+          <ScalarProperty Name="MID" ColumnName="MID" />
+          <ScalarProperty Name="TID" ColumnName="TID" />
+          <ScalarProperty Name="MPOS_OnCmpTime" ColumnName="MPOS_OnCmpTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="正式商店標籤視圖">
+      <EntityTypeMapping TypeName="TestDB2Model.正式商店標籤視圖">
+        <MappingFragment StoreEntitySet="正式商店標籤視圖">
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+          <ScalarProperty Name="CustZipcode" ColumnName="CustZipcode" />
+          <ScalarProperty Name="CustAdrs" ColumnName="CustAdrs" />
+          <ScalarProperty Name="SalesName" ColumnName="SalesName" />
+          <ScalarProperty Name="SalesTel" ColumnName="SalesTel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="合約資料標籤視圖">
+      <EntityTypeMapping TypeName="TestDB2Model.合約資料標籤視圖">
+        <MappingFragment StoreEntitySet="合約資料標籤視圖">
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+          <ScalarProperty Name="CustZipcode" ColumnName="CustZipcode" />
+          <ScalarProperty Name="CustAdrs" ColumnName="CustAdrs" />
+          <ScalarProperty Name="SalesName" ColumnName="SalesName" />
+          <ScalarProperty Name="SalesTel" ColumnName="SalesTel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="測試商店視圖">
+      <EntityTypeMapping TypeName="TestDB2Model.測試商店視圖">
+        <MappingFragment StoreEntitySet="測試商店視圖">
+          <ScalarProperty Name="NewebSales" ColumnName="NewebSales" />
+          <ScalarProperty Name="CustName_EnCode" ColumnName="CustName_EnCode" />
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="MerNo_T" ColumnName="MerNo_T" />
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+          <ScalarProperty Name="CooperMode" ColumnName="CooperMode" />
+          <ScalarProperty Name="MerState" ColumnName="MerState" />
+          <ScalarProperty Name="MerType" ColumnName="MerType" />
+          <ScalarProperty Name="HostID" ColumnName="HostID" />
+          <ScalarProperty Name="Test_Ntc_Date" ColumnName="Test_Ntc_Date" />
+          <ScalarProperty Name="Test_Cmp_Date" ColumnName="Test_Cmp_Date" />
+          <ScalarProperty Name="Auth" ColumnName="Auth" />
+          <ScalarProperty Name="InspectStatus" ColumnName="InspectStatus" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="IS_IM" ColumnName="IS_IM" />
+          <ScalarProperty Name="IS_CTID" ColumnName="IS_CTID" />
+          <ScalarProperty Name="OnlyTest" ColumnName="OnlyTest" />
+          <ScalarProperty Name="TestDelDate" ColumnName="TestDelDate" />
+          <ScalarProperty Name="TestPassword" ColumnName="TestPassword" />
+          <ScalarProperty Name="OnNtcTime" ColumnName="OnNtcTime" />
+          <ScalarProperty Name="OffNtcTime" ColumnName="OffNtcTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="登錄問題交易主選單視圖">
+      <EntityTypeMapping TypeName="TestDB2Model.登錄問題交易主選單視圖">
+        <MappingFragment StoreEntitySet="登錄問題交易主選單視圖">
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+          <ScalarProperty Name="NumCorrespondingly" ColumnName="NumCorrespondingly" />
+          <ScalarProperty Name="MerNo" ColumnName="MerNo" />
+          <ScalarProperty Name="OrderNum" ColumnName="OrderNum" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="AuthCode" ColumnName="AuthCode" />
+          <ScalarProperty Name="CreditCard" ColumnName="CreditCard" />
+          <ScalarProperty Name="NoticeDate" ColumnName="NoticeDate" />
+          <ScalarProperty Name="AuthDate" ColumnName="AuthDate" />
+          <ScalarProperty Name="IS_Receipt" ColumnName="IS_Receipt" />
+          <ScalarProperty Name="RefundDate" ColumnName="RefundDate" />
+          <ScalarProperty Name="DisputeCollectDate" ColumnName="DisputeCollectDate" />
+          <ScalarProperty Name="DeFundDate" ColumnName="DeFundDate" />
+          <ScalarProperty Name="ReasonRemarks" ColumnName="ReasonRemarks" />
+          <ScalarProperty Name="NoticeUnit" ColumnName="NoticeUnit" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="CountryOrigin" ColumnName="CountryOrigin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="登錄問題交易視圖">
+      <EntityTypeMapping TypeName="TestDB2Model.登錄問題交易視圖">
+        <MappingFragment StoreEntitySet="登錄問題交易視圖">
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+          <ScalarProperty Name="NumCorrespondingly" ColumnName="NumCorrespondingly" />
+          <ScalarProperty Name="MerNo" ColumnName="MerNo" />
+          <ScalarProperty Name="OrderNum" ColumnName="OrderNum" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="AuthCode" ColumnName="AuthCode" />
+          <ScalarProperty Name="CreditCard" ColumnName="CreditCard" />
+          <ScalarProperty Name="NoticeDate" ColumnName="NoticeDate" />
+          <ScalarProperty Name="AuthDate" ColumnName="AuthDate" />
+          <ScalarProperty Name="IS_Receipt" ColumnName="IS_Receipt" />
+          <ScalarProperty Name="RefundDate" ColumnName="RefundDate" />
+          <ScalarProperty Name="DisputeCollectDate" ColumnName="DisputeCollectDate" />
+          <ScalarProperty Name="DeFundDate" ColumnName="DeFundDate" />
+          <ScalarProperty Name="ReasonRemarks" ColumnName="ReasonRemarks" />
+          <ScalarProperty Name="NoticeUnit" ColumnName="NoticeUnit" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="CountryOrigin" ColumnName="CountryOrigin" />
+          <ScalarProperty Name="RegReasonCode" ColumnName="RegReasonCode" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="登錄問題交易匯出視圖">
+      <EntityTypeMapping TypeName="TestDB2Model.登錄問題交易匯出視圖">
+        <MappingFragment StoreEntitySet="登錄問題交易匯出視圖">
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+          <ScalarProperty Name="NumCorrespondingly" ColumnName="NumCorrespondingly" />
+          <ScalarProperty Name="MerNo" ColumnName="MerNo" />
+          <ScalarProperty Name="OrderNum" ColumnName="OrderNum" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="AuthCode" ColumnName="AuthCode" />
+          <ScalarProperty Name="CreditCard" ColumnName="CreditCard" />
+          <ScalarProperty Name="NoticeDate" ColumnName="NoticeDate" />
+          <ScalarProperty Name="AuthDate" ColumnName="AuthDate" />
+          <ScalarProperty Name="IS_Receipt" ColumnName="IS_Receipt" />
+          <ScalarProperty Name="RefundDate" ColumnName="RefundDate" />
+          <ScalarProperty Name="DisputeCollectDate" ColumnName="DisputeCollectDate" />
+          <ScalarProperty Name="DeFundDate" ColumnName="DeFundDate" />
+          <ScalarProperty Name="ReasonRemarks" ColumnName="ReasonRemarks" />
+          <ScalarProperty Name="NoticeUnit" ColumnName="NoticeUnit" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="CountryOrigin" ColumnName="CountryOrigin" />
+          <ScalarProperty Name="RegReasonCode" ColumnName="RegReasonCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="登錄問題原因視圖">
+      <EntityTypeMapping TypeName="TestDB2Model.登錄問題原因視圖">
+        <MappingFragment StoreEntitySet="登錄問題原因視圖">
+          <ScalarProperty Name="NumCorrespondingly" ColumnName="NumCorrespondingly" />
+          <ScalarProperty Name="RegReasonCode" ColumnName="RegReasonCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
