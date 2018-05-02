@@ -59,6 +59,7 @@ namespace MerchantDB
                 altText = "看不到去看手機啦",
                 title = buttonTitle,
                 text = buttonText,
+                thumbnailImageUrl = new Uri("https://i.imgur.com/Z8qy7wY.png"),
                   actions = Action //設定回覆動作
             };
 

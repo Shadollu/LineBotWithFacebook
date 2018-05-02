@@ -17,9 +17,9 @@ namespace MerchantDB.Controllers
     public class LINEBOTController : ApiController
     {
         //doge
-         //public const string ChannelAccessToken = "jdoqLxieahEpwy7jE4511lu76psRpJUQGqRcjOQLapMI2gpdsD/ea7CNtXU/h9szE6PynyFmYwh11sNtHALwrUukFCgEMdH0E3WctzP/+Hpe5+jD0eqJxleaFlTIK+hi/ojGqvvW/TGy9RcIS2A+CQdB04t89/1O/w1cDnyilFU=";
+         public const string ChannelAccessToken = "jdoqLxieahEpwy7jE4511lu76psRpJUQGqRcjOQLapMI2gpdsD/ea7CNtXU/h9szE6PynyFmYwh11sNtHALwrUukFCgEMdH0E3WctzP/+Hpe5+jD0eqJxleaFlTIK+hi/ojGqvvW/TGy9RcIS2A+CQdB04t89/1O/w1cDnyilFU=";
         //nigga
-        public const string ChannelAccessToken = "VcC9lWBYYACb0/nxzr8rUf+CaElUkRw5dNwoz6rQCHlCySrGQs3HtZtj5RJB/qq+dIIf8vbQtH7fx23riR3SDEz1BRvpGrXz4vHwf9Tv5Y9akc2L7S+0buPuX0tvf3w3tsqY3vug7UyVWIOWlrK3YgdB04t89/1O/w1cDnyilFU=";
+       // public const string ChannelAccessToken = "VcC9lWBYYACb0/nxzr8rUf+CaElUkRw5dNwoz6rQCHlCySrGQs3HtZtj5RJB/qq+dIIf8vbQtH7fx23riR3SDEz1BRvpGrXz4vHwf9Tv5Y9akc2L7S+0buPuX0tvf3w3tsqY3vug7UyVWIOWlrK3YgdB04t89/1O/w1cDnyilFU=";
         LineBotEntities LinebotDB = new LineBotEntities();
         [HttpGet]
         public IHttpActionResult GET()
@@ -133,8 +133,8 @@ namespace MerchantDB.Controllers
                             break;
                         case "給我匿名網址":
                             
-//                            Message = "講話不用負責任,網址給你 : https://linebotfortest.azurewebsites.net/home/index/" + senderToken;
-                            Message = "講話不用負責任,網址給你 : https://bba59d35.ngrok.io/home/index/" + senderToken;
+                            Message = "講話不用負責任,網址給你 : https://linebotfortest.azurewebsites.net/home/index/" + senderToken;
+                       //     Message = "講話不用負責任,網址給你 : https://bba59d35.ngrok.io/home/index/" + senderToken;
                             break;
                         case "車子停哪":
 
@@ -231,13 +231,24 @@ namespace MerchantDB.Controllers
                             if (!r.IsMatch(e.ReceievedMessage))
                             {
                                 e.isMismatch = true;
-                                e.ResponseMessage = "只接受座標資訊 ...";
+                                e.ResponseMessage = "只接受座標資訊 ... \n請給我你的座標資訊,或者跟我說『取消』來結束流程 ...";
+                            }
+                            break;
+                        case "process":
+                            if (e.ReceievedMessage == "幫我導航" | e.ReceievedMessage == "幫我記錄停車位置" | e.ReceievedMessage == "最近的3個公車站" | e.ReceievedMessage == "最近的3個Youbike站")
+                            {
+                                e.isMismatch = false;
+                            }
+                            else
+                            {
+                                e.isMismatch = true;
+                                e.ResponseMessage = "請點選選單選項,或者說『取消』來結束流程";
+                                // e.CurrentPropertyName = "";
                             }
                             break;
                     }
 
                 };
-
 
 
                 if (ReceivedMessage.events[0].message.text == "Hey!")
@@ -252,7 +263,7 @@ namespace MerchantDB.Controllers
                         new isRock.LineBot.MessageAction(){ label = "記錄停車位置", text = "幫我記錄停車位置" },
                         new isRock.LineBot.MessageAction(){ label = "公車站資訊", text = "最近的3個公車站" },
                         new isRock.LineBot.MessageAction(){ label = "Youbike站資訊", text = "最近的3個Youbike站" }},
-                          "座標定位系統", "想做些什麼？", ChannelAccessToken);
+                          "Hello!", "想做些什麼？", ChannelAccessToken);
                 }
                 else
                 {
@@ -260,10 +271,9 @@ namespace MerchantDB.Controllers
                     {
                         ReceivedMessage.events[0].message.text = ReceivedMessage.events[0].message.latitude + "," + ReceivedMessage.events[0].message.longitude;
                     }
-
                     result = CIC.Process(ReceivedMessage.events[0]);
                 }
-
+                
                 switch (result.ProcessResultStatus)
                 {
                     case ProcessResultStatus.Processed:
@@ -306,9 +316,10 @@ namespace MerchantDB.Controllers
                         break;
                     case ProcessResultStatus.Break:
                         Message += result.ResponseMessageCandidate;
+                        Message += "\n若需要我請再 Hey! 一次,我會出現的";
                         break;
                     case ProcessResultStatus.InputDataFitError:
-                        Message += "\n資料型態不合\n";
+                        Message += "Oops!!\n";
                         Message += result.ResponseMessageCandidate;
                         break;
                     default:
