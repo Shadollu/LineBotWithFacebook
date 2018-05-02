@@ -107,3 +107,4 @@ D:\visual studio proj\C#\MerchantDB\MerchantDB\bin\System.Net.Http.Formatting.xm
 D:\visual studio proj\C#\MerchantDB\MerchantDB\bin\System.Web.Http.xml
 D:\visual studio proj\C#\MerchantDB\MerchantDB\bin\System.Web.Http.WebHost.xml
 D:\visual studio proj\C#\MerchantDB\MerchantDB\obj\Debug\MerchantDB.csprojResolveAssemblyReference.cache
+D:\visual studio proj\C#\MerchantDB\MerchantDB\bin\Microsoft.ProjectOxford.Vision.dll

@@ -81,6 +81,10 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ProjectOxford.Vision, Version=1.0.393.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ProjectOxford.Vision.1.0.393\lib\portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10\Microsoft.ProjectOxford.Vision.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
@@ -215,6 +219,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="ByteConverter.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\FACEBOOKBOTController.cs" />
@@ -684,6 +689,7 @@
     <Compile Include="Models\TRADE_STATISTICAL.cs">
       <DependentUpon>MerchantDBEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\VRModel.cs" />
     <Compile Include="Models\YoubikeModel.cs" />
     <Compile Include="Models\YoubikeStationStatusModel.cs" />
     <Compile Include="Models\停用連線服務原因.cs">
@@ -754,6 +760,7 @@
     <Compile Include="Security\HMAC_SHA1.cs" />
     <Compile Include="SendRequest.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="VisionRecognize.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />

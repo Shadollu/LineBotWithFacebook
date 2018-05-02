@@ -1,25 +1,21 @@
 ﻿using isRock.LineBot.Conversation;
 using MerchantDB.Models;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
+using Microsoft.ProjectOxford.Vision.Contract;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Text;
 using System.Text.RegularExpressions;
 using System.Web.Http;
+
 
 namespace MerchantDB.Controllers
 {
     public class LINEBOTController : ApiController
     {
         //doge
-         public const string ChannelAccessToken = "jdoqLxieahEpwy7jE4511lu76psRpJUQGqRcjOQLapMI2gpdsD/ea7CNtXU/h9szE6PynyFmYwh11sNtHALwrUukFCgEMdH0E3WctzP/+Hpe5+jD0eqJxleaFlTIK+hi/ojGqvvW/TGy9RcIS2A+CQdB04t89/1O/w1cDnyilFU=";
+        //public const string ChannelAccessToken = "jdoqLxieahEpwy7jE4511lu76psRpJUQGqRcjOQLapMI2gpdsD/ea7CNtXU/h9szE6PynyFmYwh11sNtHALwrUukFCgEMdH0E3WctzP/+Hpe5+jD0eqJxleaFlTIK+hi/ojGqvvW/TGy9RcIS2A+CQdB04t89/1O/w1cDnyilFU=";
         //nigga
-       // public const string ChannelAccessToken = "VcC9lWBYYACb0/nxzr8rUf+CaElUkRw5dNwoz6rQCHlCySrGQs3HtZtj5RJB/qq+dIIf8vbQtH7fx23riR3SDEz1BRvpGrXz4vHwf9Tv5Y9akc2L7S+0buPuX0tvf3w3tsqY3vug7UyVWIOWlrK3YgdB04t89/1O/w1cDnyilFU=";
+        public const string ChannelAccessToken = "VcC9lWBYYACb0/nxzr8rUf+CaElUkRw5dNwoz6rQCHlCySrGQs3HtZtj5RJB/qq+dIIf8vbQtH7fx23riR3SDEz1BRvpGrXz4vHwf9Tv5Y9akc2L7S+0buPuX0tvf3w3tsqY3vug7UyVWIOWlrK3YgdB04t89/1O/w1cDnyilFU=";
         LineBotEntities LinebotDB = new LineBotEntities();
         [HttpGet]
         public IHttpActionResult GET()
@@ -132,9 +128,9 @@ namespace MerchantDB.Controllers
                             SendRequest.SendImageMap(senderToken);
                             break;
                         case "給我匿名網址":
-                            
+
                             Message = "講話不用負責任,網址給你 : https://linebotfortest.azurewebsites.net/home/index/" + senderToken;
-                       //     Message = "講話不用負責任,網址給你 : https://bba59d35.ngrok.io/home/index/" + senderToken;
+                            //     Message = "講話不用負責任,網址給你 : https://bba59d35.ngrok.io/home/index/" + senderToken;
                             break;
                         case "車子停哪":
 
@@ -215,15 +211,35 @@ namespace MerchantDB.Controllers
 
                 #endregion
 
+                #region 如果使用者丟圖片 ...
+
+                if (Type == "message" && ReceivedMessage.events[0].message.type.Trim().ToLower() == "image")
+                {
+                    isRock.LineBot.Bot bot = new isRock.LineBot.Bot(ChannelAccessToken);
+                    //取得使用者上傳的圖片
+                    var imageBytes = bot.GetUserUploadedContent(ReceivedMessage.events[0].message.id.ToString());
+                    //把btye轉換為image
+                    //ByteConverter Bc = new ByteConverter();
+                    //var getImg = Bc.BufferToImage(imageBytes);
+
+                    VisionRecognize.MakeAnalysisRequest(imageBytes);
+
+                }
+
+                #endregion
+
+
                 #region CICtest
+
                 isRock.LineBot.Conversation.InformationCollector<CICClass> CIC = new isRock.LineBot.Conversation.InformationCollector<CICClass>(ChannelAccessToken);
                 ProcessResult<CICClass> result;
 
-                CIC.OnMessageTypeCheck += (s,e) => {
+                CIC.OnMessageTypeCheck += (s, e) =>
+                {
 
                     string regex = @"^(\-?\d+(\.\d+)?),\s*(\-?\d+(\.\d+)?)$";
 
-                    Regex r = new Regex(regex,RegexOptions.IgnoreCase);
+                    Regex r = new Regex(regex, RegexOptions.IgnoreCase);
 
                     switch (e.CurrentPropertyName)
                     {
@@ -247,7 +263,6 @@ namespace MerchantDB.Controllers
                             }
                             break;
                     }
-
                 };
 
 
@@ -267,13 +282,27 @@ namespace MerchantDB.Controllers
                 }
                 else
                 {
-                    if (ReceivedMessage.events[0].message.latitude != 0)
+
+                    if (ReceivedMessage.events[0].message.type.Trim().ToLower() != "text")
                     {
-                        ReceivedMessage.events[0].message.text = ReceivedMessage.events[0].message.latitude + "," + ReceivedMessage.events[0].message.longitude;
+                        if (ReceivedMessage.events[0].message.latitude != 0)
+                        {
+                            ReceivedMessage.events[0].message.text = ReceivedMessage.events[0].message.latitude + "," + ReceivedMessage.events[0].message.longitude;
+                            result = CIC.Process(ReceivedMessage.events[0]);
+
+                        }
+                        else
+                        {
+                            ReceivedMessage.events[0].message.text = " ";
+                            result = CIC.Process(ReceivedMessage.events[0]);
+                        }
                     }
-                    result = CIC.Process(ReceivedMessage.events[0]);
+                    else
+                    {
+                        result = CIC.Process(ReceivedMessage.events[0]);
+                    }
                 }
-                
+
                 switch (result.ProcessResultStatus)
                 {
                     case ProcessResultStatus.Processed:
@@ -306,10 +335,10 @@ namespace MerchantDB.Controllers
                                 Message = "座標已經記錄完畢！查詢請打『車子停哪』";
                                 break;
                         }
-                        
+
                         break;
                     case ProcessResultStatus.Pass:
-//                        Message += "你說啥我看不懂";
+                        //                        Message += "你說啥我看不懂";
                         break;
                     case ProcessResultStatus.Exception:
                         Message += result.ResponseMessageCandidate;
@@ -325,8 +354,10 @@ namespace MerchantDB.Controllers
                     default:
                         break;
                 }
+                #endregion
 
-                #endregion  
+
+
 
 
                 if (!string.IsNullOrEmpty(Message))
