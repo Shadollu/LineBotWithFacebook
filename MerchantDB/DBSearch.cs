@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 
 namespace MerchantDB
@@ -43,13 +44,6 @@ namespace MerchantDB
                 LinebotDB.SaveChanges();
             }
 
-        }
-
-        public void DeleteLocation(string talkToken)
-        {
-            var adv = LinebotDB.PARKING.FirstOrDefault(x => x.UID.ToString().Equals(talkToken));
-            LinebotDB.PARKING.Remove(adv);
-            LinebotDB.SaveChanges();
         }
         /// <summary>
         /// 從DB取回使用者停車的座標
@@ -105,38 +99,17 @@ namespace MerchantDB
                 return null;
             }
         }
+
         /// <summary>
-        /// 使用者選擇記住停車位時,另外將座標存至Parking
+        /// 儲存使用者的停車座標
         /// </summary>
-        /// <param name="talkToken"></param>
-        public void SaveParkingData(string talkToken)
-        {
-            var parkingloc = LinebotDB.PARKING.Where(x => x.UID.ToString().Equals(talkToken)).ToList();
-            var location = LinebotDB.LAT_LON.Where(x => x.UID.ToString().Equals(talkToken)).ToList();
-
-            if (parkingloc.Count() == 0)
-            {
-                var parking = new PARKING
-                {
-                    UID = location.First().UID,
-                    LAT = location.First().LAT,
-                    LON = location.First().LON
-                };
-                LinebotDB.PARKING.Add(parking);
-                LinebotDB.SaveChanges();
-
-                //確認使用者只需儲存停車座標,故把原本存在LAT_LON的資料刪除
-                var adv = LinebotDB.LAT_LON.FirstOrDefault(x => x.UID.ToString().Equals(talkToken));
-                LinebotDB.LAT_LON.Remove(adv);
-                LinebotDB.SaveChanges();
-            }
-        }
-
+        /// <param name="talkToken">使用者與機器人溝通的ID(有可能是群組ID)</param>
+        /// <param name="Lat">緯度</param>
+        /// <param name="Lon">經度</param>
         public void testSaveParkingData(string talkToken, string Lat, string Lon)
         {
             var parkingloc = LinebotDB.PARKING.Where(x => x.UID.ToString().Equals(talkToken)).ToList();
-
-
+            
             if (parkingloc.Count() == 0)
             {
                 var parking = new PARKING
@@ -150,5 +123,7 @@ namespace MerchantDB
 
             }
         }
+
+
     }
 }

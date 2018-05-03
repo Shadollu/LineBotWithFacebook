@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
   <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection 應用程式在 web.config 中用來存取資料庫的連接字串。" defaultValue="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\aspnet-MerchantDB-20180208101826.mdf;Initial Catalog=aspnet-MerchantDB-20180208101826;Integrated Security=True" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="D:\\LineBotWithFacebook\\MerchantDB\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+    <parameterEntry kind="XmlFile" scope="D:\\visual\ studio\ proj\\C\#\\MerchantDB\\MerchantDB\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
   </parameter>
   <parameter name="TestDB2Entities-Web.config Connection String" description="TestDB2Entities 應用程式在 web.config 中用來存取資料庫的連接字串。" defaultValue="metadata=res://*/Models.MerchantDBEntities.csdl|res://*/Models.MerchantDBEntities.ssdl|res://*/Models.MerchantDBEntities.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=192.168.111.90\MSSQLR2;initial catalog=TestDB2;user id=sa;password=!QAZ2wsx;multipleactiveresultsets=True;application name=EntityFramework&quot;" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="D:\\LineBotWithFacebook\\MerchantDB\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='TestDB2Entities']/@connectionString" />
+    <parameterEntry kind="XmlFile" scope="D:\\visual\ studio\ proj\\C\#\\MerchantDB\\MerchantDB\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='TestDB2Entities']/@connectionString" />
   </parameter>
   <parameter name="LineBotEntities-Web.config Connection String" description="LineBotEntities 應用程式在 web.config 中用來存取資料庫的連接字串。" defaultValue="data source=tcp:linebotfortest.database.windows.net,1433;initial catalog=LINEBOT;persist security info=True;user id=shadollu;password=Iniquityspirit44;MultipleActiveResultSets=True;App=EntityFramework" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="D:\\LineBotWithFacebook\\MerchantDB\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='LineBotEntities']/@connectionString" />
+    <parameterEntry kind="XmlFile" scope="D:\\visual\ studio\ proj\\C\#\\MerchantDB\\MerchantDB\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='LineBotEntities']/@connectionString" />
   </parameter>
 </parameters>

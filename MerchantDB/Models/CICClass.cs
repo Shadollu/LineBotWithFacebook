@@ -13,7 +13,7 @@ namespace MerchantDB.Models
         [Order(1)]
         public string process { get; set; }
 
-        [Question("請給我你的座標")]
+        [Question("請給我你的位置訊息,點選訊息欄左邊的 + ,選擇位置訊息！")]
         [Order(2)]
         public string Geocoding { get; set; }
     }

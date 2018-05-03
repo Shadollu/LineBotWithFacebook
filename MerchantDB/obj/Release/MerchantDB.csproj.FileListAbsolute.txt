@@ -217,3 +217,4 @@ D:\LineBotWithFacebook\MerchantDB\bin\zh-Hant\Microsoft.Owin.Security.MicrosoftA
 D:\LineBotWithFacebook\MerchantDB\obj\Release\MerchantDB.csprojResolveAssemblyReference.cache
 D:\LineBotWithFacebook\MerchantDB\obj\Release\MerchantDB.dll
 D:\LineBotWithFacebook\MerchantDB\obj\Release\MerchantDB.pdb
+D:\visual studio proj\C#\MerchantDB\MerchantDB\bin\Microsoft.ProjectOxford.Vision.dll

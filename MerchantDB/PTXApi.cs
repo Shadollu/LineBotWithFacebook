@@ -48,56 +48,81 @@ namespace MerchantDB
 
         }
         /// <summary>
-        /// 指定座標最近的三個公車站點
+        /// 透過座標取得腳踏車資訊
         /// </summary>
-        /// <param name="lat">指定緯度</param>
-        /// <param name="lon">指定經度</param>
+        /// <param name="talkToken">要發送給誰</param>
+        /// <param name="lat">緯度</param>
+        /// <param name="lon">經度</param>
         /// <returns></returns>
-        public string returnBusData(string talkToken)
+        public string returnBikeData(string talkToken, string lat, string lon)
+        {
+
+
+            PTXApi getBusLocation = new PTXApi();
+
+            string APIUrl = "http://ptx.transportdata.tw/MOTC/v2/Bike/Station/taipei?$format=JSON";
+            List<YoubikeModel> getData = JsonConvert.DeserializeObject<List<Models.YoubikeModel>>(CallAPIByHMAC(APIUrl));
+
+            foreach (var data in getData)
+            {
+                var distance = Math.Abs(Geocoding.DistanceOfTwoPoints(Convert.ToDouble(data.StationPosition.PositionLat), Convert.ToDouble(data.StationPosition.PositionLon), Convert.ToDouble(lat), Convert.ToDouble(lon)));
+                data.Distance = distance;
+            }
+
+            var finalLocation = getData.OrderBy(x => x.Distance).Take(3);
+
+            if (finalLocation.Count() > 0)
+            {
+                foreach (var item in finalLocation)
+                {
+                    string stationStatus = BikeStationStatus(item.StationUID, "taipei");
+                    SendRequest.SendLocation(talkToken, item.StationPosition.PositionLat, item.StationPosition.PositionLon, item.StationName.Zh_tw, stationStatus);
+                }
+                return "Youbike站台資訊如上";
+            }
+            else
+                return "";
+        }
+        /// <summary>
+        /// 透過座標取得公車資訊
+        /// </summary>
+        /// <param name="talkToken">要發送給誰</param>
+        /// <param name="lat">緯度</param>
+        /// <param name="lon">經度</param>
+        /// <returns></returns>
+        public string returnBusData(string talkToken, string lat, string lon)
         {
             PTXApi getBusLocation = new PTXApi();
             string BusName = "";
 
-            LineBotEntities LinebotDB = new LineBotEntities();
 
-            var location = LinebotDB.LAT_LON.Where(x => x.UID.ToString().Equals(talkToken)).ToList();
+            //取得所有公車站座標
+            string APIUrl = "http://ptx.transportdata.tw/MOTC/v2/Bus/Station/City/Taipei?$format=JSON";
+            List<BusStopModels> getData = JsonConvert.DeserializeObject<List<Models.BusStopModels>>(CallAPIByHMAC(APIUrl));
 
-            if (location.Count > 0)
+            //依照距離排序公車站
+            foreach (var data in getData)
             {
-                //取得所有公車站座標
-                string APIUrl = "http://ptx.transportdata.tw/MOTC/v2/Bus/Station/City/Taipei?$format=JSON";
-                List<BusStopModels> getData = JsonConvert.DeserializeObject<List<Models.BusStopModels>>(CallAPIByHMAC(APIUrl));
+                var distance = Math.Abs(Geocoding.DistanceOfTwoPoints(Convert.ToDouble(data.StationPosition.PositionLat), Convert.ToDouble(data.StationPosition.PositionLon), Convert.ToDouble(lat), Convert.ToDouble(lon)));
+                data.Distance = distance;
+            }
+            //取前三名
+            var finalLocation = getData.OrderBy(x => x.Distance).Take(3);
 
-                //依照距離排序公車站
-                foreach (var data in getData)
+            //組字串
+            if (finalLocation.Count() > 0)
+            {
+                BusName = "附近的公車站：" + Environment.NewLine;
+                foreach (var item in finalLocation)
                 {
-                    var distance = Math.Abs(Geocoding.DistanceOfTwoPoints(Convert.ToDouble(data.StationPosition.PositionLat), Convert.ToDouble(data.StationPosition.PositionLon), Convert.ToDouble(location.First().LAT), Convert.ToDouble(location.First().LON)));
-                    data.Distance = distance;
+                    BusName += item.StationName.Zh_tw + Environment.NewLine + "下一班進站公車：" + BusComing(item.StationName.Zh_tw) + Environment.NewLine;
                 }
-                //取前三名
-                var finalLocation = getData.OrderBy(x => x.Distance).Take(3);
 
-                //組字串
-                if (finalLocation.Count() > 0)
-                {
-                    BusName = "附近的公車站：" + Environment.NewLine;
-                    foreach (var item in finalLocation)
-                    {
-                        BusName += item.StationName.Zh_tw + Environment.NewLine + "下一班進站公車：" + BusComing(item.StationName.Zh_tw) + Environment.NewLine;
-                    }
-
-                    var adv = LinebotDB.LAT_LON.FirstOrDefault(x => x.UID.ToString().Equals(talkToken));
-                    LinebotDB.LAT_LON.Remove(adv);
-                    LinebotDB.SaveChanges();
-
-                    return BusName;
-                }
-                else
-                    return "";
-
+                return BusName;
             }
             else
                 return "";
+
         }
         /// <summary>
         /// 取得站位即將到站的公車
@@ -128,85 +153,6 @@ namespace MerchantDB
             return result;
         }
         /// <summary>
-        /// 取得座標最近的Youbike站,並且提供該站的車輛資訊
-        /// </summary>
-        /// <param name="lat"></param>
-        /// <param name="lon"></param>
-        /// <returns></returns>
-        public string returnBikeData(string id, string talkToken)
-        {
-
-            LineBotEntities LinebotDB = new LineBotEntities();
-
-            var location = LinebotDB.LAT_LON.Where(x => x.UID.ToString().Equals(talkToken)).ToList();
-
-            if (!string.IsNullOrEmpty(location.First().COUNTRY))
-            {
-                string country = "";
-                switch (location.First().COUNTRY)
-                {
-                    case "台北市":
-                        country = "Taipei";
-                        break;
-                    case "新北市":
-                        country = "NewTaipei";
-                        break;
-                    case "桃園市":
-                        country = "Taoyuan";
-                        break;
-                    case "台中市":
-                        country = "Taichung";
-                        break;
-                    case "台南市":
-                        country = "Tainan";
-                        break;
-                    case "高雄市":
-                        country = "Kaohsiung";
-                        break;
-                    case "屏東縣":
-                        country = "PingtungCounty";
-                        break;
-                    default:
-                        break;
-                }
-
-                PTXApi getBusLocation = new PTXApi();
-
-                string APIUrl = "http://ptx.transportdata.tw/MOTC/v2/Bike/Station/" + country + "?$format=JSON";
-                List<YoubikeModel> getData = JsonConvert.DeserializeObject<List<Models.YoubikeModel>>(CallAPIByHMAC(APIUrl));
-
-                foreach (var data in getData)
-                {
-                    var distance = Math.Abs(Geocoding.DistanceOfTwoPoints(Convert.ToDouble(data.StationPosition.PositionLat), Convert.ToDouble(data.StationPosition.PositionLon), Convert.ToDouble(location.First().LAT), Convert.ToDouble(location.First().LON)));
-                    data.Distance = distance;
-                }
-
-                var finalLocation = getData.OrderBy(x => x.Distance).Take(3);
-
-                if (finalLocation.Count() > 0)
-                {
-                    foreach (var item in finalLocation)
-                    {
-                        string stationStatus = BikeStationStatus(item.StationUID, country);
-
-                        SendRequest.SendLocation(id, item.StationPosition.PositionLat, item.StationPosition.PositionLon, item.StationName.Zh_tw, stationStatus);
-                    }
-
-                    var adv = LinebotDB.LAT_LON.FirstOrDefault(x => x.UID.ToString().Equals(talkToken));
-                    LinebotDB.LAT_LON.Remove(adv);
-                    LinebotDB.SaveChanges();
-
-                    return "Youbike站台資訊如上";
-                }
-                else
-                    return "";
-            }
-            else
-                return "";
-
-
-        }
-        /// <summary>
         /// 利用UID取得該站台可租借的車數有多少
         /// </summary>
         /// <param name="stationUID"></param>
@@ -228,72 +174,5 @@ namespace MerchantDB
 
         }
 
-
-
-        public string testBikeData(string id,string lat,string lon)
-        {
-
-  
-                PTXApi getBusLocation = new PTXApi();
-
-                string APIUrl = "http://ptx.transportdata.tw/MOTC/v2/Bike/Station/taipei?$format=JSON";
-                List<YoubikeModel> getData = JsonConvert.DeserializeObject<List<Models.YoubikeModel>>(CallAPIByHMAC(APIUrl));
-
-                foreach (var data in getData)
-                {
-                    var distance = Math.Abs(Geocoding.DistanceOfTwoPoints(Convert.ToDouble(data.StationPosition.PositionLat), Convert.ToDouble(data.StationPosition.PositionLon), Convert.ToDouble(lat), Convert.ToDouble(lon)));
-                    data.Distance = distance;
-                }
-
-                var finalLocation = getData.OrderBy(x => x.Distance).Take(3);
-
-                if (finalLocation.Count() > 0)
-                {
-                    foreach (var item in finalLocation)
-                    {
-                        string stationStatus = BikeStationStatus(item.StationUID, "taipei");
-                       SendRequest.SendLocation(id, item.StationPosition.PositionLat, item.StationPosition.PositionLon, item.StationName.Zh_tw, stationStatus);
-                    }
-                    return "Youbike站台資訊如上";
-                }
-                else
-                    return "";
-            }
-
-        public string testBusData(string talkToken,string lat,string lon)
-        {
-            PTXApi getBusLocation = new PTXApi();
-            string BusName = "";
-
-
-                //取得所有公車站座標
-                string APIUrl = "http://ptx.transportdata.tw/MOTC/v2/Bus/Station/City/Taipei?$format=JSON";
-                List<BusStopModels> getData = JsonConvert.DeserializeObject<List<Models.BusStopModels>>(CallAPIByHMAC(APIUrl));
-
-                //依照距離排序公車站
-                foreach (var data in getData)
-                {
-                    var distance = Math.Abs(Geocoding.DistanceOfTwoPoints(Convert.ToDouble(data.StationPosition.PositionLat), Convert.ToDouble(data.StationPosition.PositionLon), Convert.ToDouble(lat), Convert.ToDouble(lon)));
-                    data.Distance = distance;
-                }
-                //取前三名
-                var finalLocation = getData.OrderBy(x => x.Distance).Take(3);
-
-                //組字串
-                if (finalLocation.Count() > 0)
-                {
-                    BusName = "附近的公車站：" + Environment.NewLine;
-                    foreach (var item in finalLocation)
-                    {
-                        BusName += item.StationName.Zh_tw + Environment.NewLine + "下一班進站公車：" + BusComing(item.StationName.Zh_tw) + Environment.NewLine;
-                    }
-                    
-                    return BusName;
-                }
-                else
-                    return "";
-
-        }
-
     }
-    }
+}
