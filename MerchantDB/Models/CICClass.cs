@@ -17,4 +17,5 @@ namespace MerchantDB.Models
         [Order(2)]
         public string Geocoding { get; set; }
     }
+
 }

@@ -68,11 +68,10 @@ namespace MerchantDB.Controllers
                 string postData = Request.Content.ReadAsStringAsync().Result;
 
                 FacebookMsgModels getData = JsonConvert.DeserializeObject<FacebookMsgModels>(UnicodeConverter(postData));
-               // logging(postData);
 
                 string result = "發送者：" + getData.entry.First().messaging.First().sender.id + "\n" + "私訊內容：" + getData.entry.First().messaging.First().message.text;
-                
-                SendRequest.SendLine(result, "C25b9cc414c134fe7c5531812245f3760");
+                Geocoding.test = getData.entry.First().messaging.First().sender.id;
+                SendRequest.SendLine(result, "U6ff789d36d6f22b7484a0ad6d8b32d5d");
                 
             }
             catch (Exception ex)

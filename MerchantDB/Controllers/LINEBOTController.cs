@@ -13,9 +13,9 @@ namespace MerchantDB.Controllers
     public class LINEBOTController : ApiController
     {
         //doge
-        public const string ChannelAccessToken = "jdoqLxieahEpwy7jE4511lu76psRpJUQGqRcjOQLapMI2gpdsD/ea7CNtXU/h9szE6PynyFmYwh11sNtHALwrUukFCgEMdH0E3WctzP/+Hpe5+jD0eqJxleaFlTIK+hi/ojGqvvW/TGy9RcIS2A+CQdB04t89/1O/w1cDnyilFU=";
+        //public const string ChannelAccessToken = "jdoqLxieahEpwy7jE4511lu76psRpJUQGqRcjOQLapMI2gpdsD/ea7CNtXU/h9szE6PynyFmYwh11sNtHALwrUukFCgEMdH0E3WctzP/+Hpe5+jD0eqJxleaFlTIK+hi/ojGqvvW/TGy9RcIS2A+CQdB04t89/1O/w1cDnyilFU=";
         //nigga
-        //public const string ChannelAccessToken = "VcC9lWBYYACb0/nxzr8rUf+CaElUkRw5dNwoz6rQCHlCySrGQs3HtZtj5RJB/qq+dIIf8vbQtH7fx23riR3SDEz1BRvpGrXz4vHwf9Tv5Y9akc2L7S+0buPuX0tvf3w3tsqY3vug7UyVWIOWlrK3YgdB04t89/1O/w1cDnyilFU=";
+        public const string ChannelAccessToken = "VcC9lWBYYACb0/nxzr8rUf+CaElUkRw5dNwoz6rQCHlCySrGQs3HtZtj5RJB/qq+dIIf8vbQtH7fx23riR3SDEz1BRvpGrXz4vHwf9Tv5Y9akc2L7S+0buPuX0tvf3w3tsqY3vug7UyVWIOWlrK3YgdB04t89/1O/w1cDnyilFU=";
 
         [HttpGet]
         public IHttpActionResult GET()
@@ -62,7 +62,7 @@ namespace MerchantDB.Controllers
                     senderToken = ReceivedMessage.events[0].source.groupId.ToString();
                 }
                 #endregion
-                
+
                 #region 判斷使用者發送的文字訊息
 
                 if (ReceivedMessage.events[0].message.text != null)
@@ -90,7 +90,6 @@ namespace MerchantDB.Controllers
                                 Message = "你沒有紀錄停車位置！";
                             }
                             break;
-
                     }
                     //狀況二,針對字串取重點字
                     if (ReceivedMessage.events[0].message.text.Length > 8 && (ReceivedMessage.events[0].message.text.Substring(0, 8) == "幫我google" || ReceivedMessage.events[0].message.text.Substring(0, 8) == "幫我GOOGLE" || ReceivedMessage.events[0].message.text.Substring(0, 8) == "幫我Google"))
@@ -113,20 +112,26 @@ namespace MerchantDB.Controllers
                                 "幫您導航", "以下選項協助您抵達目的地", ChannelAccessToken);
                         }
                     }
+
+                    if (ReceivedMessage.events[0].message.text.Length > 7 && ReceivedMessage.events[0].message.text.Substring(0,7) =="send fb")
+                    {
+                        SendRequest.sendFacebookMsg(Geocoding.test, ReceivedMessage.events[0].message.text.Substring(8));
+                    }
+
                 }
                 #endregion
 
                 #region 如果使用者丟圖片 ...
 
-                //if (Type == "message" && ReceivedMessage.events[0].message.type.Trim().ToLower() == "image")
-                //{
-                //    isRock.LineBot.Bot bot = new isRock.LineBot.Bot(ChannelAccessToken);
-                //    //取得使用者上傳的圖片
-                //    var imageBytes = bot.GetUserUploadedContent(ReceivedMessage.events[0].message.id.ToString());
-                //    //非同步,送給VisionRecognize進行圖像辨識
-                //    VisionRecognize.MakeAnalysisRequest(imageBytes, senderToken);
+                if (Type == "message" && ReceivedMessage.events[0].message.type.Trim().ToLower() == "image")
+                {
+                    isRock.LineBot.Bot bot = new isRock.LineBot.Bot(ChannelAccessToken);
+                    //取得使用者上傳的圖片
+                    var imageBytes = bot.GetUserUploadedContent(ReceivedMessage.events[0].message.id.ToString());
+                    //非同步,送給VisionRecognize進行圖像辨識
+                    VisionRecognize.MakeAnalysisRequest(imageBytes, senderToken);
 
-                //}
+                }
 
                 #endregion
 
@@ -222,8 +227,8 @@ namespace MerchantDB.Controllers
                                 Message = getAPIData.returnBusData(senderToken, latAndLon[0], latAndLon[1]);
                                 break;
                             case "幫我導航":
-                                 DBSearch dbprocess = new DBSearch();
-                                 dbprocess.SaveLocation(talkToken, ReceivedMessage);
+                                DBSearch dbprocess = new DBSearch();
+                                dbprocess.SaveLocation(talkToken, ReceivedMessage);
                                 Message = "想去嗎哪？格式：我想去OOXXOOXX";
                                 break;
                             case "幫我記錄停車位置":

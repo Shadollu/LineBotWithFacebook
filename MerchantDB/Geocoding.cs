@@ -11,6 +11,7 @@ namespace MerchantDB
 {
     public class Geocoding
     {
+        public static string test { get; set; }
         /// <summary>
         /// 取得兩座標距離
         /// </summary>
