@@ -685,7 +685,6 @@
     <Compile Include="Models\TEMP_SELECT_EMAIL.cs">
       <DependentUpon>MerchantDBEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\TestRequest.cs" />
     <Compile Include="Models\TRADE_STATISTICAL.cs">
       <DependentUpon>MerchantDBEntities.tt</DependentUpon>
     </Compile>
